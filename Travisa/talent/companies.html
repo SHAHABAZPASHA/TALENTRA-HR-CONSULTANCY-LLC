@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Talentra HR Consultancy llc</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- Removed unused animate.css and owl.carousel.min.css -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Floating Button Styles & Animated Header Styles -->
+    <style>
+    /* Animated Gradient Header Styles */
+    .animated-gradient-header {
+        background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%) !important;
+        border-radius: 2rem;
+        box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+        position: relative;
+        overflow: visible;
+        min-height: 320px;
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+        z-index: 1;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+    }
+    .header-animated-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%) !important;
+        opacity: 0.95;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+        border-radius: 2rem;
+    }
+    @keyframes headerGradientFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+    .header-floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .floating-shape {
+        position: absolute;
+        animation: floatShape 7s ease-in-out infinite alternate;
+    }
+    @keyframes floatShape {
+        0% { transform: translateY(0) scale(1); }
+        100% { transform: translateY(-18px) scale(1.08); }
+    }
+    .header-glass-overlay {
+        pointer-events: none;
+    }
+    .text-shadow-glow {
+        text-shadow: 0 4px 24px #2563eb99, 0 1.5px 6px #60a5fa99;
+    }
+    .animated-breadcrumb .breadcrumb-item a {
+        color: #e0e7ef;
+        text-shadow: 0 1px 4px #2563eb55;
+        font-weight: 500;
+    }
+    .animated-breadcrumb .breadcrumb-item.active {
+        color: #fff;
+        font-weight: 700;
+        text-shadow: 0 1px 4px #2563eb55;
+    }
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 38px;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+            animation: whatsapp-pulse 1.5s infinite;
+            border: 3px solid #fff;
+            cursor: pointer;
+            perspective: 400px;
+        }
+        .whatsapp-float:hover {
+            background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+            color: #fff;
+            transform: scale(1.08) rotateY(15deg);
+            box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+        }
+        .whatsapp-float i {
+            color: #ffffff !important;
+        }
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+            }
+        }
+        
+        /* Modern Navbar Styles */
+        .modern-brand-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2563eb; /* Fallback color */
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+        
+        .arabic-text {
+            font-family: 'Arial', sans-serif;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: -3px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+        
+        .modern-nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151 !important;
+            position: relative;
+            padding: 0.8rem 1.2rem !important;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0 2px;
+        }
+        
+        .modern-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .modern-nav-link:hover::before,
+        .modern-nav-link.active::before {
+            width: 80%;
+        }
+        
+        .modern-nav-link:hover,
+        .modern-nav-link.active {
+            color: #2563eb !important;
+        }
+        
+        .modern-dropdown {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .modern-dropdown-item {
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .modern-dropdown-item:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-left-color: #1d4ed8;
+            transform: translateX(5px);
+        }
+        
+        .modern-cta-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .modern-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .modern-cta-btn:hover::before {
+            left: 100%;
+        }
+        
+        .modern-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Navbar Styles */
+        @media (max-width: 768px) {
+            .modern-brand-text {
+                font-size: 1.5rem;
+            }
+            
+            .arabic-text {
+                font-size: 1rem;
+            }
+            
+            .modern-cta-btn {
+                margin-top: 10px;
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+            
+            .navbar-nav {
+                text-align: center;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 10px 15px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .modern-brand-text {
+                font-size: 1.3rem;
+            }
+            
+            .arabic-text {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Top Contact Bar Styles */
+        .container-fluid.bg-dark {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
+        }
+        
+        .container-fluid.bg-dark a {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluid.bg-dark a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Navbar Scroll Effect */
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Active navbar link styling */
+        .navbar-nav .nav-link.active {
+            color: #007bff !important;
+            font-weight: 600;
+        }
+        
+        .navbar-nav .nav-link.active:hover {
+            color: #0056b3 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div style="position:relative;display:flex;align-items:center;justify-content:center;width:5.2rem;height:5.2rem;">
+                <div class="spinner-border" style="width: 5.2rem; height: 5.2rem; color: #2563eb; border-color: #2563eb; border-width: 0.38em; position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;animation: spinner-rotate 1.1s linear infinite;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <img src="img/L3.png" alt="Talentra Logo" style="position:absolute;top:50%;left:50%;width:3.6rem;height:3.6rem;transform:translate(-50%,-50%);object-fit:contain;border-radius:50%;z-index:2;box-shadow:0 2px 12px #2563eb33;background:#fff;" />
+            </div>
+            <style>
+            @keyframes spinner-rotate {
+                100% { transform: rotate(360deg); }
+            }
+            </style>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Top Contact Bar Start -->
+        <div class="container-fluid bg-dark text-white py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="me-4">
+                                <i class="fa fa-phone-alt me-2"></i>
+                                <span>+(971) 56 380 7863</span>
+                            </div>
+                            <div class="me-4">
+                                <i class="fa fa-envelope me-2"></i>
+                                <span>info@talentra.com</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 text-end">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <span class="me-3">Follow Us:</span>
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Contact Bar End -->
+
+        <!-- Modern Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(37, 99, 235, 0.1); transition: all 0.3s ease; padding: 0.8rem 0;">
+            <div class="container">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/only logo.png" alt="Talentra Logo" style="height: 70px; width: auto; object-fit: contain; margin-right: 15px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div style="color:#2563eb;font-size:2rem;font-weight:900;font-family:Arial,sans-serif;line-height:1.1;margin-bottom:0;letter-spacing:1px;">TALENTRA</div>
+                        <span class="arabic-text">تالينترا</span>
+                    </div>
+                </a>
+                
+                <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="padding: 0.5rem;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto d-flex align-items-center">
+                        <a href="index.html" class="nav-item nav-link modern-nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link modern-nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link" data-bs-toggle="dropdown">Jobs</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="job-list.html" class="dropdown-item modern-dropdown-item">Job List</a>
+                                <a href="job-detail.html" class="dropdown-item modern-dropdown-item">Job Detail</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link active" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="pro services.html" class="dropdown-item modern-dropdown-item">PRO Services</a>
+                                <a href="countries.html" class="dropdown-item modern-dropdown-item">Countries We Serve</a>
+                                <a href="companies.html" class="dropdown-item modern-dropdown-item">Our Strategic Partners</a>
+                            </div>
+                        </div>
+                        <a href="BLOG.html" class="nav-item nav-link modern-nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link modern-nav-link">Contact</a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center ms-lg-3">
+                        <a href="Travisa/index.html" class="btn modern-cta-btn">
+                            <span>VISA SERVICES</span>
+                            <i class="fa fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Modern Navbar End -->
+
+
+
+        <!-- Animated Header Start -->
+        <!-- Animated Modern Header Start -->
+        <div class="container-xxl py-5 mb-5 animated-gradient-header position-relative" style="overflow:visible;">
+            <div class="header-animated-bg"></div>
+            <div class="header-gradient-border" style="position:absolute;inset:0;border-radius:2rem;pointer-events:none;z-index:2;border:4px solid;border-image:linear-gradient(120deg,#2563eb 0%,#60a5fa 100%) 1;opacity:0.8;box-shadow:0 0 32px 0 #2563eb33;"></div>
+            <div class="header-floating-shapes">
+                <svg width="120" height="120" class="floating-shape" style="left:5%;top:18%;opacity:0.18;"><circle cx="60" cy="60" r="55" fill="#2563eb"/></svg>
+                <svg width="80" height="80" class="floating-shape" style="right:10%;top:10%;opacity:0.13;"><rect width="80" height="80" rx="20" fill="#1d4ed8"/></svg>
+                <svg width="60" height="60" class="floating-shape" style="left:20%;bottom:10%;opacity:0.12;"><polygon points="30,5 55,55 5,55" fill="#60a5fa"/></svg>
+                <svg width="48" height="48" class="floating-shape" style="right:18%;bottom:18%;opacity:0.10;"><ellipse cx="24" cy="24" rx="22" ry="14" fill="#60a5fa"/></svg>
+                <svg width="36" height="36" class="floating-shape" style="left:12%;top:32%;opacity:0.09;"><rect width="36" height="36" rx="8" fill="#2563eb"/></svg>
+            </div>
+            <div class="header-glass-overlay position-absolute top-0 start-0 w-100 h-100" style="backdrop-filter: blur(24px); background: rgba(255,255,255,0.22); border-radius: 2rem; z-index:1; box-shadow: 0 8px 32px rgba(37,99,235,0.10);"></div>
+            <div class="container position-relative d-flex flex-row align-items-center justify-content-between" style="z-index:2;min-height:180px;">
+                <div class="company-header-logo me-4" style="display:flex;align-items:center;justify-content:flex-start;">
+                    <img src="img/whiteBG.png" alt="Talentra Logo" class="logo-3d-animated logo-3d-hover" style="height:220px;width:auto;object-fit:contain;border-radius:2.7rem;box-shadow:0 16px 64px 0 rgba(37,99,235,0.28),0 4px 24px #2563eb88,0 0px 0px 12px #60a5fa55;filter:drop-shadow(0 6px 32px #2563eb88) drop-shadow(0 0px 32px #60a5fa55);padding:0;transition:transform 0.5s cubic-bezier(.4,2,.6,1),box-shadow 0.3s;perspective:600px;">
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1" style="min-width:0;">
+                    <h1 class="display-4 fw-bold text-white text-shadow-glow mb-3 text-center" style="letter-spacing:2.5px; text-shadow: 0 6px 32px #2563eb99, 0 2px 8px #60a5fa99;">Our Strategic Partners</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb animated-breadcrumb justify-content-center mb-0" style="background:rgba(255,255,255,0.08); border-radius:1rem;">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:#e0e7ef;text-shadow:0 1px 4px #2563eb55;font-weight:500;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:#fff;font-weight:700;text-shadow:0 1px 4px #2563eb55;">Companies</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <style>
+                .header-gradient-border {
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 2rem;
+                    pointer-events: none;
+                    z-index: 3;
+                    border: 4px solid;
+                    border-image: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%) 1;
+                    opacity: 0.7;
+                    box-shadow: 0 0 32px 0 #2563eb33;
+                }
+                .logo-3d-animated {
+                    animation: logoPulseGlow 2.2s ease-in-out infinite alternate;
+                }
+                @keyframes logoPulseGlow {
+                    0% {
+                        box-shadow: 0 0 0px 0 #2563eb55, 0 8px 32px rgba(37,99,235,0.18);
+                        transform: scale(1.02) translateY(0);
+                    }
+                    50% {
+                        box-shadow: 0 0 24px 8px #2563eb88, 0 16px 48px rgba(37,99,235,0.22);
+                        transform: scale(1.07) translateY(-6px);
+                    }
+                    100% {
+                        box-shadow: 0 0 12px 4px #2563eb66, 0 12px 40px rgba(37,99,235,0.20);
+                        transform: scale(1.04) translateY(-3px);
+                    }
+                }
+                .logo-3d-hover:hover {
+                    animation-play-state: paused;
+                    transform: scale(1.18) rotateY(32deg) rotateX(18deg) skewY(-10deg) translateY(-18px) perspective(600px);
+                    box-shadow:0 48px 128px 0 rgba(37,99,235,0.38),0 12px 36px #00c6ff88,0 0px 0px 32px #60a5fa99;
+                    z-index:2;
+                }
+            </style>
+        </div>
+        <!-- Animated Modern Header End -->
+        <!-- Animated Header End -->
+
+
+        <!-- Companies We Are Merged With Start -->
+    <div class="container-xxl py-5 scroll-animate" data-animation="fade-up">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="section-title bg-white text-center text-primary px-3 wow bounceIn" data-wow-delay="0.1s">Our Strategic Partners</h6>
+                    <h1 class="mb-3 wow slideInDown" data-wow-delay="0.3s">Companies We Are Merged With</h1>
+                    <p class="mb-5 text-muted wow fadeInUp" data-wow-delay="0.5s">Providing comprehensive workforce solutions across white-collar and blue-collar industries globally</p>
+                </div>
+                
+                <!-- Company Cards with Enhanced Animations -->
+                <div class="row g-4">
+                    <!-- Row 1 - Middle East Oil & Gas -->
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Oil & Gas</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/5b3d0cd78bab8757568ba44d6dc2a41b.png" alt="Saudi Aramco">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Saudi Aramco</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Saudi Arabia
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Energy Sector Leader
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Oil & Gas</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/LOGO-SERBA-WEB-3.0_COLOR-11.png" alt="ADNOC">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">ADNOC Group</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>UAE
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Energy Innovation
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">Aviation</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/emi.png" alt="Emirates">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Emirates Airlines</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>UAE
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Premium Aviation
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-success text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-success px-3 py-1">Healthcare</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Mayo-Clinic-Logo-2001-1024x623-1.webp" alt="Mayo Clinic">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Mayo Clinic</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-success px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Medical Excellence
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2 - Construction & Manufacturing -->
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Construction</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Emaar-Properties-Logo.png" alt="Emaar">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Emaar Properties</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>UAE
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Real Estate Giant
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-warning text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-warning px-3 py-1">Manufacturing</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/CAT-Emblem.png" alt="Caterpillar">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Caterpillar Inc</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Heavy Machinery
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">Banking</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Logo-della-JP-Morgan-Chase.png" alt="JPMorgan">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">JPMorgan Chase</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Financial Services
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-warning text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-warning px-3 py-1">Logistics</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/DHL-Emblema (1).png" alt="DHL">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">DHL Express</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Germany
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-warning px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Global Delivery
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 - Technology & Finance -->
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">Technology</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/new micro.png" alt="Microsoft">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Microsoft Corp</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Software Innovation
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">Banking</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/rbc new.png" alt="RBC">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Royal Bank of Canada</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Canada
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Canadian Banking
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Mining</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/bhp-logo-png-1.png" alt="BHP">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">BHP Group</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Australia
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Mining Operations
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-success text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-success px-3 py-1">Pharmaceuticals</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/company-logo-10.png" alt="Pfizer">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Pfizer Inc</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-success px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Drug Development
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 - Additional Industries -->
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-warning text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-warning px-3 py-1">Retail</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Walmart-Logo-New-500x281.png" alt="Walmart">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Walmart Inc</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-warning px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Global Retail
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-warning text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-warning px-3 py-1">Hospitality</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Marriott-International-Logo-1993-2016.png" alt="Marriott">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Marriott International</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-warning px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Luxury Hotels
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Automotive</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/ford2.png" alt="Ford">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Ford Motor Company</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Auto Manufacturing
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">Consulting</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/accenture-logo.webp" alt="Accenture">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Accenture</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Global
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-user-tie me-2"></i>White Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Digital Consulting
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 - New Additional Companies -->
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-success text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-success px-3 py-1">Electric Vehicles</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Wells-Fargo-Emblem.png" alt="Wells Fargo & Company">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Wells Fargo & Company</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-success px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>EV Innovation
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-info text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-info px-3 py-1">E-commerce</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/amazon-logo-transparent-fulfillment-8.png" alt="Amazon">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Amazon</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-info px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>E-commerce & Cloud
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-primary text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-primary px-3 py-1">Aerospace</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Boeing-Logo.png" alt="Boeing">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">Boeing Company</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-secondary px-3 py-2 rounded-pill">
+                                        <i class="fas fa-hard-hat me-2"></i>Blue Collar
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Aircraft Manufacturing
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="fade-up">
+                        <div class="company-card modern-card bg-white rounded-3 shadow-lg border-0 h-100">
+                            <div class="card-header-section bg-gradient-warning text-white text-center p-3 rounded-top">
+                                <div class="company-category-badge">
+                                    <span class="badge bg-light text-warning px-3 py-1">Logistics</span>
+                                </div>
+                            </div>
+                            <div class="card-body-section text-center p-4">
+                                <div class="company-logo-container mx-auto mb-3">
+                                    <img class="img-fluid company-logo" src="img/LOGO/Fedex-Logo-PNG-Clipart.png" alt="FedEx">
+                                </div>
+                                <h5 class="company-name fw-bold mb-2">FedEx Corporation</h5>
+                                <p class="company-location text-muted mb-3">
+                                    <i class="fas fa-map-marker-alt me-2"></i>USA
+                                </p>
+                                <div class="job-type-section">
+                                    <span class="job-badge badge bg-warning px-3 py-2 rounded-pill">
+                                        <i class="fas fa-users me-2"></i>Mixed Jobs
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-footer-section bg-light p-3 text-center rounded-bottom">
+                                <small class="text-muted">
+                                    <i class="fas fa-briefcase me-1"></i>Express Delivery
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Categories Legend with Animation -->
+                <div class="row mt-5">
+                    <div class="col-12 wow fadeInUp" data-wow-delay="2.1s">
+                        <div class="bg-light p-4 rounded legend-section">
+                            <h5 class="text-center mb-4 wow pulse" data-wow-delay="2.3s">Our Expertise Across Industries</h5>
+                            <div class="row text-center">
+                                <div class="col-md-4 mb-3 wow slideInLeft" data-wow-delay="2.4s">
+                                    <span class="badge bg-info fs-6 p-3 mb-2 category-badge">White Collar Jobs</span>
+                                    <p class="small mb-0 text-muted">Technology, Finance, Healthcare, Aviation, Consulting, Pharmaceuticals</p>
+                                </div>
+                                <div class="col-md-4 mb-3 wow slideInUp" data-wow-delay="2.5s">
+                                    <span class="badge bg-secondary fs-6 p-3 mb-2 category-badge">Blue Collar Jobs</span>
+                                    <p class="small mb-0 text-muted">Oil & Gas, Construction, Manufacturing, Mining, Automotive, Aerospace</p>
+                                </div>
+                                <div class="col-md-4 mb-3 wow slideInRight" data-wow-delay="2.6s">
+                                    <span class="badge bg-warning fs-6 p-3 mb-2 category-badge">Mixed Industries</span>
+                                    <p class="small mb-0 text-muted">Logistics, Retail, Hospitality, E-commerce, Electric Vehicles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custom CSS for Enhanced Animations -->
+        <style>
+            /* Modern Company Card Design */
+            .modern-card {
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(0,0,0,0.08) !important;
+                backdrop-filter: blur(10px);
+            }
+            
+            .modern-card:hover {
+                transform: translateY(-15px) scale(1.02);
+                box-shadow: 0 25px 50px rgba(0,123,255,0.15) !important;
+                border: 1px solid rgba(0,123,255,0.2) !important;
+            }
+            
+            .card-header-section {
+                background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-primary-dark, #0056b3) 100%) !important;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .card-header-section::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+                transform: rotate(45deg);
+                transition: all 0.6s ease;
+                opacity: 0;
+            }
+            
+            .modern-card:hover .card-header-section::before {
+                opacity: 1;
+                animation: shimmer 1.5s ease-in-out;
+            }
+            
+            @keyframes shimmer {
+                0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+                100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            }
+            
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            }
+            
+            .bg-gradient-info {
+                background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);
+            }
+            
+            .bg-gradient-success {
+                background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            }
+            
+            .bg-gradient-warning {
+                background: linear-gradient(135deg, #ffc107 0%, #d39e00 100%);
+            }
+            
+            .company-category-badge {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .company-logo-container {
+                width: 180px;
+                height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                border-radius: 50%;
+                padding: 20px;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                border: 3px solid #ffffff;
+            }
+            
+            .company-logo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: all 0.4s ease;
+                filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+            }
+            
+            .modern-card:hover .company-logo {
+                transform: scale(1.08);
+                filter: drop-shadow(0 4px 15px rgba(0,0,0,0.2));
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s;
+            }
+            
+            .modern-card:hover .company-logo-container {
+                transform: scale(1.03);
+                box-shadow: 0 15px 35px rgba(0,123,255,0.15);
+                background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+            }
+            
+            .company-name {
+                color: #2c3e50;
+                transition: all 0.3s ease;
+                font-size: 1.1rem;
+            }
+            
+            .modern-card:hover .company-name {
+                color: #007bff;
+                transform: scale(1.05);
+            }
+            
+            .company-location {
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+            
+            .job-badge {
+                font-size: 0.85rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            }
+            
+            .modern-card:hover .job-badge {
+                transform: scale(1.1) translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            }
+            
+            .card-footer-section {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+                border-top: 1px solid rgba(0,0,0,0.05);
+            }
+            
+            /* Icon Animations */
+            .fas {
+                transition: all 0.3s ease;
+            }
+            
+            .modern-card:hover .fas {
+                transform: scale(1.1);
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .company-logo-container {
+                    width: 150px;
+                    height: 150px;
+                    padding: 15px;
+                }
+                
+                .company-name {
+                    font-size: 1rem;
+                }
+                
+                .job-badge {
+                    font-size: 0.8rem;
+                }
+            }
+            
+            /* Legacy styles cleanup */
+            .company-card {
+                transition: all 0.4s ease;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .company-card:hover {
+                transform: scale(1.04);
+                box-shadow: 0 15px 35px rgba(0,123,255,0.15);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+            }
+            
+            .company-logo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: all 0.3s ease;
+            }
+            
+            .company-card:hover .company-logo {
+                transform: scale(1.08);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .company-card:hover .company-logo-container {
+                background: linear-gradient(45deg, #007bff, #0056b3);
+                transform: scale(1.05);
+            }
+            
+            .company-name {
+                transition: all 0.3s ease;
+            }
+            
+            .company-card:hover .company-name {
+                color: #007bff;
+                transform: scale(1.05);
+            }
+            
+            .job-badge {
+                transition: all 0.3s ease;
+                animation: pulse-badge 2s infinite;
+            }
+            
+            .company-card:hover .job-badge {
+                transform: scale(1.1);
+                animation: none;
+            }
+            
+            @keyframes pulse-badge {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.7; }
+            }
+            
+            .legend-section {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border: 1px solid rgba(0,123,255,0.1);
+                transition: all 0.3s ease;
+            }
+            
+            .legend-section:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+            
+            .category-badge {
+                transition: all 0.3s ease;
+                border-radius: 25px;
+            }
+            
+            .category-badge:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+            
+            /* Floating animation for random cards */
+            .company-card:nth-child(odd) {
+                animation: float-gentle 6s ease-in-out infinite;
+            }
+            
+            .company-card:nth-child(even) {
+                animation: float-gentle 6s ease-in-out infinite reverse;
+            }
+            
+            @keyframes float-gentle {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+            }
+            
+            /* Navbar Brand Text Styling */
+            .navbar-brand-text {
+                background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 800;
+                font-size: 2.2rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                position: relative;
+                transition: all 0.4s ease;
+                font-family: 'Inter', sans-serif;
+                text-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+            }
+            
+            .navbar-brand-text::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                transform: scale(1.1);
+            }
+            
+            .navbar-brand:hover .navbar-brand-text {
+                transform: translateY(-2px) scale(1.05);
+                filter: drop-shadow(0 4px 8px rgba(37, 211, 102, 0.4));
+            }
+            
+            .navbar-brand:hover .navbar-brand-text::before {
+                opacity: 0.3;
+            }
+            
+            @keyframes brand-glow {
+                0%, 100% {
+                    filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.3));
+                }
+                50% {
+                    filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.6));
+                }
+            }
+            
+            .navbar-brand-text {
+                animation: brand-glow 3s ease-in-out infinite;
+            }
+            
+            /* Responsive brand text */
+            @media (max-width: 768px) {
+                .navbar-brand-text {
+                    font-size: 1.8rem;
+                    letter-spacing: 1px;
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .navbar-brand-text {
+                    font-size: 1.5rem;
+                    letter-spacing: 0.5px;
+                }
+            }
+        </style>
+        
+        <!-- Footer Animation Styles -->
+        <style>
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid #007bff;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+            animation: footer-shimmer 8s infinite;
+        }
+
+        @keyframes footer-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .footer-section {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9) !important;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,123,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .footer-section:hover::before {
+            left: 100%;
+        }
+
+        .footer-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,1) !important;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+            border-color: rgba(0,123,255,0.3);
+        }
+
+        .footer-title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            transition: width 0.5s ease;
+        }
+
+        .footer-section:hover .footer-title::after {
+            width: 100%;
+        }
+
+        .footer-title:hover {
+            color: #007bff !important;
+            transform: scale(1.05);
+        }
+
+        .footer-link {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0.5rem;
+            margin-left: -0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .footer-link:hover {
+            color: #007bff !important;
+            transform: translateX(10px);
+            border-left-color: #007bff;
+            background: rgba(0,123,255,0.05);
+        }
+
+        .footer-link:hover::before {
+            left: 0;
+        }
+
+        .footer-link i {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .footer-link:hover i {
+            transform: translateX(5px) scale(1.2);
+            opacity: 1;
+            color: #007bff;
+        }
+
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item:hover {
+            background: rgba(0,123,255,0.1);
+            transform: translateX(8px);
+        }
+
+        .contact-icon {
+            transition: all 0.3s ease;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.3) rotate(360deg);
+            color: #0056b3;
+        }
+
+        .social-links {
+            gap: 0.5rem;
+        }
+
+        .social-btn {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: #007bff !important;
+            border: 2px solid #007bff !important;
+            color: #ffffff !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+            color: #ffffff !important;
+        }
+
+        .social-btn:hover::before {
+            width: 80px;
+            height: 80px;
+        }
+
+        .social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+        .social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+        .social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+        .social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+        .social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+        .social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+        .social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+        .social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+        .social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+        .social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .company-logo {
+            width: 180px;
+            height: 200px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .copyright {
+            background: #007bff !important;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            margin: 0 !important;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            transition: all 0.3s ease;
+        }
+
+        .copyright .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .copyright .row {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+
+        .copyright .col-md-6 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        .copyright-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+
+        .copyright-link:hover {
+            color: #f8f9fa !important;
+            border-bottom-color: #f8f9fa;
+            transform: translateY(-1px);
+        }
+
+        .footer-menu-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.2rem;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .footer-menu-link:hover {
+            color: #007bff !important;
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive footer adjustments */
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+            
+            .footer-section:hover {
+                transform: translateY(-5px);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-menu {
+                text-align: center;
+            }
+            
+            .footer-menu-link {
+                display: inline-block;
+                margin: 0.2rem;
+            }
+            
+            .company-logo {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .logo-container {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+            }
+        }
+        
+        /* Advanced Scroll Animation System */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-animate.animate-in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-animate[data-animation="fade-up"] {
+            transform: translateY(60px);
+        }
+        
+        .scroll-animate[data-animation="fade-up"].animate-in-view {
+            transform: translateY(0);
+        }
+        
+        .scroll-animate[data-animation="slide-left"] {
+            transform: translateX(-60px);
+        }
+        
+        .scroll-animate[data-animation="slide-left"].animate-in-view {
+            transform: translateX(0);
+        }
+        
+        .scroll-animate[data-animation="slide-right"] {
+            transform: translateX(60px);
+        }
+        
+        .scroll-animate[data-animation="slide-right"].animate-in-view {
+            transform: translateX(0);
+        }
+        
+        .scroll-animate[data-animation="zoom-in"] {
+            transform: scale(0.8);
+        }
+        
+        .scroll-animate[data-animation="zoom-in"].animate-in-view {
+            transform: scale(1);
+        }
+        
+        /* Parallax Elements */
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+        }
+        
+        .parallax-bg {
+            transition: transform 0.1s ease-out;
+        }
+        
+        /* Text Reveal Animation */
+        .text-reveal {
+            overflow: hidden;
+        }
+        
+        .word-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .animate-in-view .word-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .animate-in-view .word-reveal:nth-child(1) { transition-delay: 0.1s; }
+        .animate-in-view .word-reveal:nth-child(2) { transition-delay: 0.2s; }
+        .animate-in-view .word-reveal:nth-child(3) { transition-delay: 0.3s; }
+        .animate-in-view .word-reveal:nth-child(4) { transition-delay: 0.4s; }
+        .animate-in-view .word-reveal:nth-child(5) { transition-delay: 0.5s; }
+        
+        /* Staggered Animation Delays */
+        .scroll-animate[data-delay="0.1"] { transition-delay: 0.1s; }
+        .scroll-animate[data-delay="0.2"] { transition-delay: 0.2s; }
+        .scroll-animate[data-delay="0.3"] { transition-delay: 0.3s; }
+        .scroll-animate[data-delay="0.4"] { transition-delay: 0.4s; }
+        .scroll-animate[data-delay="0.5"] { transition-delay: 0.5s; }
+        .scroll-animate[data-delay="0.6"] { transition-delay: 0.6s; }
+        
+        /* Navbar Scroll Effect */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-animate,
+            .parallax-element,
+            .parallax-bg,
+            .word-reveal {
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+        </style>
+        <!-- Companies We Are Merged With End -->
+
+        
+        <!-- Footer Start -->
+        <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Company</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Quick Links</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Contact</h5>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-envelope me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="d-flex pt-2 social-links">
+                                        <a class="btn btn-outline-primary btn-social social-btn" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="logo-container">
+                                        <img src="img/only logo.png" alt="Talentra Logo" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="copyright wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="container-fluid px-0">
+                        <div class="row mx-0">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                            &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy <span style="font-family: 'Arial', sans-serif; color: #f8f9fa; font-weight: 500; font-size: 1.1em;">تالينترا</span></a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom copyright-link" href="">SHAHABAZ PASHA SN</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end px-3">
+                            <div class="footer-menu">
+                                <a href="" class="footer-menu-link text-secondary">Home</a>
+                                <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                                <a href="" class="footer-menu-link text-secondary">Help</a>
+                                <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 50px; height: 50px; background: #007bff !important; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,123,255,0.4); transition: all 0.3s ease;"><i class="bi bi-arrow-up"></i></a>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/971563807863" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                width: 65px;
+                height: 65px;
+                bottom: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 38px;
+                box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+                animation: whatsapp-pulse 1.5s infinite;
+                border: 3px solid #fff;
+                cursor: pointer;
+                perspective: 400px;
+            }
+            .whatsapp-float:hover {
+                background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+                color: #fff;
+                transform: scale(1.08) rotateY(15deg);
+                box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+            }
+            @keyframes whatsapp-pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+            }
+        </style>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <!-- Removed unused wow.js, easing.js, waypoints.js, owl.carousel.min.js -->
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+            <!-- Spinner Removal Script -->
+            <script>
+                window.addEventListener('load', function() {
+                    var spinner = document.getElementById('spinner');
+                    if (spinner) {
+                        spinner.classList.remove('show');
+                    }
+                });
+            </script>
+    
+    
+    <!-- Advanced Scroll Animations Script -->
+    <script>
+        // Advanced Scroll Animation System
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Scroll-triggered Animation Observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            // Create intersection observer with error handling
+            const scrollAnimationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    try {
+                        if (entry.isIntersecting && !entry.target.classList.contains('animate-in-view')) {
+                            entry.target.classList.add('animate-in-view');
+                            // Add staggered delay for child elements
+                            const children = entry.target.querySelectorAll('.stagger-child');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.classList.add('animate-in-view');
+                                }, index * 100);
+                            });
+                        }
+                    } catch (error) {
+                        console.log('Animation error:', error);
+                    }
+                });
+            }, observerOptions);
+            
+            // 2. Apply scroll animations to elements that don't already have scroll-animate class
+            const animatedElements = document.querySelectorAll(`
+                .company-card:not(.scroll-animate), 
+                .partner-logo:not(.scroll-animate), 
+                .container-xxl:not(.scroll-animate)
+            `);
+            
+            animatedElements.forEach(el => {
+                el.classList.add('scroll-animate');
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // Also observe existing scroll-animate elements
+            const existingScrollElements = document.querySelectorAll('.scroll-animate');
+            existingScrollElements.forEach(el => {
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // 3. Throttled Parallax Scroll Effects
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax-bg');
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+                
+                // Navbar scroll effect
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    if (scrolled > 100) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                }
+                
+                ticking = false;
+            }
+            
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+            
+            // 4. Text Reveal Animation
+            const textElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+            textElements.forEach(element => {
+                if (element.textContent.trim()) {
+                    element.classList.add('text-reveal');
+                    const words = element.textContent.split(' ');
+                    element.innerHTML = words.map(word => 
+                        `<span class="word-reveal">${word}</span>`
+                    ).join(' ');
+                    scrollAnimationObserver.observe(element);
+                }
+            });
+            
+            // 5. Parallax Elements Animation
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            parallaxElements.forEach(element => {
+                scrollAnimationObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>

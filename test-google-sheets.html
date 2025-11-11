@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Google Sheets Integration</title>
+</head>
+<body>
+    <h2>Google Sheets Test</h2>
+    <button onclick="testSubmission()">Test Submission</button>
+    <div id="result"></div>
+
+    <script>
+        function testSubmission() {
+            const googleSheetURL = 'https://script.google.com/macros/s/AKfycby6jgWxMVtDRw8nMmWGKCNXywmnUxPcwsAA4D8krH8SOqWd2HVpw4LPCABZFMfxspsSNg/exec';
+            
+            const testData = {
+                timestamp: new Date().toLocaleString(),
+                name: 'Test User',
+                email: 'test@example.com',
+                portfolio: 'https://test.com',
+                coverLetter: 'This is a test cover letter for Google Sheets integration.',
+                fileName: 'test-resume.pdf',
+                fileSize: '2.5MB',
+                jobPosition: 'Software Engineer',
+                jobLocation: 'software-engineer',
+                privacyAgreed: 'Yes'
+            };
+            
+            console.log('Sending test data:', testData);
+            
+            fetch(googleSheetURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(testData)
+            })
+            .then(() => {
+                document.getElementById('result').innerHTML = '<p style="color: green;">✅ Test submission sent! Check your Google Sheet.</p>';
+                console.log('Test submission successful');
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = '<p style="color: red;">❌ Test failed: ' + error.message + '</p>';
+                console.error('Test submission failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>

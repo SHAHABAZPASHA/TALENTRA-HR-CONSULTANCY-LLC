@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Project Manager - Talentra Job Portal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Floating Button Styles -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 38px;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+            animation: whatsapp-pulse 1.5s infinite;
+            border: 3px solid #fff;
+            cursor: pointer;
+            perspective: 400px;
+        }
+        .whatsapp-float:hover {
+            background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+            color: #fff;
+            transform: scale(1.08) rotateY(15deg);
+            box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+        }
+        .whatsapp-float i {
+            color: #ffffff !important;
+        }
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+            }
+        }
+        
+        /* Navbar Brand Text Styling */
+        .navbar-brand-text {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 50%, #0d6d57 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+            text-shadow: 0 2px 4px rgba(37, 211, 102, 0.3);
+        }
+        
+        .navbar-brand-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 50%, #0d6d57 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            transform: scale(1.1);
+        }
+        
+        .navbar-brand:hover .navbar-brand-text {
+            transform: translateY(-2px) scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(37, 211, 102, 0.4));
+        }
+        
+        .navbar-brand:hover .navbar-brand-text::before {
+            opacity: 0.3;
+        }
+        
+        @keyframes brand-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.6));
+            }
+        }
+        
+        .navbar-brand-text {
+            animation: brand-glow 3s ease-in-out infinite;
+        }
+        
+        /* Footer Animation Styles */
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid #007bff;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+            animation: footer-shimmer 8s infinite;
+        }
+        
+        @keyframes footer-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .footer-section {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9) !important;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,123,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .footer-section:hover::before {
+            left: 100%;
+        }
+        
+        .footer-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,1) !important;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+            border-color: rgba(0,123,255,0.3);
+        }
+        
+        .footer-title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            transition: width 0.5s ease;
+        }
+        
+        .footer-section:hover .footer-title::after {
+            width: 100%;
+        }
+        
+        .footer-title:hover {
+            color: #007bff !important;
+            transform: scale(1.05);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0.5rem;
+            margin-left: -0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .footer-link:hover {
+            color: #007bff !important;
+            transform: translateX(10px);
+            border-left-color: #007bff;
+            background: rgba(0,123,255,0.05);
+        }
+        
+        .footer-link:hover::before {
+            left: 0;
+        }
+        
+        .footer-link i {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .footer-link:hover i {
+            transform: translateX(5px) scale(1.2);
+            opacity: 1;
+            color: #007bff;
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item:hover {
+            background: rgba(0,123,255,0.1);
+            transform: translateX(8px);
+        }
+        
+        .contact-icon {
+            transition: all 0.3s ease;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item:hover .contact-icon {
+            transform: scale(1.3) rotate(360deg);
+            color: #0056b3;
+        }
+        
+        .social-links {
+            gap: 0.5rem;
+        }
+        
+        .social-btn {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: #007bff !important;
+            border: 2px solid #007bff !important;
+            color: #ffffff !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+            color: #ffffff !important;
+        }
+        
+        .social-btn:hover::before {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+        .social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+        .social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+        .social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+        .social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+        .social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+        .social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+        .social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+        .social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+        .social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+        
+        .copyright {
+            background: #007bff !important;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            margin: 0 !important;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            transition: all 0.3s ease;
+        }
+        
+        .copyright .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        .copyright .row {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+        
+        .copyright .col-md-6 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        
+        .copyright-text {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+        }
+        
+        .copyright:hover .copyright-text {
+            transform: translateY(-2px);
+        }
+        
+        .copyright-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+        
+        .copyright-link:hover {
+            color: #f8f9fa !important;
+            border-bottom-color: #f8f9fa;
+            transform: translateY(-1px);
+        }
+        
+        .footer-menu-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.2rem;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        .footer-menu-link:hover {
+            color: #007bff !important;
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+        
+        .company-logo {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            filter: brightness(1.1);
+        }
+        
+        .logo-container:hover .company-logo {
+            transform: scale(1.1) rotate(5deg);
+            filter: brightness(1.2);
+        }
+        
+        /* Responsive footer adjustments */
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 2rem;
+                padding: 1rem;
+                min-height: auto;
+            }
+            
+            .footer-section:hover {
+                transform: translateY(-5px);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-menu {
+                text-align: center;
+            }
+            
+            .footer-menu-link {
+                display: inline-block;
+                margin: 0.2rem;
+            }
+            
+            .company-logo {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <img src="img/about - Copy.png" alt="Talentra Logo" style="height: 80px; width: auto; object-fit: contain; margin-right: 15px;">
+                <h1 class="m-0 navbar-brand-text">TALENTRA</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Jobs</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="job-list.html" class="dropdown-item">Job List</a>
+                            <a href="job-detail.html" class="dropdown-item">Software Engineer</a>
+                            <a href="job-detail-hr-manager.html" class="dropdown-item">HR Manager</a>
+                            <a href="job-detail-project-manager.html" class="dropdown-item active">Project Manager</a>
+                            <a href="job-detail-data-scientist.html" class="dropdown-item">Data Scientist</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SERVICES</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="category.html" class="dropdown-item">Job Category</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="countries.html" class="dropdown-item">Countries We Serve</a>
+                            <a href="companies.html" class="dropdown-item">Companies We Serve</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="Travisa/index.html" class="btn rounded-0 py-4 px-lg-5 d-none d-lg-block" style="background: linear-gradient(135deg, #25d366 60%, #128c7e 100%); color: white; border: none; font-weight: 600;">VISA SERVICES<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Project Manager</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Jobs</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Project Manager</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Job Detail Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-5">
+                            <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-4.jpg" alt="" style="width: 80px; height: 80px;">
+                            <div class="text-start ps-4">
+                                <h3 class="mb-3">Project Manager</h3>
+                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Dubai, Middle East</span>
+                                <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
+                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$4000 - $6000</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h4 class="mb-3">Job description</h4>
+                            <p>We are seeking an experienced Project Manager to join BuildRight, a leading construction and infrastructure development company in Dubai. You will be responsible for planning, executing, and delivering complex construction projects across the Middle East region. This role offers an exceptional opportunity to work on landmark projects, manage diverse teams, and contribute to the rapid development of the region's infrastructure while maintaining the highest standards of quality, safety, and efficiency.</p>
+                            <h4 class="mb-3">Responsibility</h4>
+                            <p>As a Project Manager at BuildRight, you will lead multimillion-dollar construction projects from conception to completion, ensuring successful delivery within scope, time, and budget.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Develop comprehensive project plans, timelines, and budgets for construction projects</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Coordinate and manage cross-functional teams including engineers, architects, contractors, and suppliers</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Monitor project progress, identify risks, and implement mitigation strategies</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Ensure compliance with safety regulations, building codes, and quality standards</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Manage stakeholder relationships and provide regular project updates to senior management</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Oversee procurement processes and vendor management</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Lead project meetings, prepare detailed reports, and maintain project documentation</li>
+                            </ul>
+                            <h4 class="mb-3">Qualifications</h4>
+                            <p>We are looking for a results-driven project management professional with extensive experience in construction and infrastructure projects.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Bachelor's degree in Civil Engineering, Construction Management, or related field</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>7+ years of project management experience in construction or infrastructure development</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>PMP, PRINCE2, or equivalent project management certification required</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Experience with construction management software (Primavera P6, MS Project, AutoCAD)</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Strong knowledge of UAE building codes, safety regulations, and construction standards</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Excellent leadership, communication, and problem-solving skills</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Proven track record of delivering projects on time and within budget</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Fluency in English; Arabic language skills preferred</li>
+                            </ul>
+                        </div>
+        
+                        <div class="">
+                            <h4 class="mb-4">Apply For The Job</h4>
+                            <div id="form-messages"></div>
+                            <form id="job-application-form" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" id="applicant-name" class="form-control" placeholder="Your Name" required>
+                                        <div class="invalid-feedback">Please provide your full name.</div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" id="applicant-email" class="form-control" placeholder="Your Email" required>
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="url" id="portfolio-website" class="form-control" placeholder="Portfolio Website (Optional)">
+                                        <div class="invalid-feedback">Please provide a valid website URL.</div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="file" id="resume-file" class="form-control bg-white" accept=".pdf,.doc,.docx" required>
+                                        <div class="invalid-feedback">Please upload your resume (PDF, DOC, or DOCX).</div>
+                                        <small class="text-muted">Max file size: 5MB. Accepted formats: PDF, DOC, DOCX</small>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea id="cover-letter" class="form-control" rows="5" placeholder="Cover Letter" required></textarea>
+                                        <div class="invalid-feedback">Please provide a cover letter (minimum 50 characters).</div>
+                                        <small class="text-muted"><span id="char-count">0</span>/1000 characters</small>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="privacy-agreement" required>
+                                            <label class="form-check-label" for="privacy-agreement">
+                                                I agree to the <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of Service</a>
+                                            </label>
+                                            <div class="invalid-feedback">You must agree to our privacy policy and terms.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-apply w-100" type="submit" id="submit-btn">
+                                            <span class="btn-text">Apply Now</span>
+                                            <span class="btn-spinner d-none">
+                                                <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                                Submitting...
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Job Summary</h4>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Published On: 05 Nov, 2024</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Vacancy: 1 Position</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Job Nature: Full Time</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Salary: $4000 - $6000</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Location: Dubai, Middle East</p>
+                            <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Application Deadline: 05 Feb, 2025</p>
+                        </div>
+                        <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Company Detail</h4>
+                            <p class="m-0">BuildRight is a premier construction and infrastructure development company based in Dubai, specializing in large-scale commercial, residential, and infrastructure projects across the Middle East. We are committed to delivering world-class construction solutions while maintaining the highest standards of safety, quality, and innovation. Join our team and be part of building the future of the region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Job Detail End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Company</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Quick Links</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Contact</h5>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i>+012 345 67890</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-envelope me-3 contact-icon"></i>info@example.com</p>
+                                    </div>
+                                    <div class="d-flex pt-2 social-links">
+                                        <a class="btn btn-outline-primary btn-social social-btn" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="logo-container">
+                                        <img src="img/about - Copy.png" alt="Talentra Logo" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="copyright wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="container-fluid px-0">
+                        <div class="row mx-0">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                            &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom copyright-link" href="">SHAHABAZ PASHA SN</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end px-3">
+                            <div class="footer-menu">
+                                <a href="" class="footer-menu-link text-secondary">Home</a>
+                                <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                                <a href="" class="footer-menu-link text-secondary">Help</a>
+                                <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/971563807863" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                width: 65px;
+                height: 65px;
+                bottom: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 38px;
+                box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+                animation: whatsapp-pulse 1.5s infinite;
+                border: 3px solid #fff;
+                cursor: pointer;
+                perspective: 400px;
+            }
+            .whatsapp-float:hover {
+                background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+                color: #fff;
+                transform: scale(1.08) rotateY(15deg);
+                box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+            }
+            @keyframes whatsapp-pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+            }
+        </style>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

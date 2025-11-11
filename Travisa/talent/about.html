@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Talentra HR Consultancy llc</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Removed unused animation and owlcarousel libraries -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Animated Gradient Header Styles (copied from job-list.html) -->
+    <style>
+    .animated-gradient-header {
+        background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%);
+        border-radius: 2rem;
+        box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+        position: relative;
+        overflow: visible;
+        min-height: 320px;
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+        z-index: 1;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+    }
+    .header-animated-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%);
+        opacity: 0.95;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+        border-radius: 2rem;
+    }
+    @keyframes headerGradientFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+    </style>
+<script>
+// Ensure spinner is removed on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+        spinner.classList.remove('show');
+        spinner.style.display = 'none';
+    }
+});
+</script>
+</head>
+    <!-- Navbar & Dropdown Styles from index.html for consistency -->
+    <style>
+        .dropdown-toggle::after {
+            display: inline-block !important;
+            margin-left: 0.255em !important;
+            vertical-align: 0.255em !important;
+            content: "" !important;
+            border-top: 0.3em solid !important;
+            border-right: 0.3em solid transparent !important;
+            border-bottom: 0 !important;
+            border-left: 0.3em solid transparent !important;
+        }
+        .dropdown-toggle:empty::after {
+            margin-left: 0 !important;
+        }
+        .navbar-nav .dropdown-toggle::after {
+            color: inherit !important;
+            opacity: 0.8 !important;
+        }
+        .navbar-nav .dropdown-toggle:hover::after {
+            opacity: 1 !important;
+        }
+        .arabic-text {
+            font-family: 'Arial', sans-serif;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: -3px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+        .modern-nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151 !important;
+            position: relative;
+            padding: 0.8rem 1.2rem !important;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 8px;
+        }
+        .modern-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .modern-nav-link:hover::before,
+        .modern-nav-link.active::before {
+            width: 80%;
+        }
+        .modern-nav-link:hover,
+        .modern-nav-link.active {
+            color: #2563eb !important;
+        }
+        .modern-dropdown {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .modern-dropdown-item {
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .modern-dropdown-item:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-left-color: #1d4ed8;
+            transform: translateX(5px);
+        }
+        .modern-cta-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .modern-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        .modern-cta-btn:hover::before {
+            left: 100%;
+        }
+        .modern-cta-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        .container-fluid.bg-dark {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
+        }
+        .container-fluid.bg-dark a {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .container-fluid.bg-dark a:hover {
+            color: #60a5fa;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-nav .nav-link.active {
+            color: #2563eb !important;
+            font-weight: 600;
+        }
+        .navbar-nav .nav-link.active:hover {
+            color: #1d4ed8 !important;
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div style="position:relative;display:flex;align-items:center;justify-content:center;width:5.2rem;height:5.2rem;">
+                <div class="spinner-border" style="width: 5.2rem; height: 5.2rem; color: #2563eb; border-color: #2563eb; border-width: 0.38em; position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;animation: spinner-rotate 1.1s linear infinite;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <img src="img/only logo.png" alt="Talentra Logo" style="position:absolute;top:50%;left:50%;width:3.6rem;height:3.6rem;transform:translate(-50%,-50%);object-fit:contain;border-radius:50%;z-index:2;box-shadow:0 2px 12px #2563eb33;background:#fff;" />
+            </div>
+            <style>
+            @keyframes spinner-rotate {
+                100% { transform: rotate(360deg); }
+            }
+            </style>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Top Contact Bar Start -->
+        <div class="container-fluid bg-dark text-white py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="me-4">
+                                <i class="fa fa-phone-alt me-2"></i>
+                                <span>+(971) 56 380 7863</span>
+                            </div>
+                            <div class="me-4">
+                                <i class="fa fa-envelope me-2"></i>
+                                <span>info@talentra.com</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12 text-end">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <span class="me-3">Follow Us:</span>
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Contact Bar End -->
+
+        <!-- Modern Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(37, 99, 235, 0.1); transition: all 0.3s ease; padding: 0.8rem 0;">
+            <div class="container">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/only logo.png" alt="Talentra Logo" style="height: 70px; width: auto; object-fit: contain; margin-right: 15px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div style="color:#2563eb;font-size:2rem;font-weight:900;font-family:Arial,sans-serif;line-height:1.1;margin-bottom:0;letter-spacing:1px;">TALENTRA</div>
+                        <span class="arabic-text">تالينترا</span>
+                    </div>
+                </a>
+                
+                <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="padding: 0.5rem;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto d-flex align-items-center">
+                        <a href="index.html" class="nav-item nav-link modern-nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link modern-nav-link active">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link" data-bs-toggle="dropdown">Jobs</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="job-list.html" class="dropdown-item modern-dropdown-item">Job List</a>
+                                <a href="job-detail.html" class="dropdown-item modern-dropdown-item">Job Detail</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="pro services.html" class="dropdown-item modern-dropdown-item">PRO Services</a>
+                                <a href="countries.html" class="dropdown-item modern-dropdown-item">Countries We Serve</a>
+                                <a href="companies.html" class="dropdown-item modern-dropdown-item">Our Strategic Partners</a>
+                            </div>
+                        </div>
+                        <a href="BLOG.html" class="nav-item nav-link modern-nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link modern-nav-link">Contact</a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center ms-lg-3">
+                        <a href="Travisa/index.html" class="btn modern-cta-btn">
+                            <span>VISA SERVICES</span>
+                            <i class="fa fa-arrow-right ms-2"></i>
+                            <style>
+                                .modern-cta-btn {
+                                    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+                                    border: none;
+                                    color: white !important;
+                                    padding: 12px 24px;
+                                    border-radius: 25px;
+                                    font-weight: 600;
+                                    font-size: 0.9rem;
+                                    letter-spacing: 0.5px;
+                                    position: relative;
+                                    overflow: hidden;
+                                    transition: all 0.3s ease;
+                                    text-decoration: none;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+                                }
+                                .modern-cta-btn:hover {
+                                    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%) !important;
+                                    color: white !important;
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 8px 25px rgba(37,99,235,0.4);
+                                    text-decoration: none;
+                                }
+                            </style>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Modern Navbar End -->
+
+
+
+
+        <!-- Animated Modern Header Start -->
+        <div class="container-xxl py-5 mb-5 animated-gradient-header position-relative" style="overflow:visible;">
+            <div class="header-animated-bg"></div>
+            <div class="header-gradient-border" style="position:absolute;inset:0;border-radius:2rem;pointer-events:none;z-index:2;border:4px solid;border-image:linear-gradient(120deg,#2563eb 0%,#60a5fa 100%) 1;opacity:0.8;box-shadow:0 0 32px 0 #2563eb33;"></div>
+            <style>
+            .animated-gradient-header {
+                min-height: 180px !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            </style>
+            <div class="header-floating-shapes">
+                <svg width="120" height="120" class="floating-shape" style="left:5%;top:18%;opacity:0.18;"><circle cx="60" cy="60" r="55" fill="#2563eb"/></svg>
+                <svg width="80" height="80" class="floating-shape" style="right:10%;top:10%;opacity:0.13;"><rect width="80" height="80" rx="20" fill="#1d4ed8"/></svg>
+                <svg width="60" height="60" class="floating-shape" style="left:20%;bottom:10%;opacity:0.12;"><polygon points="30,5 55,55 5,55" fill="#60a5fa"/></svg>
+            </div>
+            <div class="header-glass-overlay position-absolute top-0 start-0 w-100 h-100" style="backdrop-filter: blur(16px); background: rgba(255,255,255,0.18); border-radius: 2rem; z-index:1;"></div>
+            <div class="container position-relative d-flex flex-row align-items-center justify-content-between" style="z-index:2;min-height:180px;">
+                <div class="company-header-logo mx-auto" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="img/whiteBG.png" alt="Talentra Logo" class="logo-3d-animated logo-3d-hover" style="height:220px;width:auto;object-fit:contain;border-radius:2.7rem;box-shadow:0 16px 64px 0 rgba(37,99,235,0.28),0 4px 24px #2563eb88,0 0px 0px 12px #60a5fa55;filter:drop-shadow(0 6px 32px #2563eb88) drop-shadow(0 0px 32px #60a5fa55);padding:0;transition:transform 0.5s cubic-bezier(.4,2,.6,1),box-shadow 0.3s;perspective:600px;position:relative;top:-28px;">
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1" style="min-width:0;">
+                    <h1 class="display-4 fw-bold text-white text-shadow-glow mb-3 text-center" style="letter-spacing:2px;">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb animated-breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:#ffffff;text-shadow:0 1px 4px #2563eb55;font-weight:500;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:#fff;font-weight:700;text-shadow:0 1px 4px #2563eb55;">About</li>
+                        </ol>
+                    </nav>
+                    <p class="mb-0 mt-3" style="color:#f3f6fa;font-size:1.15rem;font-weight:500;">Learn more about our mission, vision, and the team behind Talentra.</p>
+                </div>
+            </div>
+            <style>
+                .logo-3d-animated {
+                    animation: logoPulseGlow 2.2s ease-in-out infinite alternate;
+                }
+                @keyframes logoPulseGlow {
+                    0% {
+                        box-shadow: 0 0 0px 0 #2563eb55, 0 8px 32px rgba(37,99,235,0.18);
+                        transform: scale(1.02) translateY(0);
+                    }
+                    50% {
+                        box-shadow: 0 0 24px 8px #2563eb88, 0 16px 48px rgba(37,99,235,0.22);
+                        transform: scale(1.07) translateY(-6px);
+                    }
+                    100% {
+                        box-shadow: 0 0 12px 4px #2563eb66, 0 12px 40px rgba(37,99,235,0.20);
+                        transform: scale(1.04) translateY(-3px);
+                    }
+                }
+                .logo-3d-hover:hover {
+                    animation-play-state: paused;
+                    transform: scale(1.18) rotateY(32deg) rotateX(18deg) skewY(-10deg) translateY(-18px) perspective(600px);
+                    box-shadow:0 48px 128px 0 rgba(37,99,235,0.38),0 12px 36px #00c6ff88,0 0px 0px 32px #60a5fa99;
+                    z-index:2;
+                }
+            </style>
+        </div>
+        <!-- Animated Modern Header End -->
+
+
+        <!-- Company Overview Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title bg-white text-center text-primary px-3">About Company</h2>
+                    <h1 class="mb-5">Talentra HR Consultancy</h1>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 col-12 wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="company-image-container position-relative" style="max-width:100%;">
+                            <div class="company-img-border-wrapper">
+                                <img class="img-fluid company-main-img" src="img/l4.png" alt="Talentra Office" style="position:relative; z-index:1; max-width:680px; width:100%; height:auto; border-radius:2rem; box-shadow:0 4px 24px rgba(37,99,235,0.13); object-fit:cover;">
+                            </div>
+                            <!-- Stats overlay at bottom, hidden by default, visible on hover -->
+                            <div class="company-stats-overlay d-flex justify-content-center gap-4">
+                                <div class="stat-item-overlay text-center p-3">
+                                    <h3 class="mb-1">2500+</h3>
+                                    <p class="mb-0">Successful Placements</p>
+                                </div>
+                                <div class="stat-item-overlay text-center p-3">
+                                    <h3 class="mb-1">150+</h3>
+                                    <p class="mb-0">Partner Companies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="col-lg-6 col-12 wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="company-content company-content-glass">
+                            <h2 class="mb-4 text-primary company-content-title">Excellence in HR Solutions</h2>
+                            <p class="mb-4 company-content-desc">Talentra HR Consultancy is a leading human resources consulting firm dedicated to connecting exceptional talent with outstanding opportunities. Since our inception, we have been at the forefront of innovative recruitment solutions, helping businesses across various industries find the right professionals for their growth and success.</p>
+                            <p class="mb-4 company-content-desc">Our comprehensive approach combines traditional recruitment expertise with cutting-edge technology and data-driven insights. We specialize in executive search, talent acquisition, workforce planning, and HR consulting services that drive organizational excellence.</p>
+                            <div class="company-features-box p-4 mb-4 rounded-4 shadow-sm" style="background: linear-gradient(135deg, #f8fbff 60%, #eaf6ff 100%); border: 2px solid #2563eb22;">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="company-feature company-feature-animated d-flex align-items-center p-3 rounded-4 mb-2" style="background: rgba(255,255,255,0.18); border: 2px solid #2563eb33; box-shadow: 0 4px 18px rgba(37,99,235,0.10); backdrop-filter: blur(10px); transition: box-shadow 0.3s, border-color 0.3s;">
+                                            <i class="fa fa-check-circle feature-icon-gradient me-3" style="font-size:2rem; color:#2563eb; background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%); border-radius:50%; padding:8px; box-shadow:0 2px 8px #2563eb22; transition: transform 0.3s;"></i>
+                                            <span class="feature-text fw-semibold" style="color:#2563eb; font-size:1.08rem;">Expert Recruitment Team</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="company-feature company-feature-animated d-flex align-items-center p-3 rounded-4 mb-2" style="background: rgba(255,255,255,0.18); border: 2px solid #2563eb33; box-shadow: 0 4px 18px rgba(37,99,235,0.10); backdrop-filter: blur(10px); transition: box-shadow 0.3s, border-color 0.3s;">
+                                            <i class="fa fa-check-circle feature-icon-gradient me-3" style="font-size:2rem; color:#2563eb; background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%); border-radius:50%; padding:8px; box-shadow:0 2px 8px #2563eb22; transition: transform 0.3s;"></i>
+                                            <span class="feature-text fw-semibold" style="color:#2563eb; font-size:1.08rem;">Global Network Access</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="company-feature company-feature-animated d-flex align-items-center p-3 rounded-4 mb-2" style="background: rgba(255,255,255,0.18); border: 2px solid #2563eb33; box-shadow: 0 4px 18px rgba(37,99,235,0.10); backdrop-filter: blur(10px); transition: box-shadow 0.3s, border-color 0.3s;">
+                                            <i class="fa fa-check-circle feature-icon-gradient me-3" style="font-size:2rem; color:#2563eb; background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%); border-radius:50%; padding:8px; box-shadow:0 2px 8px #2563eb22; transition: transform 0.3s;"></i>
+                                            <span class="feature-text fw-semibold" style="color:#2563eb; font-size:1.08rem;">Industry Expertise</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="company-feature company-feature-animated d-flex align-items-center p-3 rounded-4 mb-2" style="background: rgba(255,255,255,0.18); border: 2px solid #2563eb33; box-shadow: 0 4px 18px rgba(37,99,235,0.10); backdrop-filter: blur(10px); transition: box-shadow 0.3s, border-color 0.3s;">
+                                            <i class="fa fa-check-circle feature-icon-gradient me-3" style="font-size:2rem; color:#2563eb; background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%); border-radius:50%; padding:8px; box-shadow:0 2px 8px #2563eb22; transition: transform 0.3s;"></i>
+                                            <span class="feature-text fw-semibold" style="color:#2563eb; font-size:1.08rem;">Technology-Driven Solutions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+       
+                            <a class="btn py-3 px-5" data-bs-toggle="modal" data-bs-target="#licenseModal" href="#" role="button" style="background: linear-gradient(135deg, #2563eb 60%, #1d4ed8 100%); color: white; border: none; font-weight: 600; box-shadow:0 4px 18px #2563eb22; border-radius:1.2rem;">
+                                <i class="fa fa-certificate me-2"></i>View License
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission & Vision -->
+                <div class="row g-5 mt-5 mission-vision-animated">
+                    <div class="col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="mission-vision-card animate__animated animate__fadeInUp mission-vision-attractive" style="animation-delay:0.2s;">
+                            <div class="card-icon">
+                                <i class="fa fa-bullseye text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Our Mission</h4>
+                            <p>To empower organizations by connecting them with exceptional talent while helping professionals achieve their career aspirations through personalized and innovative HR solutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="mission-vision-card animate__animated animate__fadeInUp mission-vision-attractive" style="animation-delay:0.4s;">
+                            <div class="card-icon">
+                                <i class="fa fa-eye text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Our Vision</h4>
+                            <p>To be the most trusted HR consulting partner globally, recognized for our commitment to excellence, innovation, and sustainable growth for both clients and candidates.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="mission-vision-card animate__animated animate__fadeInUp mission-vision-attractive" style="animation-delay:0.6s;">
+                            <div class="card-icon">
+                                <i class="fa fa-heart text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Our Values</h4>
+                            <p>Integrity, Excellence, Innovation, and Client-centricity. We believe in building lasting relationships based on trust, transparency, and mutual success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Company Overview End -->
+        <style>
+            /* --- Enhanced stats overlay at bottom of company image --- */
+            .company-image-container {
+                position: relative;
+                display: inline-block;
+            }
+            .company-img-border-wrapper {
+                position: relative;
+                display: inline-block;
+                border-radius: 2.5rem;
+                padding: 6px;
+                background: linear-gradient(120deg, #2563eb 0%, #00c6ff 100%);
+                box-shadow: 0 8px 32px 0 rgba(37,99,235,0.13), 0 1.5px 6px #e5e7eb;
+                transition: box-shadow 0.3s, background 0.3s;
+            }
+            .company-img-border-wrapper:hover {
+                box-shadow: 0 16px 56px 0 rgba(37,99,235,0.22), 0 2px 12px #c7e0fa;
+                background: linear-gradient(120deg, #00c6ff 0%, #2563eb 100%);
+            }
+            .company-main-img {
+                border-radius: 2.2rem;
+                width: 100%;
+                height: auto;
+                box-shadow: 0 2px 12px rgba(37,99,235,0.09);
+                transition: transform 0.3s;
+            }
+            .company-img-border-wrapper:hover .company-main-img {
+                transform: scale(1.03);
+            }
+            @media (max-width: 991px) {
+                .company-img-border-wrapper {
+                    border-radius: 1.5rem;
+                    padding: 3px;
+                }
+                .company-main-img {
+                    border-radius: 1.2rem;
+                }
+            }
+            @media (max-width: 600px) {
+                .company-img-border-wrapper {
+                    border-radius: 0.8rem;
+                    padding: 2px;
+                }
+                .company-main-img {
+                    border-radius: 0.6rem;
+                }
+            }
+            .company-stats-overlay {
+                position: absolute;
+                left: 50%;
+                bottom: 18px;
+                transform: translateX(-50%) translateY(18px);
+                width: 90%;
+                opacity: 0;
+                pointer-events: none;
+                z-index: 10;
+                display: flex;
+                gap: 1.2rem;
+                transition: opacity 0.4s, transform 0.5s cubic-bezier(.4,2,.6,1);
+                backdrop-filter: blur(12px) saturate(1.2);
+                -webkit-backdrop-filter: blur(12px) saturate(1.2);
+            }
+            .company-image-container:hover .company-stats-overlay {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateX(-50%) translateY(0);
+            }
+            .stat-item-overlay {
+                background: rgba(255,255,255,0.22);
+                border-radius: 1.2rem;
+                box-shadow: 0 8px 32px 0 rgba(37,99,235,0.18), 0 1.5px 6px #e5e7eb;
+                min-width: 140px;
+                color: #2563eb;
+                font-weight: 700;
+                border: 2px solid #2563eb22;
+                padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: box-shadow 0.3s, border-color 0.3s;
+            }
+            .stat-item-overlay h3 {
+                font-size: 2.1rem;
+                font-weight: 900;
+                margin-bottom: 0.3rem;
+                color: #2563eb;
+                text-shadow: 0 2px 16px #c7e0fa;
+            }
+            .stat-item-overlay p {
+                font-size: 1.08rem;
+                margin-bottom: 0;
+                color: #2563eb;
+                font-weight: 600;
+                text-shadow: 0 1px 8px #eaf6ff;
+            }
+            .stat-item-overlay:hover {
+                box-shadow: 0 16px 56px 0 rgba(37,99,235,0.22), 0 2px 12px #c7e0fa;
+                border-color: #00c6ff;
+            }
+            @media (max-width: 991px) {
+                .company-stats-overlay {
+                    width: 98%;
+                    gap: 0.7rem;
+                }
+                .stat-item-overlay {
+                    min-width: 110px;
+                    padding: 0.7rem 0.6rem 0.6rem 0.6rem;
+                }
+                .stat-item-overlay h3 {
+                    font-size: 1.3rem;
+                }
+                .stat-item-overlay p {
+                    font-size: 0.95rem;
+                }
+            }
+            @media (max-width: 600px) {
+                .company-stats-overlay {
+                    width: 100%;
+                    gap: 0.4rem;
+                    bottom: 8px;
+                }
+                .stat-item-overlay {
+                    min-width: 80px;
+                    padding: 0.5rem 0.3rem 0.4rem 0.3rem;
+                }
+                .stat-item-overlay h3 {
+                    font-size: 1rem;
+                }
+                .stat-item-overlay p {
+                    font-size: 0.7rem;
+                }
+            }
+        .license-content {
+            background: rgba(255,255,255,0.22);
+            backdrop-filter: blur(14px) saturate(1.2);
+            -webkit-backdrop-filter: blur(14px) saturate(1.2);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(37,99,235,0.13), 0 1.5px 6px #e5e7eb;
+            padding: 2.2rem 2rem 1.7rem 2rem;
+            margin-bottom: 1.2rem;
+            transition: box-shadow 0.3s, background 0.3s;
+        }
+        .license-content:hover {
+            box-shadow: 0 16px 56px 0 rgba(37,99,235,0.22), 0 2px 12px #c7e0fa;
+            background: rgba(255,255,255,0.32);
+        }
+        @media (max-width: 991px) {
+            .license-content {
+                border-radius: 1rem;
+                padding: 1.2rem 1rem 1rem 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .license-content {
+                border-radius: 0.6rem;
+                padding: 0.7rem 0.4rem 0.5rem 0.4rem;
+            }
+        }
+        .mission-vision-attractive {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(37,99,235,0.13), 0 1.5px 6px #e5e7eb;
+            padding: 44px 32px 36px 32px;
+            position: relative;
+            overflow: visible;
+            border: 3px solid #2563eb;
+            transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+        }
+        .mission-vision-attractive:hover {
+            box-shadow: 0 16px 56px 0 rgba(37,99,235,0.22), 0 2px 12px #c7e0fa;
+            transform: translateY(-8px) scale(1.04);
+            border-color: #00c6ff;
+        }
+        .mission-vision-attractive::before {
+            display: none;
+        }
+        .mission-vision-attractive .card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 18px auto;
+            box-shadow: 0 4px 18px rgba(0,123,255,0.18);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .mission-vision-attractive:hover .card-icon {
+            background: linear-gradient(135deg, #00c6ff 0%, #2563eb 100%);
+            box-shadow: 0 8px 32px rgba(0,123,255,0.28);
+        }
+        .mission-vision-attractive h4 {
+            font-family: 'Inter', 'Heebo', Arial, sans-serif;
+            font-weight: 800;
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .mission-vision-attractive p {
+            color: #444;
+            font-size: 1.08rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        </style>
+
+        <!-- Company License Modal Start -->
+        <div class="modal fade" id="licenseModal" tabindex="-1" aria-labelledby="licenseModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header text-white" style="background: linear-gradient(135deg, #2563eb 60%, #1d4ed8 100%);">
+                        <h5 class="modal-title" id="licenseModalLabel">
+                            <i class="fa fa-certificate me-2"></i>Talentra HR Consultancy - License & Certifications
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <!-- License Image Display -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-12">
+                                    <div class="license-image-container text-center">
+                                        <h6 class="mb-3" style="color: #2563eb; font-weight: 600;">
+                                            <i class="fa fa-id-card me-2"></i>Official Business License Certificate
+                                        </h6>
+                                        <div class="license-image-wrapper" style="position: relative; display: inline-block; border: 3px solid #2563eb; border-radius: 15px; padding: 10px; background: linear-gradient(145deg, #f8f9fa, #ffffff); box-shadow: 0 10px 30px rgba(37,99,235,0.2);">
+                                            <img src="img/l4.png" alt="Talentra Business License" class="img-fluid license-certificate" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);" onerror="this.src='img/about.png'; this.alt='License Certificate (Image not found - using placeholder)';">
+                                            <div class="license-overlay-badge" style="position: absolute; top: -15px; right: -15px; background: linear-gradient(135deg, #2563eb 60%, #1d4ed8 100%); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; box-shadow: 0 4px 15px rgba(37,99,235,0.4);">
+                                                <i class="fa fa-check-circle me-1"></i>Verified
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 text-muted" style="font-size: 0.9rem;">
+                                            <i class="fa fa-info-circle me-1"></i>
+                                            Click on the certificate image to view in full size
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-4">
+                                <!-- Company Registration -->
+                                <div class="col-12">
+                                    <div class="license-card">
+                                        <div class="license-header">
+                                            <i class="fa fa-building text-primary me-3"></i>
+                                            <h6 class="mb-0">Company Registration</h6>
+                                        </div>
+                                        <div class="license-content">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Registration Number:</strong> TRC-2024-001234</p>
+                                                    <p><strong>Trade License:</strong> TL-HR-2024-5678</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Established:</strong> January 2020</p>
+                                                    <p><strong>Legal Status:</strong> Limited Liability Company</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- HR Certifications -->
+                                <div class="col-12">
+                                    <div class="license-card">
+                                        <div class="license-header">
+                                            <i class="fa fa-award text-success me-3"></i>
+                                            <h6 class="mb-0">Professional Certifications</h6>
+                                        </div>
+                                        <div class="license-content">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <ul class="list-unstyled">
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>Society for Human Resource Management (SHRM) Certified</li>
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>International Association of Workforce Professionals (IAWP)</li>
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>Certified Talent Acquisition Professional (CTAP)</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul class="list-unstyled">
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>ISO 9001:2015 Quality Management Certified</li>
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>Data Protection & Privacy Compliance</li>
+                                                        <li><i class="fa fa-check-circle text-success me-2"></i>Equal Employment Opportunity Certified</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Government Approvals -->
+                                <div class="col-12">
+                                    <div class="license-card">
+                                        <div class="license-header">
+                                            <i class="fa fa-stamp text-warning me-3"></i>
+                                            <h6 class="mb-0">Government Approvals & Permits</h6>
+                                        </div>
+                                        <div class="license-content">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Labor Department License:</strong> LD-HR-2024-9876</p>
+                                                    <p><strong>Immigration Services Permit:</strong> ISP-2024-3456</p>
+                                                    <p><strong>Ministry of Human Resources Approval:</strong> MHR-001-2024</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Valid Until:</strong> December 31, 2025</p>
+                                                    <p><strong>Renewal Status:</strong> <span class="badge bg-primary">Active</span></p>
+                                                    <p><strong>Compliance Rating:</strong> <span class="badge bg-primary">AAA+</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Industry Memberships -->
+                                <div class="col-12">
+                                    <div class="license-card">
+                                        <div class="license-header">
+                                            <i class="fa fa-users text-info me-3"></i>
+                                            <h6 class="mb-0">Professional Memberships</h6>
+                                        </div>
+                                        <div class="license-content">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        <span class="badge bg-primary">International HR Association</span>
+                                                        <span class="badge bg-primary">Global Recruitment Federation</span>
+                                                        <span class="badge bg-info">Middle East HR Council</span>
+                                                        <span class="badge bg-warning text-dark">Talent Acquisition Network</span>
+                                                        <span class="badge bg-secondary">Chamber of Commerce</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information -->
+                                <div class="col-12">
+                                    <div class="license-card">
+                                        <div class="license-header">
+                                            <i class="fa fa-phone text-primary me-3"></i>
+                                            <h6 class="mb-0">License Verification Contact</h6>
+                                        </div>
+                                        <div class="license-content">
+                                            <p class="mb-2"><strong>For license verification inquiries:</strong></p>
+                                            <p class="mb-1"><i class="fa fa-envelope me-2"></i>licensing@talentra.com</p>
+                                            <p class="mb-1"><i class="fa fa-phone me-2"></i>+971-XXX-XXXX</p>
+                                            <p class="mb-0"><i class="fa fa-clock me-2"></i>Business Hours: Sunday - Thursday, 9:00 AM - 6:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="window.print()">
+                            <i class="fa fa-print me-2"></i>Print License Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Company License Modal End -->
+
+
+
+
+        <!-- Leadership Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title bg-white text-center text-primary px-3" style="font-size:2.2rem; font-weight:900; letter-spacing:1.5px; background: linear-gradient(90deg,#2563eb 40%,#00c6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Leadership</h2>
+                    <h1 class="mb-5" style="font-size:2.7rem; font-weight:800; color:#2563eb; text-shadow:0 2px 16px #c7e0fa; letter-spacing:1px;">Meet Our Leadership Team</h1>
+                </div>
+                <div class="row g-5 justify-content-center">
+                    <!-- Founder Card (Syed Shahid) -->
+                    <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s" style="animation-delay:0.2s;">
+                        <div class="leadership-card-animated">
+                            <span class="leadership-badge">Founder</span>
+                            <div class="leadership-img-wrapper position-relative">
+                                <img class="img-fluid leadership-img" src="img/newlogo1.png" alt="Syed Shahid">
+                                <!-- L3 Logo Overlay -->
+                                <img src="img/newlogo1.png" alt="Talentra Logo" class="leadership-logo-overlay">
+                                <div class="leadership-social">
+                                    <a href="#" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon email" title="Email"><i class="fa fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="leadership-info">
+                                <h4 class="mb-1">Syed Shahid</h4>
+                                <p class="leadership-role mb-2">Founder</p>
+                                <p class="leadership-desc">Syed Shahid is the founder of Talentra HR Consultancy, bringing a wealth of experience in international recruitment and business development. He has successfully led large-scale talent acquisition projects for multinational companies and is known for his innovative approach to HR challenges.</p>
+                                <p class="leadership-desc">With a background in engineering and a passion for people, Syed has built a reputation for integrity, reliability, and results-driven leadership. He is dedicated to empowering both clients and candidates, ensuring the highest standards of service and professionalism.</p>
+                                <p class="leadership-desc">Syed’s vision is to create a global platform where talent and opportunity meet, fostering growth for businesses and individuals alike. His commitment to continuous improvement and ethical practices is at the core of Talentra’s success.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Founder & MD Card (Syeda Kausar Fathima) -->
+                    <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s" style="animation-delay:0.4s;">
+                        <div class="leadership-card-animated">
+                            <span class="leadership-badge badge-ceo">Founder & MD</span>
+                            <div class="leadership-img-wrapper position-relative">
+                                <img class="img-fluid leadership-img" src="img/syeda_pick_2[1].jpg" alt="Syeda Kausar Fathima">
+                                <!-- L3 Logo Overlay -->
+                                <img src="img/only logo.png" alt="Talentra Logo" class="leadership-logo-overlay">
+                                <div class="leadership-social">
+                                    <a href="#" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon email" title="Email"><i class="fa fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="leadership-info">
+                                <h4 class="mb-1">Syeda Kausar Fathima</h4>
+                                <p class="leadership-role mb-2">Founder & Managing Director – Telentra HR Consultancy LLC</p>
+                                <p class="leadership-desc">With over 8 years of professional experience in the United Arab Emirates, Syeda Kausar Fathima is a dynamic leader and visionary entrepreneur with expertise across seven key industry sectors. She holds a Bachelor’s degree in Commerce (B.Com) with a specialization in Administration and Marketing from India.</p>
+                                <p class="leadership-desc">As the Founder and Managing Director of Telentra HR Consultancy LLC, she has played a pivotal role in building a reputable and results-driven organization that provides skilled and unskilled manpower solutions to a wide range of international companies. Her strategic leadership, commitment to excellence, and deep understanding of global workforce demands have been instrumental in driving the company’s success and credibility in the HR and recruitment industry.</p>
+                                <p class="leadership-desc">Under her guidance, Telentra HR Consultancy LLC continues to grow as a trusted bridge between global employers and quality talent, delivering services rooted in integrity, innovation, and professionalism. Syeda’s journey reflects her dedication to empowering people, supporting businesses, and contributing to the sustainable development of the international labor market.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CEO Card (Umme Kulsum) -->
+                    <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s" style="animation-delay:0.6s;">
+                        <div class="leadership-card-animated">
+                            <span class="leadership-badge badge-ceo">CEO</span>
+                            <div class="leadership-img-wrapper position-relative">
+                                <img class="img-fluid leadership-img" src="img/only logo.png" alt="Umme Kulsum">
+                                <!-- L3 Logo Overlay -->
+                                <img src="img/only logo.png" alt="Talentra Logo" class="leadership-logo-overlay">
+                                <div class="leadership-social">
+                                    <a href="#" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon email" title="Email"><i class="fa fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="leadership-info">
+                                <h4 class="mb-1">Umme Kulsum</h4>
+                                <p class="leadership-role mb-2">Chief Executive Officer</p>
+                                <p class="leadership-desc">Umme Kulsum is the CEO of Talentra HR Consultancy, recognized for her expertise in organizational strategy and operational excellence. She has played a key role in expanding Talentra’s reach, building strong client relationships, and driving digital transformation within the company.</p>
+                                <p class="leadership-desc">With a degree in Business Administration and a background in HR analytics, Umme is passionate about leveraging technology to enhance recruitment processes and deliver measurable results. She is committed to fostering a collaborative and inclusive workplace culture.</p>
+                                <p class="leadership-desc">Umme’s leadership is defined by her focus on innovation, transparency, and sustainable growth. She continues to inspire her team to exceed client expectations and uphold the values that define Talentra’s reputation in the HR industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+                .leadership-card-animated {
+                    background: linear-gradient(135deg, #f8fbff 60%, #eaf6ff 100%);
+                    border-radius: 1.7rem;
+                    box-shadow: 0 8px 32px 0 rgba(37,99,235,0.13), 0 1.5px 6px #e5e7eb;
+                    padding: 0 0 32px 0;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 16px;
+                    border: 3px solid transparent;
+                    background-clip: padding-box;
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .leadership-card-animated::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 1.7rem;
+                    padding: 2.5px;
+                    background: linear-gradient(120deg, #2563eb 60%, #00c6ff 100%);
+                    z-index: -1;
+                    filter: blur(2.5px);
+                    opacity: 0.18;
+                    transition: opacity 0.3s;
+                }
+                .leadership-card-animated:hover::before {
+                    opacity: 0.38;
+                    filter: blur(4px);
+                }
+                .leadership-card-animated:hover {
+                    box-shadow: 0 24px 64px 0 rgba(37,99,235,0.22), 0 2px 12px #c7e0fa;
+                    transform: translateY(-12px) scale(1.045);
+                }
+        .leadership-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+        .leadership-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+        }
+        .leadership-card-animated:hover .leadership-img {
+            transform: scale(1.07);
+        }
+        .leadership-social {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 16px;
+            z-index: 2;
+        }
+                .social-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%);
+                    color: #fff;
+                    font-size: 1.3rem;
+                    box-shadow: 0 2px 8px rgba(37,99,235,0.18);
+                    transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+                    border: 2px solid #fff;
+                    animation: social-pulse 1.7s infinite;
+                }
+                .social-icon:hover {
+                    background: linear-gradient(135deg, #00c6ff 0%, #2563eb 100%);
+                    color: #fff;
+                    transform: scale(1.16) rotate(-8deg);
+                    box-shadow: 0 4px 18px #00c6ff44;
+                }
+                @keyframes social-pulse {
+                    0% { box-shadow: 0 0 0 0 #2563eb44, 0 2px 8px #2563eb2a; }
+                    70% { box-shadow: 0 0 0 10px #2563eb11, 0 2px 8px #2563eb2a; }
+                    100% { box-shadow: 0 0 0 0 #2563eb44, 0 2px 8px #2563eb2a; }
+                }
+                .leadership-badge {
+                    position: absolute;
+                    top: 18px;
+                    left: 18px;
+                    background: linear-gradient(135deg, #2563eb 60%, #00c6ff 100%);
+                    color: #fff;
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                    padding: 7px 18px 7px 16px;
+                    border-radius: 1.2rem;
+                    box-shadow: 0 2px 8px #2563eb22;
+                    z-index: 3;
+                    letter-spacing: 0.5px;
+                    border: 2px solid #fff;
+                    text-shadow: 0 1px 4px #2563eb33;
+                }
+                .badge-ceo { background: linear-gradient(135deg, #00c6ff 60%, #2563eb 100%); }
+                .badge-coo { background: linear-gradient(135deg, #1d4ed8 60%, #00c6ff 100%); }
+        .leadership-info {
+            padding: 28px 24px 0 24px;
+            text-align: center;
+            flex: 1 1 auto;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .leadership-info h4 {
+            font-family: 'Inter', 'Heebo', Arial, sans-serif;
+            font-weight: 800;
+            color: #2563eb;
+            font-size: 1.4rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.5px;
+        }
+        .leadership-role {
+            color: #00c6ff;
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .leadership-desc {
+            color: #444;
+            font-size: 1.04rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        @media (max-width: 991px) {
+            .leadership-img-wrapper { height: 260px; }
+        }
+        @media (max-width: 767px) {
+            .leadership-img-wrapper { height: 200px; }
+        }
+        .leadership-logo-overlay {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px #2563eb22;
+            z-index: 4;
+            border: 2px solid #2563eb;
+            padding: 2px;
+            transition: transform 0.2s;
+        }
+        .leadership-img-wrapper:hover .leadership-logo-overlay {
+            transform: scale(1.12);
+        }
+        </style>
+        <!-- Leadership Team End -->
+
+
+        <!-- Our Team Start -->
+         <div class="container-xxl py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title bg-white text-center text-primary px-3" style="font-family:'Inter',Arial,sans-serif;font-weight:800;letter-spacing:1.2px;">Our Team</h2>
+                    <h1 class="mb-3" style="font-size:2.2rem;font-weight:700;color:#222;font-family:'Inter',Arial,sans-serif;">Meet Our Professional Staff</h1>
+                    <p class="mb-4" style="color:#555;font-size:1.08rem;">Our dedicated team of professionals brings diverse expertise and experience to deliver exceptional HR solutions for our clients.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member Example -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="HR Manager" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:hr@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Ayesha Khan</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Senior HR Manager</p>
+                                <p class="card-text" style="font-size:0.98rem;">Specializes in talent acquisition and employee relations with 8+ years of experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Marketing Manager" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:marketing@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Rahul Mehra</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Marketing Manager</p>
+                                <p class="card-text" style="font-size:0.98rem;">Drives brand awareness and client engagement strategies with innovative marketing approaches.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Operations Manager" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:ops@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Fatima Noor</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Operations Manager</p>
+                                <p class="card-text" style="font-size:0.98rem;">Ensures smooth operations and process optimization across all departments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Admin Executive" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:admin@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Imran Sheikh</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Admin Executive</p>
+                                <p class="card-text" style="font-size:0.98rem;">Manages administrative functions and supports daily operations with attention to detail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center mt-2">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Recruitment Specialist" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:recruit@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Priya Singh</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Senior Recruitment Specialist</p>
+                                <p class="card-text" style="font-size:0.98rem;">Expert in matching candidates with perfect job opportunities across various industries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Finance Manager" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:finance@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Suresh Patel</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Finance Manager</p>
+                                <p class="card-text" style="font-size:0.98rem;">Manages financial operations and ensures fiscal responsibility across all projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="IT Specialist" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:it@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Zainab Hussain</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">IT Specialist</p>
+                                <p class="card-text" style="font-size:0.98rem;">Maintains technology infrastructure and develops digital solutions for better efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card team-official-card shadow-sm border-0 h-100">
+                            <div class="team-img-classic position-relative">
+                                <img src="img/our team.png" class="card-img-top rounded-top" alt="Business Development Executive" style="object-fit:cover;height:260px;">
+                                <div class="team-social-classic d-flex flex-row justify-content-center align-items-center">
+                                    <a href="mailto:bd@talentra.com" class="social-icon-classic gmail" title="Gmail"><i class="fa fa-envelope"></i></a>
+                                    <a href="#" class="social-icon-classic linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon-classic instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1" style="font-weight:700;color:#2563eb;">Aman Verma</h5>
+                                <p class="card-subtitle mb-2 text-muted" style="font-size:1.05rem;">Business Development Executive</p>
+                                <p class="card-text" style="font-size:0.98rem;">Drives business growth and builds strategic partnerships for the company.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+        .team-official-card {
+            border-radius: 1.3rem;
+            background: #fff;
+            transition: box-shadow 0.3s, transform 0.3s;
+            box-shadow: 0 4px 18px #2563eb11;
+        }
+        .team-official-card:hover {
+            box-shadow: 0 12px 36px #2563eb22;
+            transform: translateY(-8px) scale(1.03);
+        }
+        .team-img-classic {
+            border-top-left-radius: 1.3rem;
+            border-top-right-radius: 1.3rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .team-social-classic {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.92);
+            border-radius: 2rem;
+            box-shadow: 0 2px 8px #2563eb22;
+            padding: 6px 18px;
+            gap: 18px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+        }
+        .team-img-classic:hover .team-social-classic,
+        .team-img-classic:focus .team-social-classic {
+            opacity: 1;
+        }
+        .social-icon-classic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb 60%, #1d4ed8 100%);
+            color: #fff;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px #2563eb22;
+            transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+            border: 2px solid #fff;
+        }
+        .social-icon-classic.gmail { background: linear-gradient(135deg, #ea4335 60%, #ffb300 100%); }
+        .social-icon-classic.linkedin { background: linear-gradient(135deg, #0077b5 60%, #2563eb 100%); }
+        .social-icon-classic.instagram { background: linear-gradient(135deg, #e1306c 60%, #fdc468 100%); }
+        .social-icon-classic:hover {
+            color: #fff;
+            transform: scale(1.13) rotate(-8deg);
+            box-shadow: 0 4px 18px #2563eb44;
+        }
+        </style>
+           
+    </script>
+        <!-- Our Team End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Company</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Quick Links</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Contact</h5>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i>Coming Soon</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i>Coming Soon</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-envelope-open me-3 contact-icon"></i>Coming Soon</p>
+                                    </div>
+                                    <div class="d-flex pt-2 social-links">
+                                        <a class="btn btn-outline-primary btn-social social-btn" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="logo-container">
+                                        <img src="img/only logo.png" alt="Talentra Logo" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="copyright wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="container-fluid px-0">
+                        <div class="row mx-0">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                            &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy <span style="font-family: 'Arial', sans-serif; color: #f8f9fa; font-weight: 500; font-size: 1.1em;">تالينترا</span></a>, All Right Reserved. 
+                            <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom copyright-link" href="">SHAHABAZ PASHA SN</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end px-3">
+                            <div class="footer-menu">
+                                <a href="" class="footer-menu-link text-secondary">Home</a>
+                                <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                                <a href="" class="footer-menu-link text-secondary">Help</a>
+                                <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    
+    <!-- Advanced Scroll Animations Script -->
+    <script>
+        // Advanced Scroll Animation System
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Scroll-triggered Animation Observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            // Create intersection observer with error handling
+            const scrollAnimationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    try {
+                        if (entry.isIntersecting && !entry.target.classList.contains('animate-in-view')) {
+                            entry.target.classList.add('animate-in-view');
+                            // Add staggered delay for child elements
+                            const children = entry.target.querySelectorAll('.stagger-child');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.classList.add('animate-in-view');
+                                }, index * 100);
+                            });
+                        }
+                    } catch (error) {
+                        console.log('Animation error:', error);
+                    }
+                });
+            }, observerOptions);
+            
+            // 2. Apply scroll animations to elements that don't already have scroll-animate class
+            const animatedElements = document.querySelectorAll(`
+                .company-image-container:not(.scroll-animate), 
+                .mission-vision-card:not(.scroll-animate), 
+                .team-card:not(.scroll-animate),
+                .license-card:not(.scroll-animate)
+            `);
+            
+            animatedElements.forEach(el => {
+                el.classList.add('scroll-animate');
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // Also observe existing scroll-animate elements
+            const existingScrollElements = document.querySelectorAll('.scroll-animate');
+            existingScrollElements.forEach(el => {
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // 3. Throttled Parallax Scroll Effects
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax-bg');
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+                
+                // Navbar scroll effect
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    if (scrolled > 100) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                }
+                
+                ticking = false;
+            }
+            
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+            
+            // 4. Text Reveal Animation
+            const textElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+            textElements.forEach(element => {
+                if (element.textContent.trim()) {
+                    element.classList.add('text-reveal');
+                    const words = element.textContent.split(' ');
+                    element.innerHTML = words.map(word => 
+                        `<span class="word-reveal">${word}</span>`
+                    ).join(' ');
+                    scrollAnimationObserver.observe(element);
+                }
+            });
+            
+            // 5. Parallax Elements Animation
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            parallaxElements.forEach(element => {
+                scrollAnimationObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+    <style>
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid #007bff;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+            animation: footer-shimmer 8s infinite;
+        }
+        @keyframes footer-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .footer-section {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9) !important;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,123,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .footer-section:hover::before {
+            left: 100%;
+        }
+        .footer-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,1) !important;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+            border-color: rgba(0,123,255,0.3);
+        }
+        .footer-title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            transition: width 0.5s ease;
+        }
+        .footer-section:hover .footer-title::after {
+            width: 100%;
+        }
+        .footer-title:hover {
+            color: #007bff !important;
+            transform: scale(1.05);
+        }
+        .footer-link {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0.5rem;
+            margin-left: -0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .footer-link:hover {
+            color: #007bff !important;
+            transform: translateX(10px);
+            border-left-color: #007bff;
+            background: rgba(0,123,255,0.05);
+        }
+        .footer-link:hover::before {
+            left: 0;
+        }
+        .footer-link i {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        .footer-link:hover i {
+            transform: translateX(5px) scale(1.2);
+            opacity: 1;
+            color: #007bff;
+        }
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        .contact-item:hover {
+            background: rgba(0,123,255,0.1);
+            transform: translateX(8px);
+        }
+        .contact-icon {
+            transition: all 0.3s ease;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        .contact-item:hover .contact-icon {
+            transform: scale(1.3) rotate(360deg);
+            color: #0056b3;
+        }
+        .social-links {
+            gap: 0.5rem;
+        }
+        .social-btn {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: #007bff !important;
+            border: 2px solid #007bff !important;
+            color: #ffffff !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+            color: #ffffff !important;
+        }
+        .social-btn:hover::before {
+            width: 80px;
+            height: 80px;
+        }
+        .social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+        .social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+        .social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+        .social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+        .social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+        .social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+        .social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+        .social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+        .social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+        .social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .company-logo {
+            width: 180px;
+            height: 200px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+        .company-logo:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .copyright {
+            background: #007bff !important;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            margin: 0 !important;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            transition: all 0.3s ease;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+        .copyright .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        .copyright .row {
+            margin: 0 !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 0 !important;
+        }
+        .copyright .col-md-6 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .footer .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+        }
+        .footer .container-fluid:last-child {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        /* Removed overflow-x: hidden from body and .container-xxl to allow proper horizontal scrolling and layout on desktop */
+        .copyright-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+        .copyright-link:hover {
+            color: #f8f9fa !important;
+            border-bottom-color: #f8f9fa;
+            transform: translateY(-1px);
+        }
+        .footer-menu-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.2rem;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            font-weight: 500;
+        }
+        .footer-menu-link:hover {
+            color: #007bff !important;
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+            .footer-section:hover {
+                transform: translateY(-5px);
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .footer-menu {
+                text-align: center;
+            }
+            .footer-menu-link {
+                display: inline-block;
+                margin: 0.2rem;
+            }
+            .company-logo {
+                width: 90px;
+                height: 90px;
+            }
+            .logo-container {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+
+</html>

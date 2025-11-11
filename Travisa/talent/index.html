@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Talentra HR Consultancy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Counter Animation CSS -->
+    <style>
+        .counter-facts {
+            background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%); }
+            50% { background: linear-gradient(135deg, #00c6ff 0%, #007bff 100%); }
+        }
+        
+        .counter-facts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+
+        }
+        
+        .counter:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .counter-icon {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        .counter-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 65px;
+            height: 65px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.7; }
+        }
+        
+        .counter-icon i {
+            font-size: 1.8rem;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .counter:hover .counter-icon i {
+            transform: scale(1.15) rotate(360deg);
+            background: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .counter-content h3 {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+            100% { text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3); }
+        }
+        
+        .counter-value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            min-width: 60px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .counter-value.counting {
+            animation: countPulse 0.1s ease-in-out;
+        }
+        
+        @keyframes countPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .counter-value::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #fff, transparent);
+            transform: translateX(-50%);
+            animation: underlineExpand 2s ease-in-out 1s;
+        }
+        
+        @keyframes underlineExpand {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 100%; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+            40%, 43% { transform: translate3d(0,-15px,0); }
+            70% { transform: translate3d(0,-7px,0); }
+            90% { transform: translate3d(0,-2px,0); }
+        }
+        
+        /* Particle effect */
+        .counter-facts .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .counter-facts .particles span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: particleFloat 8s infinite linear;
+        }
+        
+        /* Search section animations - matching counter facts */
+        .search-section {
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        .search-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        
+        .search-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: floatingLight 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        .search-section .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .search-section .particles span {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: particleFloat 6s infinite linear;
+        }
+        
+        .search-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .counter {
+                margin-bottom: 2rem;
+            }
+            .counter-value {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Fix for dropdown arrows */
+        .dropdown-toggle::after {
+            display: inline-block !important;
+            margin-left: 0.255em !important;
+            vertical-align: 0.255em !important;
+            content: "" !important;
+            border-top: 0.3em solid !important;
+            border-right: 0.3em solid transparent !important;
+            border-bottom: 0 !important;
+            border-left: 0.3em solid transparent !important;
+        }
+        
+        .dropdown-toggle:empty::after {
+            margin-left: 0 !important;
+        }
+        
+        .navbar-nav .dropdown-toggle::after {
+            color: inherit !important;
+            opacity: 0.8 !important;
+        }
+        
+        .navbar-nav .dropdown-toggle:hover::after {
+            opacity: 1 !important;
+        }
+        
+
+        
+
+        
+        .arabic-text {
+            font-family: 'Arial', sans-serif;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: -5px;
+            opacity: 0.8;
+        }
+        
+        .modern-nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151 !important;
+            position: relative;
+            padding: 0.8rem 1.2rem !important;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .modern-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .modern-nav-link:hover::before,
+        .modern-nav-link.active::before {
+            width: 80%;
+        }
+        
+        .modern-nav-link:hover,
+        .modern-nav-link.active {
+            color: #2563eb !important;
+        }
+        
+        .modern-dropdown {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .modern-dropdown-item {
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .modern-dropdown-item:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-left-color: #1d4ed8;
+            transform: translateX(5px);
+        }
+        
+        .modern-cta-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .modern-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .modern-cta-btn:hover::before {
+            left: 100%;
+        }
+        
+        .modern-cta-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        /* Top Contact Bar Styles */
+        .container-fluid.bg-dark {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
+        }
+        
+        .container-fluid.bg-dark a {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluid.bg-dark a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Navbar Scroll Effect */
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Active navbar link styling */
+        .navbar-nav .nav-link.active {
+            color: #2563eb !important;
+            font-weight: 600;
+        }
+        
+        .navbar-nav .nav-link.active:hover {
+            color: #1d4ed8 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <!-- Spinner removed for debug -->
+        <!-- Spinner End -->
+
+
+        <!-- Top Contact Bar Start -->
+        <div class="container-fluid bg-dark text-white py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center">
+                            <div class="me-4">
+                                <i class="fa fa-phone-alt me-2"></i>
+                                <span>+(971) 56 380 7863</span>
+                            </div>
+                            <div class="me-4">
+                                <i class="fa fa-envelope me-2"></i>
+                                <span>info@talentra.com</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <span class="me-3">Follow Us:</span>
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Contact Bar End -->
+
+        <!-- Modern Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(37, 99, 235, 0.1); transition: all 0.3s ease; padding: 0.8rem 0;">
+            <div class="container d-flex align-items-center justify-content-between" style="background: #fff;">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/only logo.png" alt="Talentra Logo" style="height: 70px; width: auto; object-fit: contain; margin-right: 15px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div style="color:#2563eb;font-size:2rem;font-weight:900;font-family:Arial,sans-serif;line-height:1.1;margin-bottom:0;letter-spacing:1px;">TALENTRA</div>
+                        <span class="arabic-text">تالينترا</span>
+                    </div>
+                </a>
+                
+                <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="padding: 0.5rem;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto d-flex align-items-center">
+                        <a href="index.html" class="nav-item nav-link modern-nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link modern-nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link" data-bs-toggle="dropdown">Jobs</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="job-list.html" class="dropdown-item modern-dropdown-item">Job List</a>
+                                <a href="job-detail.html" class="dropdown-item modern-dropdown-item">Job Detail</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                 <a href="pro services.html" class="dropdown-item modern-dropdown-item">PRO Services</a>
+                                <a href="countries.html" class="dropdown-item modern-dropdown-item">Countries We Serve</a>
+                                <a href="companies.html" class="dropdown-item modern-dropdown-item">Our Strategic Partners</a>
+                            </div>
+                        </div>
+                        <a href="BLOG.html" class="nav-item nav-link modern-nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link modern-nav-link">Contact</a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center ms-lg-3">
+                        <a href="travisa/index.html" class="btn modern-cta-btn">
+                            <span>VISA SERVICES</span>
+                            <i class="fa fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Modern Navbar End -->
+
+<style>
+/* ====== Logo Styling & Animation ====== */
+.logo-3d {
+    height: 85px; /* Adjust logo size */
+    width: 370px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transform-style: preserve-3d;
+    animation: floatLogo 4s ease-in-out infinite; /* continuous floating */
+}
+
+.logo-3d:hover {
+    transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0px) rotateY(0deg); }
+    50% { transform: translateY(-5px) rotateY(5deg); }
+    100% { transform: translateY(0px) rotateY(0deg); }
+}
+
+
+
+
+.arabic-text {
+    font-family: 'Arial', sans-serif;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: -3px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Modern Navbar Styles */
+.modern-nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #374151 !important;
+    position: relative;
+    padding: 0.8rem 1.2rem !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+.modern-nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.modern-nav-link:hover::before,
+.modern-nav-link.active::before {
+    width: 80%;
+}
+
+.modern-nav-link:hover,
+.modern-nav-link.active,
+.modern-nav-link:hover {
+    color: #2563eb !important;
+}
+
+.modern-dropdown {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.modern-dropdown-item {
+    padding: 0.7rem 1.5rem;
+    color: #374151;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 8px;
+}
+
+.modern-dropdown-item:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    transform: translateX(5px);
+}
+
+.modern-cta-btn {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.modern-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.modern-cta-btn:hover::before {
+    left: 100%;
+}
+
+.modern-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Navbar Styles */
+@media (max-width: 768px) {
+    .modern-brand-text {
+        font-size: 1.5rem;
+    }
+    
+    .arabic-text {
+        font-size: 1rem;
+    }
+    
+    .modern-cta-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 10px 15px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .modern-brand-text {
+        font-size: 1.3rem;
+    }
+    
+    .arabic-text {
+        font-size: 0.9rem;
+    }
+}
+
+.navbar-brand-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: scale(1.1);
+}
+
+.navbar-brand:hover .navbar-brand-text {
+    transform: translateY(-2px) scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(37, 211, 102, 0.4));
+}
+
+.navbar-brand:hover .navbar-brand-text::before {
+    opacity: 0.3;
+}
+
+@keyframes brand-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.6));
+    }
+}
+
+.navbar-brand-text {
+    animation: brand-glow 3s ease-in-out infinite;
+}
+
+/* Responsive brand text */
+@media (max-width: 768px) {
+    .navbar-brand-text {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand-text {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Footer Animation Styles */
+.footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #007bff;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+    animation: footer-shimmer 8s infinite;
+}
+
+@keyframes footer-shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.footer-section {
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.9) !important;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,123,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.footer-section:hover::before {
+    left: 100%;
+}
+
+.footer-section:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,1) !important;
+    box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+    border-color: rgba(0,123,255,0.3);
+}
+
+.footer-title {
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    transition: width 0.5s ease;
+}
+
+.footer-section:hover .footer-title::after {
+    width: 100%;
+}
+
+.footer-title:hover {
+    color: #007bff !important;
+    transform: scale(1.05);
+}
+
+.footer-link {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    padding-left: 0.5rem;
+    margin-left: -0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.footer-link:hover {
+    color: #007bff !important;
+    transform: translateX(10px);
+    border-left-color: #007bff;
+    background: rgba(0,123,255,0.05);
+}
+
+.footer-link:hover::before {
+    left: 0;
+}
+
+.footer-link i {
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.footer-link:hover i {
+    transform: translateX(5px) scale(1.2);
+    opacity: 1;
+    color: #007bff;
+}
+
+.contact-item {
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item:hover {
+    background: rgba(0,123,255,0.1);
+    transform: translateX(8px);
+}
+
+.contact-icon {
+    transition: all 0.3s ease;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.3) rotate(360deg);
+    color: #0056b3;
+}
+
+.social-links {
+    gap: 0.5rem;
+}
+
+.social-btn {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    background: #007bff !important;
+    border: 2px solid #007bff !important;
+    color: #ffffff !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+    color: #ffffff !important;
+}
+
+.social-btn:hover::before {
+    width: 80px;
+    height: 80px;
+}
+
+.social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+.social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+.social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+.social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+.social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+.social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+.social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+.social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+.social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+.social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.company-logo {
+    width: 180px;
+    height: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.company-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.copyright {
+    background: #007bff !important;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 1rem 0;
+    margin: 0 !important;
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    transition: all 0.3s ease;
+}
+
+.copyright .container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.copyright .row {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.copyright .col-md-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.copyright-link {
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+}
+
+.copyright-link:hover {
+    color: #f8f9fa !important;
+    border-bottom-color: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+.footer-menu-link {
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0 0.2rem;
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
+    font-weight: 500;
+}
+
+.footer-menu-link:hover {
+    color: #007bff !important;
+    background: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    .footer-section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    
+    .footer-section:hover {
+        transform: translateY(-5px);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-menu {
+        text-align: center;
+    }
+    
+    .footer-menu-link {
+        display: inline-block;
+        margin: 0.2rem;
+    }
+    
+    .company-logo {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .logo-container {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+}
+</style>
+
+
+
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0">
+            <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <video class="carousel-media" style="position:absolute;top:0;left:0;width:100%;height:650px;object-fit:cover;z-index:1;background-color:#2B3940;" data-speed="0.3" src="img/videoplayback (3) (1).mp4" autoplay loop muted playsinline preload="none"></video>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5); z-index:2;">
+                    <div class="container h-100 d-flex align-items-end pb-5">
+                        <div class="row w-100 justify-content-start">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <h1 class="display-4 display-md-3 display-lg-3 text-white animated slideInDown mb-4" style="font-size:2.1rem;font-size:clamp(1.5rem,6vw,3.5rem);font-weight:800;line-height:1.1;">
+                                    Discover Your Next Opportunity with Talentra
+                                </h1>
+                                <p class="fs-6 fs-md-5 fw-medium text-white mb-4 pb-2" style="font-size:clamp(1rem,3vw,1.5rem);">
+                                    Connecting talented professionals with top employers in Dubai and beyond. Start your journey to a better career with Talentra today.
+                                </p>
+                                <a href="#search-section" class="btn btn-3d-animated py-2 px-4 py-md-3 px-md-5 me-3 animated slideInLeft w-100 w-md-auto" id="search-job-btn-1" style="max-width:320px;min-width:160px;font-size:1.1rem;">
+                                    <i class="fas fa-briefcase job-icon-3d"></i>
+                                    Search A Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid carousel-media" src="img/aus.jpg" alt="" loading="lazy" style="height:650px;object-fit:cover;width:100%;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Whether It's Blue Collar or White, We'll Find the Best Fit for You</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Your skills, your aspirations – perfectly matched with the right opportunities. Let us help you discover your ideal job.</p>
+                                <a href="" class="btn btn-3d-animated py-md-3 px-md-5 me-3 animated slideInLeft" id="search-job-btn-2">
+                                    <i class="fas fa-briefcase job-icon-3d"></i>
+                                    Search A Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <video class="img-fluid w-100 carousel-media" src="img/newdubai.mp4" autoplay loop muted playsinline preload="none" style="height:650px;object-fit:cover;width:100%;"></video>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Connecting Companies with Exceptional Talent</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">We partner with leading organizations to provide top-tier recruitment solutions. Find the perfect candidate to drive your business forward.</p>
+                                <a href="" class="btn btn-3d-animated py-md-3 px-md-5 me-3 animated slideInLeft" id="search-job-btn-3">
+                                    <i class="fas fa-users job-icon-3d"></i>
+                                    Find Talent
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <style>
+            /* Unify carousel media height */
+            .carousel-media {height:650px !important;object-fit:cover !important;width:100% !important;background-color:#2B3940 !important;}
+            /* Counter icon circle fix */
+            .counter-icon {width:70px;height:70px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px auto;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+            .counter-icon i {font-size:2rem;color:#007bff;margin:0;}
+            /* 3D Animated Button */
+            .btn-3d-animated {
+                background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.25rem;
+                border: none;
+                border-radius: 50px;
+                box-shadow: 0 8px 24px rgba(0,123,255,0.3), 0 1.5px 0 #fff inset;
+                transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s, background 0.3s;
+                position: relative;
+                perspective: 600px;
+                overflow: hidden;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .btn-3d-animated:hover {
+                transform: scale(1.08) rotateY(10deg) rotateX(5deg);
+                box-shadow: 0 16px 32px rgba(0,123,255,0.5), 0 1.5px 0 #fff inset;
+                background: linear-gradient(135deg, #00c6ff 0%, #007bff 100%);
+            }
+            .btn-3d-animated:active {
+                animation: btnClickAnim 0.5s cubic-bezier(.34,1.56,.64,1);
+            }
+            @keyframes btnClickAnim {
+                0% { transform: scale(1.08) rotateY(10deg) rotateX(5deg); }
+                40% { transform: scale(0.95) rotateY(-10deg) rotateX(-5deg); }
+                60% { transform: scale(1.05) rotateY(5deg) rotateX(2deg); }
+                100% { transform: scale(1.08) rotateY(10deg) rotateX(5deg); }
+            }
+            /* 3D Job Icon Animation */
+            .job-icon-3d {
+                font-size: 1.5em;
+                color: #fff;
+                text-shadow: 0 2px 8px rgba(0,123,255,0.5);
+                transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), color 0.3s;
+                will-change: transform;
+                perspective: 400px;
+            }
+            .btn-3d-animated:hover .job-icon-3d {
+                transform: scale(1.2) rotateY(30deg);
+                color: #ffd700;
+                text-shadow: 0 4px 16px rgba(0,123,255,0.7);
+            }
+            .btn-3d-animated:active .job-icon-3d {
+                animation: iconClickAnim 0.5s cubic-bezier(.34,1.56,.64,1);
+            }
+            @keyframes iconClickAnim {
+                0% { transform: scale(1.2) rotateY(30deg); }
+                40% { transform: scale(0.9) rotateY(-20deg); }
+                60% { transform: scale(1.1) rotateY(15deg); }
+                100% { transform: scale(1.2) rotateY(30deg); }
+            }
+            /* Carousel Arrow Customization - 3D Stylish */
+            .owl-carousel .owl-nav button.owl-prev,
+            .owl-carousel .owl-nav button.owl-next {
+                background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+                color: #fff !important;
+                border: none;
+                border-radius: 50%;
+                width: 54px;
+                height: 54px;
+                font-size: 2.2rem !important;
+                box-shadow: 0 10px 32px rgba(0,123,255,0.35), 0 2px 0 #fff inset;
+                transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s, background 0.3s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                z-index: 2;
+                perspective: 600px;
+                will-change: transform;
+            }
+            .owl-carousel .owl-nav button.owl-prev {
+                left: 20px;
+            }
+            .owl-carousel .owl-nav button.owl-next {
+                right: 20px;
+            }
+            .owl-carousel .owl-nav button.owl-prev:hover,
+            .owl-carousel .owl-nav button.owl-next:hover {
+                transform: scale(1.18) rotateY(18deg) rotateX(8deg);
+                background: linear-gradient(135deg, #00c6ff 0%, #007bff 100%);
+                box-shadow: 0 18px 40px rgba(0,123,255,0.5), 0 2px 0 #fff inset;
+                color: #ffd700 !important;
+            }
+            .owl-carousel .owl-nav button.owl-prev:active,
+            .owl-carousel .owl-nav button.owl-next:active {
+                animation: arrowNavClickAnim3d 0.5s cubic-bezier(.34,1.56,.64,1);
+            }
+            @keyframes arrowNavClickAnim3d {
+                0% { transform: scale(1.18) rotateY(18deg) rotateX(8deg); }
+                40% { transform: scale(0.92) rotateY(-12deg) rotateX(-6deg); }
+                60% { transform: scale(1.08) rotateY(10deg) rotateX(4deg); }
+                100% { transform: scale(1.18) rotateY(18deg) rotateX(8deg); }
+            }
+            /* Use FontAwesome chevron icons for carousel arrows */
+            .owl-carousel .owl-nav button.owl-prev:before {
+                content: "\f053";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                text-shadow: 0 4px 16px rgba(0,123,255,0.7), 0 1px 0 #fff;
+                transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), color 0.3s;
+                display: inline-block;
+            }
+            .owl-carousel .owl-nav button.owl-next:before {
+                content: "\f054";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                text-shadow: 0 4px 16px rgba(0,123,255,0.7), 0 1px 0 #fff;
+                transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), color 0.3s;
+                display: inline-block;
+            }
+            .owl-carousel .owl-nav button.owl-prev:hover:before,
+            .owl-carousel .owl-nav button.owl-next:hover:before {
+                transform: scale(1.25) rotateY(30deg);
+                color: #ffd700;
+                text-shadow: 0 8px 32px rgba(0,123,255,0.9);
+            }
+            </style>
+            <script>
+            // Animate button on click (for both carousel buttons)
+            document.addEventListener('DOMContentLoaded', function() {
+                ['search-job-btn-1', 'search-job-btn-2'].forEach(function(id) {
+                    var btn = document.getElementById(id);
+                    if (btn) {
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            btn.classList.remove('clicked');
+                            void btn.offsetWidth; // trigger reflow
+                            btn.classList.add('clicked');
+                            setTimeout(function() {
+                                btn.classList.remove('clicked');
+                            }, 500);
+                        });
+                    }
+                });
+            });
+            </script>
+        <!-- Carousel End -->
+
+        <!-- Counter Facts Start -->
+        <div class="container-fluid counter-facts py-3">
+            <div class="particles">
+                <span style="left: 10%; animation-delay: 0s;"></span>
+                <span style="left: 20%; animation-delay: 2s;"></span>
+                <span style="left: 30%; animation-delay: 4s;"></span>
+                <span style="left: 40%; animation-delay: 1s;"></span>
+                <span style="left: 50%; animation-delay: 3s;"></span>
+                <span style="left: 60%; animation-delay: 5s;"></span>
+                <span style="left: 70%; animation-delay: 1.5s;"></span>
+                <span style="left: 80%; animation-delay: 2.5s;"></span>
+                <span style="left: 90%; animation-delay: 4.5s;"></span>
+            </div>
+            <div class="container py-3">
+                <div class="row g-4 scroll-animate" data-animation="fade-up">
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp parallax-element" data-wow-delay="0.1s" data-speed="0.1">
+                        <div class="counter">
+                            <div class="counter-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="counter-content">
+                                <h3>Job Placements</h3>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="counter-value" data-toggle="counter-up">2500</span>
+                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp parallax-element" data-wow-delay="0.3s" data-speed="0.08">
+                        <div class="counter">
+                            <div class="counter-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="counter-content">
+                                <h3>Partner Companies</h3>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="counter-value" data-toggle="counter-up">150</span>
+                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp parallax-element" data-wow-delay="0.5s" data-speed="0.06">
+                        <div class="counter">
+                            <div class="counter-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="counter-content">
+                                <h3>Active Candidates</h3>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="counter-value" data-toggle="counter-up">5200</span>
+                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp parallax-element" data-wow-delay="0.7s" data-speed="0.04">
+                        <div class="counter">
+                            <div class="counter-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="counter-content">
+                                <h3>Success Rate</h3>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="counter-value" data-toggle="counter-up">96</span>
+                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Counter Facts End -->
+        <!-- Search Start -->
+        <div class="container-fluid search-section mb-5 scroll-animate" data-animation="fade-up" data-delay="0.1" style="padding: 35px; background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);">
+            <div class="particles parallax-bg" data-speed="0.2">
+                <span style="left: 15%; animation-delay: 0s;"></span>
+                <span style="left: 25%; animation-delay: 1.5s;"></span>
+                <span style="left: 35%; animation-delay: 3s;"></span>
+                <span style="left: 45%; animation-delay: 0.5s;"></span>
+                <span style="left: 55%; animation-delay: 2s;"></span>
+                <span style="left: 65%; animation-delay: 4s;"></span>
+                <span style="left: 75%; animation-delay: 1s;"></span>
+                <span style="left: 85%; animation-delay: 2.5s;"></span>
+            </div>
+            <div class="container parallax-element" data-speed="0.1">
+                <form id="job-search-form">
+                    <div class="row g-2 align-items-center">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control border-0" placeholder="Keyword (e.g. Developer, Plumber)" name="keyword" />
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select border-0" name="category">
+                                <option value="">All Categories</option>
+                                <option>Developer</option>
+                                <option>Tester</option>
+                                <option>Accounts Manager</option>
+                                <option>Supervisor</option>
+                                <option>Plumber</option>
+                                <option>Electrician</option>
+                                <option>Carpenter</option>
+                                <option>Welder</option>
+                                <option>Construction Worker</option>
+                                <option>Factory Worker / Machine Operator</option>
+                                <option>Delivery Driver</option>
+                                <option>Painter</option>
+                                <option>Technician (AC, Refrigeration, Automotive)</option>
+                                <option>Oil Rig Worker / Field Operator</option>
+                                <option>Nurse</option>
+                                <option>Radiology</option>
+                                <option>Health Department</option>
+                                <option>Oil Department</option>
+                                <option>Bike Rider</option>
+                                <option>Food Store Manager</option>
+                                <option>Waiter</option>
+                                <option>CUSTOMER SERVICE</option>
+                                <option>Software Engineer / Developer</option>
+                                <option>Accountant / Auditor</option>
+                                <option>HR Manager / Recruiter</option>
+                                <option>Marketing Executive / Digital Marketer</option>
+                                <option>Business Analyst</option>
+                                <option>Project Manager</option>
+                                <option>Lawyer / Legal Consultant</option>
+                                <option>Financial Analyst</option>
+                                <option>Architect</option>
+                                <option>Data Scientist</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select border-0" name="location">
+                                <option value="">All Locations</option>
+                                <option>UK</option>
+                                <option>Australia</option>
+                                <option>Canada</option>
+                                <option>USA</option>
+                                <option>Middle East</option>
+                                <option>Abu Dhabi</option>
+                                <option>Dubai</option>
+                                <option>Saudi Arabia</option>
+                                <option>European Countries</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-dark border-0 w-100" id="search-toggle-btn">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="search-results" class="mt-4"></div>
+            </div>
+        </div>
+        <!-- Search End -->
+
+        <script>
+        // Example job data
+        const jobs = [
+            { title: "Developer", category: "Developer", location: "Dubai", company: "Tech Solutions", salary: "$2000-$3000" },
+            { title: "Tester", category: "Tester", location: "UK", company: "QA Corp", salary: "$1800-$2500" },
+            { title: "Accounts Manager", category: "Accounts Manager", location: "Canada", company: "FinancePro", salary: "$2200-$3200" },
+            { title: "Supervisor", category: "Supervisor", location: "Saudi Arabia", company: "OilWorks", salary: "$2500-$3500" },
+            { title: "Plumber", category: "Plumber", location: "Australia", company: "FixIt", salary: "$1500-$2000" },
+            { title: "Electrician", category: "Electrician", location: "USA", company: "ElectroMax", salary: "$1700-$2300" },
+            { title: "Carpenter", category: "Carpenter", location: "Dubai", company: "WoodWorks", salary: "$1600-$2100" },
+            { title: "Welder", category: "Welder", location: "UK", company: "SteelPro", salary: "$1800-$2400" },
+            { title: "Construction Worker", category: "Construction Worker", location: "Saudi Arabia", company: "BuildCorp", salary: "$1400-$2000" },
+            { title: "Factory Worker / Machine Operator", category: "Factory Worker / Machine Operator", location: "Canada", company: "Machina", salary: "$1300-$1900" },
+            { title: "Delivery Driver", category: "Delivery Driver", location: "Australia", company: "QuickMove", salary: "$1200-$1700" },
+            { title: "Painter", category: "Painter", location: "Dubai", company: "ColorPro", salary: "$1500-$2000" },
+            { title: "Technician (AC, Refrigeration, Automotive)", category: "Technician (AC, Refrigeration, Automotive)", location: "Middle East", company: "TechFix", salary: "$2000-$2800" },
+            { title: "Oil Rig Worker / Field Operator", category: "Oil Rig Worker / Field Operator", location: "Abu Dhabi", company: "PetroServe", salary: "$3000-$4000" },
+            { title: "Nurse", category: "Nurse", location: "Dubai", company: "HealthCare", salary: "$2500-$3500" },
+            { title: "Radiology", category: "Radiology", location: "UK", company: "MedScan", salary: "$3200-$4500" },
+            { title: "Health Department", category: "Health Department", location: "Canada", company: "HealthGov", salary: "$2800-$4000" },
+            { title: "Oil Department", category: "Oil Department", location: "Abu Dhabi", company: "PetroServe", salary: "$3000-$4000" },
+            { title: "Bike Rider", category: "Bike Rider", location: "Dubai", company: "FastDelivery", salary: "$1200-$1600" },
+            { title: "Food Store Manager", category: "Food Store Manager", location: "Middle East", company: "Foodies", salary: "$2000-$2800" },
+            { title: "Waiter", category: "Waiter", location: "European Countries", company: "Eatery", salary: "$1000-$1500" },
+            { title: "Software Engineer / Developer", category: "Software Engineer / Developer", location: "Dubai", company: "Innovatech", salary: "$3500-$5000" },
+            { title: "Accountant / Auditor", category: "Accountant / Auditor", location: "UK", company: "AuditPro", salary: "$2500-$4000" },
+            { title: "HR Manager / Recruiter", category: "HR Manager / Recruiter", location: "Canada", company: "PeopleFirst", salary: "$3000-$4500" },
+            { title: "Marketing Executive / Digital Marketer", category: "Marketing Executive / Digital Marketer", location: "USA", company: "MarketGenius", salary: "$2800-$4200" },
+            { title: "Business Analyst", category: "Business Analyst", location: "Australia", company: "BizInsights", salary: "$3200-$4800" },
+            { title: "Project Manager", category: "Project Manager", location: "Middle East", company: "BuildRight", salary: "$4000-$6000" },
+            { title: "Lawyer / Legal Consultant", category: "Lawyer / Legal Consultant", location: "Abu Dhabi", company: "LegalEase", salary: "$5000-$7000" },
+            { title: "Financial Analyst", category: "Financial Analyst", location: "Dubai", company: "FinVision", salary: "$3500-$5500" },
+            { title: "Architect", category: "Architect", location: "Saudi Arabia", company: "DesignHub", salary: "$4500-$6500" },
+            { title: "Data Scientist", category: "Data Scientist", location: "Canada, USA, Saudi Arabia", company: "DataMinds,IBM,INFOSYS,GOOGLE", salary: "$5000-$8000" }
+            // Add more jobs as needed
+        ];
+
+        let searchResultsVisible = false;
+        const searchBtn = document.getElementById('search-toggle-btn');
+        
+        document.getElementById('job-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const resultsDiv = document.getElementById('search-results');
+            
+            if (searchResultsVisible) {
+                // Clear results and reset
+                resultsDiv.innerHTML = '';
+                this.reset();
+                searchBtn.textContent = 'Search';
+                searchResultsVisible = false;
+            } else {
+                // Show search results
+                const keyword = this.keyword.value.trim().toLowerCase();
+                const category = this.category.value;
+                const location = this.location.value;
+
+                const filteredJobs = jobs.filter(job => {
+                    const matchKeyword = keyword === "" || job.title.toLowerCase().includes(keyword);
+                    const matchCategory = category === "" || job.category === category;
+                    const matchLocation = location === "" || job.location === location;
+                    return matchKeyword && matchCategory && matchLocation;
+                });
+
+                if (filteredJobs.length === 0) {
+                    resultsDiv.innerHTML = '<div class="alert alert-warning">No jobs found matching your criteria.</div>';
+                } else {
+                    resultsDiv.innerHTML = filteredJobs.map(job => `
+                    <div class="job-item p-3 mb-3 border rounded bg-light">
+                    <h5>${job.title}</h5>
+                    <p><strong>Category:</strong> ${job.category} | <strong>Location:</strong> ${job.location}</p>
+                    <p><strong>Company:</strong> ${job.company} | <strong>Salary:</strong> ${job.salary}</p>
+                    <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+                    </div>
+                    `).join('');
+                }
+                
+                searchBtn.textContent = 'Clear Results';
+                searchResultsVisible = true;
+            }
+        });
+        </script>
+
+
+        <!-- Category Start -->
+        <div class="container-xxl py-5 scroll-animate" data-animation="fade-up" data-delay="0.1">
+            <div class="container">
+                <h1 class="text-center mb-5 wow fadeInUp text-reveal" data-wow-delay="0.1s" style="font-family: 'Inter', 'Heebo', sans-serif; font-weight: 800; letter-spacing: 2px; font-size: 2.8rem; text-shadow: 0 6px 24px rgba(0,123,255,0.18); color: #007bff;">
+                    <span style="display:inline-block; transform: perspective(400px) rotateY(-8deg) scale(1.08); transition: all 0.4s;">Explore By Category</span>
+                </h1>
+                <div class="row g-4 parallax-element" data-speed="0.1">
+                    <style>
+                        /* Category Card Animation */
+                        .cat-item {
+                            opacity: 0;
+                            transform: translateY(60px) scale(0.95) rotateY(0deg);
+                            animation: catCardIn 0.7s cubic-bezier(.34,1.56,.64,1) forwards;
+                        }
+                        @keyframes catCardIn {
+                            0% {
+                                opacity: 0;
+                                transform: translateY(60px) scale(0.95) rotateY(0deg);
+                            }
+                            60% {
+                                opacity: 1;
+                                transform: translateY(-10px) scale(1.05) rotateY(10deg);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translateY(0) scale(1) rotateY(0deg);
+                            }
+                        }
+                        /* Existing styles... */
+                        .cat-item {
+                            background: linear-gradient(135deg, #f8f9fa 0%, #e3f0ff 100%);
+                            box-shadow: 0 8px 32px rgba(0,123,255,0.12), 0 1.5px 0 #fff inset;
+                            border: none;
+                            border-radius: 24px;
+                            transition: transform 0.5s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s, background 0.3s;
+                            display: block;
+                            text-align: center;
+                            font-family: 'Inter', 'Heebo', sans-serif;
+                            font-weight: 700;
+                            color: #222;
+                            position: relative;
+                            overflow: hidden;
+                            perspective: 600px;
+                        }
+                        .cat-item:hover {
+                            transform: scale(1.08) rotateY(12deg) rotateX(4deg);
+                            box-shadow: 0 18px 48px rgba(0,123,255,0.22), 0 1.5px 0 #fff inset;
+                            background: linear-gradient(135deg, #e3f0ff 0%, #f8f9fa 100%);
+                        }
+                        .cat-item i {
+                            font-size: 3.2em;
+                            color: #007bff;
+                            text-shadow: 0 4px 16px rgba(0,123,255,0.18);
+                            transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), color 0.3s;
+                            will-change: transform;
+                            margin-bottom: 18px;
+                        }
+                        .cat-item:hover i {
+                            transform: scale(1.18) rotateY(30deg);
+                            color: #ffd700;
+                            text-shadow: 0 8px 32px rgba(0,123,255,0.32);
+                        }
+                        .cat-item h6 {
+                            font-size: 1.25rem;
+                            font-family: 'Inter', 'Heebo', sans-serif;
+                            font-weight: 800;
+                            letter-spacing: 1px;
+                            color: #007bff;
+                            text-shadow: 0 2px 8px rgba(0,123,255,0.12);
+                            margin-bottom: 0.5rem;
+                            transition: color 0.3s;
+                        }
+                        .cat-item:hover h6 {
+                            color: #ffd700;
+                        }
+                        .cat-item p {
+                            font-size: 1.05rem;
+                            font-family: 'Heebo', sans-serif;
+                            color: #222;
+                            font-weight: 500;
+                            margin-bottom: 0;
+                            text-shadow: 0 1px 4px rgba(0,123,255,0.08);
+                        }
+                    </style>
+                    <!-- Cards with increasing animation-delay for cool sequential effect -->
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.1s" data-wow-delay="0.1s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.1s">
+                            <i class="fa fa-3x fa-mail-bulk"></i>
+                            <h6>Marketing</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.2s" data-wow-delay="0.2s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.2s">
+                            <i class="fa fa-3x fa-headset"></i>
+                            <h6>Customer Service</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.3s" data-wow-delay="0.3s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.3s">
+                            <i class="fa fa-3x fa-user-tie"></i>
+                            <h6>Human Resource</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.4s" data-wow-delay="0.4s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.4s">
+                            <i class="fa fa-3x fa-tasks"></i>
+                            <h6>Project Management</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.5s" data-wow-delay="0.5s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.5s">
+                            <i class="fa fa-3x fa-chart-line"></i>
+                            <h6>Business Development</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.6s" data-wow-delay="0.6s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.6s">
+                            <i class="fa fa-3x fa-hands-helping"></i>
+                            <h6>Sales & Communication</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.7s" data-wow-delay="0.7s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.7s">
+                            <i class="fa fa-3x fa-book-reader"></i>
+                            <h6>Teaching & Education</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.8s" data-wow-delay="0.8s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.8s">
+                            <i class="fa fa-3x fa-drafting-compass"></i>
+                            <h6>Design & Creative</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <!-- Added Categories -->
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:0.9s" data-wow-delay="0.9s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:0.9s">
+                            <i class="fa fa-3x fa-hotel"></i>
+                            <h6>Hospitality</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.0s" data-wow-delay="1.0s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:1.0s">
+                            <i class="fa fa-3x fa-briefcase"></i>
+                            <h6>Management</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.1s" data-wow-delay="1.1s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:1.1s">
+                            <i class="fa fa-3x fa-laptop-code"></i>
+                            <h6>IT & Software</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.2s" data-wow-delay="1.2s">
+                        <a class="cat-item rounded p-4" href="job-list.html" style="animation-delay:1.2s">
+                            <i class="fa fa-3x fa-tools"></i>
+                            <h6>Construction & Maintenance</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.3s" data-wow-delay="1.3s">
+                        <a class="cat-item rounded p-4" href="" style="animation-delay:1.3s">
+                            <i class="fa fa-3x fa-truck"></i>
+                            <h6>Driver & Delivery</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.4s" data-wow-delay="1.4s">
+                        <a class="cat-item rounded p-4" href="" style="animation-delay:1.4s">
+                            <i class="fa fa-3x fa-wrench"></i>
+                            <h6>Technician & Mechanic</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.5s" data-wow-delay="1.5s">
+                        <a class="cat-item rounded p-4" href="" style="animation-delay:1.5s">
+                            <i class="fa fa-3x fa-paint-roller"></i>
+                            <h6>Painter</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.6s" data-wow-delay="1.6s">
+                        <a class="cat-item rounded p-4" href="" style="animation-delay:1.6s">
+                            <i class="fa fa-3x fa-hard-hat"></i>
+                            <h6>Blue Collar Jobs</h6>
+                            <p>123 Vacancy</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" style="animation-delay:1.7s" data-wow-delay="1.7s">
+                        <a class="cat-item rounded p-4" href="" style="animation-delay:1.7s">
+                            <i class="fa fa-3x fa-plane"></i>
+                            <h6>Airport Jobs</h6>
+                            <p>89 Vacancy</p>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category End -->
+        <script>
+            // Sequentially trigger animation for category cards (for browsers not supporting animation-delay inline)
+            document.addEventListener('DOMContentLoaded', function() {
+                var cards = document.querySelectorAll('.cat-item');
+                cards.forEach(function(card, i) {
+                    card.style.animationDelay = (0.1 + i * 0.1) + 's';
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 scroll-animate" data-animation="fade-up" data-delay="0.1">
+            <div class="container">
+                <h1 class="text-center mb-5 text-reveal" style="font-family: 'Inter', 'Heebo', sans-serif; font-weight: 800; letter-spacing: 2px; color: #007bff;">What Our Clients Say About Us</h1>
+                <div class="owl-carousel testimonial-carousel parallax-element" data-speed="0.05">
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"Talentra HR Consultancy helped me secure my dream job in Dubai within just 2 weeks! Their team understood my skills perfectly and matched me with the right opportunity. The entire process was smooth and professional."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Ahmed Al-Rashid</h5>
+                                <small>Software Engineer, Dubai</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"Outstanding service! Talentra connected our company with highly skilled professionals. Their recruitment process is thorough and they truly understand our hiring needs. We've hired 15+ employees through them."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Sarah Johnson</h5>
+                                <small>HR Manager, TechCorp UAE</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"I got my construction job in Canada through Talentra. They handled everything from visa processing to job placement. Very reliable and supportive team. Highly recommend their services!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Rajesh Kumar</h5>
+                                <small>Construction Supervisor, Canada</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"Talentra's team is exceptional! They found me a perfect nursing position in the UK. Their guidance throughout the application process was invaluable. Professional, efficient, and truly caring."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Maria Santos</h5>
+                                <small>Registered Nurse, London</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"Best HR consultancy in the region! They helped our hospitality business find talented chefs and managers. Their understanding of the industry and quick turnaround time is impressive."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">James Mitchell</h5>
+                                <small>Restaurant Owner, Abu Dhabi</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>"From blue-collar to white-collar jobs, Talentra covers it all! They found me an excellent technician position in Australia. Great communication and follow-up throughout the entire process."</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Ali Hassan</h5>
+                                <small>HVAC Technician, Australia</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-light text-dark footer pt-5 mt-5 scroll-animate" data-animation="fade-up" data-delay="0.1">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="slide-left" data-delay="0.2">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Company</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 scroll-animate" data-animation="slide-left" data-delay="0.4">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Quick Links</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 scroll-animate" data-animation="slide-left" data-delay="0.6">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Contact</h5>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i>+012 345 67890</p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-envelope me-3 contact-icon"></i>info@example.com</p>
+                                    </div>
+                                    <div class="d-flex pt-2 social-links">
+                                        <a class="btn btn-outline-primary btn-social social-btn" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="logo-container">
+                                        <img src="img/only logo.png" alt="Talentra Logo" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="copyright wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="container-fluid px-0">
+                        <div class="row mx-0">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                                &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy <span style="font-family: 'Arial', sans-serif; color: #f8f9fa; font-weight: 500; font-size: 1.1em;">تالينترا</span></a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom copyright-link" href="">SHAHABAZ PASHA SN</a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end px-3">
+                            <div class="footer-menu">
+                                <a href="" class="footer-menu-link text-secondary">Home</a>
+                                <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                                <a href="" class="footer-menu-link text-secondary">Help</a>
+                                <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 50px; height: 50px; background: #007bff !important; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,123,255,0.4); transition: all 0.3s ease;"><i class="bi bi-arrow-up"></i></a>
+        
+        <!-- Floating Quote Button -->
+        <div class="floating-quote-button">
+            <a href="contact.html" class="quote-button-link" role="button">
+                <span class="quote-button-content-wrapper">
+                    <span class="quote-button-text">
+                        <span>Get Your Free Quote</span>
+                    </span>
+                </span>
+            </a>
+        </div>
+        
+        <!-- WhatsApp Floating Button Start -->
+        <a href="https://wa.me/971563807863" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                width: 65px;
+                height: 65px;
+                bottom: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 38px;
+                box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+                animation: whatsapp-pulse 1.5s infinite;
+                border: 3px solid #fff;
+                cursor: pointer;
+                perspective: 400px;
+            }
+            .whatsapp-float:hover {
+                background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+                color: #fff;
+                transform: scale(1.08) rotateY(15deg);
+                box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+            }
+            @keyframes whatsapp-pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+            }
+            
+            /* Floating Quote Button */
+            .floating-quote-button {
+                position: fixed;
+                bottom: 120px;
+                left: 30px;
+                z-index: 1000;
+                transition: all 0.3s ease;
+                transform: translate3d(0px, 0px, 0px);
+                border-radius: 100%;
+                display: inline-block;
+                animation: floatUpDown 6s ease-in-out infinite;
+            }
+            
+            @keyframes floatUpDown {
+                0%, 100% { 
+                    transform: translate3d(0px, 0px, 0px); 
+                }
+                50% { 
+                    transform: translate3d(0px, -10px, 0px); 
+                }
+            }
+            
+            .quote-button-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.02);
+                backdrop-filter: blur(60px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: #ffffff;
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 700;
+                text-decoration: none;
+                text-align: center;
+                text-transform: capitalize;
+                transition: all ease 0.3s;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            }
+            
+            .quote-button-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, 
+                    rgba(37, 99, 235, 0.8) 0%, 
+                    rgba(29, 78, 216, 0.9) 50%, 
+                    rgba(37, 99, 235, 0.8) 100%);
+                border-radius: 50%;
+                opacity: 0.9;
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+            
+            .quote-button-link:hover::before {
+                opacity: 1;
+                background: linear-gradient(135deg, 
+                    rgba(29, 78, 216, 0.9) 0%, 
+                    rgba(37, 99, 235, 1) 50%, 
+                    rgba(29, 78, 216, 0.9) 100%);
+            }
+            
+            .quote-button-link:hover {
+                transform: scale(1.05) rotate(5deg);
+                box-shadow: 0 12px 40px rgba(37, 99, 235, 0.3);
+                color: #ffffff;
+                text-decoration: none;
+            }
+            
+            .quote-button-content-wrapper {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .quote-button-text {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.2;
+                text-align: center;
+                padding: 20px;
+                letter-spacing: 0.5px;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            
+            .quote-button-text span {
+                display: block;
+                position: relative;
+            }
+            
+            /* Enhanced Animation Effects */
+            .floating-quote-button:hover {
+                animation-play-state: paused;
+            }
+            
+            /* Pulse Animation */
+            .quote-button-link::after {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                border-radius: 50%;
+                border: 2px solid rgba(37, 99, 235, 0.3);
+                animation: quotePulse 3s ease-in-out infinite;
+                z-index: -2;
+            }
+            
+            @keyframes quotePulse {
+                0%, 100% {
+                    transform: scale(1);
+                    opacity: 0.3;
+                }
+                50% {
+                    transform: scale(1.1);
+                    opacity: 0.1;
+                }
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .floating-quote-button {
+                    bottom: 100px;
+                    left: 20px;
+                }
+                
+                .quote-button-link {
+                    width: 140px;
+                    height: 140px;
+                    font-size: 18px;
+                }
+                
+                .quote-button-text {
+                    font-size: 14px;
+                    padding: 15px;
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .floating-quote-button {
+                    bottom: 80px;
+                    left: 15px;
+                }
+                
+                .quote-button-link {
+                    width: 120px;
+                    height: 120px;
+                    font-size: 16px;
+                }
+                
+                .quote-button-text {
+                    font-size: 13px;
+                    padding: 12px;
+                }
+            }
+            
+            /* Advanced Scroll Animation Styles */
+            .scroll-animate {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            .scroll-animate.animate-in-view {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Text Reveal Animation */
+            .text-reveal {
+                overflow: hidden;
+            }
+            
+            .word-reveal {
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            .animate-in-view .word-reveal {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Footer specific animations */
+            .footer .scroll-animate {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            .footer .scroll-animate.animate-in-view {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .footer .scroll-animate[data-animation="slide-left"] {
+                transform: translateX(-50px);
+            }
+            
+            .footer .scroll-animate[data-animation="slide-left"].animate-in-view {
+                transform: translateX(0);
+            }
+            
+            .animate-in-view .word-reveal:nth-child(1) { transition-delay: 0.1s; }
+            .animate-in-view .word-reveal:nth-child(2) { transition-delay: 0.2s; }
+            .animate-in-view .word-reveal:nth-child(3) { transition-delay: 0.3s; }
+            .animate-in-view .word-reveal:nth-child(4) { transition-delay: 0.4s; }
+            .animate-in-view .word-reveal:nth-child(5) { transition-delay: 0.5s; }
+            .animate-in-view .word-reveal:nth-child(6) { transition-delay: 0.6s; }
+            .animate-in-view .word-reveal:nth-child(7) { transition-delay: 0.7s; }
+            .animate-in-view .word-reveal:nth-child(8) { transition-delay: 0.8s; }
+            
+            /* Parallax Background */
+            .parallax-bg {
+                will-change: transform;
+                transition: transform 0.1s linear;
+            }
+            
+            /* Enhanced Navbar Scroll Effect */
+            .navbar-scrolled {
+                background: rgba(255, 255, 255, 0.98) !important;
+                backdrop-filter: blur(20px);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+            }
+            
+            .navbar-scrolled .modern-brand-text {
+                font-size: 1.6rem;
+                transition: font-size 0.3s ease;
+            }
+            
+            .navbar-scrolled .arabic-text {
+                font-size: 1rem;
+                transition: font-size 0.3s ease;
+            }
+            
+            /* Section Enter Animations */
+            .container-xxl.animate-in-view {
+                animation: sectionSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            @keyframes sectionSlideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(80px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            /* Category Item Animations */
+            .category-item {
+                transform: translateY(30px);
+                opacity: 0;
+                transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            .category-item.animate-in-view {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .category-item:nth-child(1).animate-in-view { transition-delay: 0.1s; }
+            .category-item:nth-child(2).animate-in-view { transition-delay: 0.2s; }
+            .category-item:nth-child(3).animate-in-view { transition-delay: 0.3s; }
+            .category-item:nth-child(4).animate-in-view { transition-delay: 0.4s; }
+            .category-item:nth-child(5).animate-in-view { transition-delay: 0.5s; }
+            .category-item:nth-child(6).animate-in-view { transition-delay: 0.6s; }
+            
+            /* Enhanced Counter Animation */
+            .counter.animate-in-view {
+                animation: counterBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            
+            @keyframes counterBounceIn {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.3) rotate(-10deg);
+                }
+                50% {
+                    opacity: 0.8;
+                    transform: scale(1.05) rotate(2deg);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+            
+            /* Search Section Slide In */
+            .search-section.animate-in-view {
+                animation: searchSlideIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            @keyframes searchSlideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-100px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            /* Button Hover Enhancements */
+            .btn.animate-in-view {
+                animation: buttonSlideUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            @keyframes buttonSlideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            /* Testimonial Animation */
+            .testimonial-item.animate-in-view {
+                animation: testimonialFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            @keyframes testimonialFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px) scale(0.95);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+            
+            /* Footer Section Animation */
+            .footer-section.animate-in-view {
+                animation: footerSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            @keyframes footerSlideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(60px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            /* Staggered Child Elements */
+            .stagger-child {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            .stagger-child.animate-in-view {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Smooth Page Scroll */
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            /* Performance Optimizations */
+            .scroll-animate,
+            .parallax-bg,
+            .word-reveal {
+                will-change: transform, opacity;
+            }
+            
+            /* Reduce motion for accessibility */
+            @media (prefers-reduced-motion: reduce) {
+                .scroll-animate,
+                .word-reveal,
+                .parallax-bg {
+                    transition: none;
+                    animation: none;
+                }
+                
+                html {
+                    scroll-behavior: auto;
+                }
+            }
+        </style>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Advanced Scroll Animations Script -->
+    <script>
+        // Advanced Scroll Animation System
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Scroll-triggered Animation Observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            // Create intersection observer with error handling
+            const scrollAnimationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    try {
+                        if (entry.isIntersecting && !entry.target.classList.contains('animate-in-view')) {
+                            entry.target.classList.add('animate-in-view');
+                            // Add staggered delay for child elements
+                            const children = entry.target.querySelectorAll('.stagger-child');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.classList.add('animate-in-view');
+                                }, index * 100);
+                            });
+                        }
+                    } catch (error) {
+                        console.log('Animation error:', error);
+                    }
+                });
+            }, observerOptions);
+            
+            // 2. Apply scroll animations to elements that don't already have scroll-animate class
+            const animatedElements = document.querySelectorAll(`
+                .category-item:not(.scroll-animate), 
+                .testimonial-item:not(.scroll-animate), 
+                .job-item:not(.scroll-animate),
+                .counter:not(.scroll-animate)
+            `);
+            
+            animatedElements.forEach(el => {
+                el.classList.add('scroll-animate');
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // Also observe existing scroll-animate elements
+            const existingScrollElements = document.querySelectorAll('.scroll-animate');
+            existingScrollElements.forEach(el => {
+                scrollAnimationObserver.observe(el);
+            });
+            
+            // 3. Throttled Parallax Scroll Effects
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax-bg');
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+                
+                // Navbar scroll effect
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    if (scrolled > 100) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                }
+                
+                ticking = false;
+            }
+            
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+            
+
+            
+            // 5. Enhanced Counter Animation on Scroll
+            const counters = document.querySelectorAll('.counter-value');
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                        entry.target.classList.add('counted');
+                        animateCounter(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+            
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-target')) || 
+                               parseInt(element.textContent.replace(/[^0-9]/g, ''));
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target + (element.textContent.includes('+') ? '+' : '');
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.ceil(current) + (element.textContent.includes('+') ? '+' : '');
+                    }
+                }, 20);
+            }
+            
+            // 6. Smooth Page Transitions
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // 7. Mouse Move Parallax for Hero Section
+            const hero = document.querySelector('.carousel');
+            if (hero) {
+                hero.addEventListener('mousemove', (e) => {
+                    const rect = hero.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const deltaX = (x - centerX) / centerX;
+                    const deltaY = (y - centerY) / centerY;
+                    
+                    const parallaxElements = hero.querySelectorAll('.parallax-element');
+                    parallaxElements.forEach((element, index) => {
+                        const speed = (index + 1) * 2;
+                        element.style.transform = `translate(${deltaX * speed}px, ${deltaY * speed}px)`;
+                    });
+                });
+            }
+            
+        });
+    </script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+        $(document).ready(function() {
+            // Enhanced counter animation function
+            function animateCounter() {
+                $('.counter').each(function(index) {
+                    const $counter = $(this);
+                    
+                    // Add staggered animation entrance
+                    setTimeout(() => {
+                        $counter.addClass('animate-in');
+                    }, index * 200);
+                });
+                
+                // Animate counter values with enhanced effects
+                setTimeout(() => {
+                    $('.counter-value').each(function(index) {
+                        var $this = $(this);
+                        var countTo = $this.attr('data-toggle') === 'counter-up' ? parseInt($this.text()) : 0;
+                        
+                        if (countTo > 0) {
+                            $this.text('0');
+                            
+                            // Add counting class for pulse effect
+                            var countingInterval = setInterval(() => {
+                                $this.addClass('counting');
+                                setTimeout(() => $this.removeClass('counting'), 100);
+                            }, 150);
+                            
+                            $({ countNum: 0 }).animate({
+                                countNum: countTo
+                            }, {
+                                duration: 2500 + (index * 300),
+                                easing: 'easeOutCubic',
+                                step: function() {
+                                    var currentNum = Math.floor(this.countNum);
+                                    $this.text(currentNum.toLocaleString());
+                                },
+                                complete: function() {
+                                    clearInterval(countingInterval);
+                                    $this.removeClass('counting');
+                                    $this.text(countTo.toLocaleString());
+                                    
+                                    // Add completion effect
+                                    $this.parent().find('h4').css({
+                                        'animation': 'bounce 0.6s ease-in-out'
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }, 800);
+            }
+            
+            // Initialize WOW.js with custom settings
+            new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 100,
+                mobile: true,
+                live: true
+            }).init();
+            
+            // Add custom easing
+            $.easing.easeOutCubic = function (x, t, b, c, d) {
+                return c*((t=t/d-1)*t*t + 1) + b;
+            };
+            
+            // Trigger counter animation when section comes into view
+            $(window).scroll(function() {
+                var counterSection = $('.counter-facts');
+                if (counterSection.length) {
+                    var sectionTop = counterSection.offset().top;
+                    var sectionHeight = counterSection.outerHeight();
+                    var windowTop = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    // Check if section is in viewport
+                    if (windowTop + windowHeight > sectionTop + 200 && 
+                        windowTop < sectionTop + sectionHeight - 200) {
+                        
+                        // Only animate once
+                        if (!counterSection.hasClass('animated')) {
+                            counterSection.addClass('animated');
+                            setTimeout(animateCounter, 300);
+                        }
+                    }
+                }
+            });
+            
+            // Add hover effects for counters
+            $('.counter').hover(
+                function() {
+                    $(this).find('.counter-icon i').css('animation-play-state', 'paused');
+                },
+                function() {
+                    $(this).find('.counter-icon i').css('animation-play-state', 'running');
+                }
+            );
+            
+            // Also trigger on page load if section is already visible
+            $(window).trigger('scroll');
+        });
+        
+        // Modern Navbar JavaScript
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth dropdown animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const dropdown = this.nextElementSibling;
+                    
+                    // Close other dropdowns
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        if (menu !== dropdown) {
+                            menu.style.display = 'none';
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    if (dropdown.style.display === 'block') {
+                        dropdown.style.display = 'none';
+                    } else {
+                        dropdown.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.style.display = 'none';
+                    });
+                }
+            });
+        });
+        
+        // Add loading animation for CTA button
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaBtn = document.querySelector('.modern-cta-btn');
+            if (ctaBtn) {
+                ctaBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Add loading state
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Loading...';
+                    this.style.pointerEvents = 'none';
+                    
+                    // Simulate loading and redirect
+                    setTimeout(() => {
+                        window.location.href = this.getAttribute('href');
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

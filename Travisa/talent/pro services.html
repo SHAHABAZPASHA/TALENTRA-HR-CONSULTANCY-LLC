@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Talentra HR Consultancy llc</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- WhatsApp Floating Button Styles & Animated Header Styles -->
+    <style>
+    /* Animated Gradient Header Styles */
+    .animated-gradient-header {
+    background: linear-gradient(120deg, #2563eb 0%, #1d4ed8 100%);
+        border-radius: 2rem;
+        box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+        position: relative;
+        overflow: visible;
+        min-height: 320px;
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+        z-index: 1;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+    }
+    .header-animated-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    background: linear-gradient(120deg, #2563eb 0%, #1d4ed8 100%);
+        opacity: 0.95;
+        animation: headerGradientFlow 8s ease-in-out infinite alternate;
+        border-radius: 2rem;
+    }
+    @keyframes headerGradientFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+    .header-floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .floating-shape {
+        position: absolute;
+        animation: floatShape 7s ease-in-out infinite alternate;
+    }
+    @keyframes floatShape {
+        0% { transform: translateY(0) scale(1); }
+        100% { transform: translateY(-18px) scale(1.08); }
+    }
+    .header-glass-overlay {
+        pointer-events: none;
+    }
+    .text-shadow-glow {
+    text-shadow: 0 4px 24px #2563eb99, 0 1.5px 6px #1d4ed899;
+    }
+    .animated-breadcrumb .breadcrumb-item a {
+        color: #e0e7ef;
+        text-shadow: 0 1px 4px #2563eb55;
+        font-weight: 500;
+    }
+    .animated-breadcrumb .breadcrumb-item.active {
+        color: #fff;
+        font-weight: 700;
+        text-shadow: 0 1px 4px #2563eb55;
+    }
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #2563eb 60%, #1d4ed8 100%);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 38px;
+            box-shadow: 0 8px 24px #2563eb44, 0 1.5px 6px #1d4ed8;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+            animation: whatsapp-pulse 1.5s infinite;
+            border: 3px solid #fff;
+            cursor: pointer;
+            perspective: 400px;
+        }
+        .whatsapp-float:hover {
+            background: linear-gradient(135deg, #1d4ed8 60%, #2563eb 100%);
+            color: #fff;
+            transform: scale(1.08) rotateY(15deg);
+            box-shadow: 0 12px 32px #2563eb66, 0 2px 8px #1d4ed8;
+        }
+        .whatsapp-float i {
+            color: #ffffff !important;
+        }
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 0 0 0 #2563eb77, 0 8px 24px #1d4ed844;
+            }
+            70% {
+                box-shadow: 0 0 0 16px #2563eb00, 0 8px 24px #1d4ed844;
+            }
+            100% {
+                box-shadow: 0 0 0 0 #2563eb77, 0 8px 24px #1d4ed844;
+            }
+        }
+        
+        /* Footer Animation Styles */
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid #007bff;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+            animation: footer-shimmer 8s infinite;
+        }
+        
+        @keyframes footer-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .footer-section {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9) !important;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,123,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .footer-section:hover::before {
+            left: 100%;
+        }
+        
+        .footer-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,1) !important;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+            border-color: rgba(0,123,255,0.3);
+        }
+        
+        .footer-title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            transition: width 0.5s ease;
+        }
+        
+        .footer-section:hover .footer-title::after {
+            width: 100%;
+        }
+        
+        .footer-title:hover {
+            color: #007bff !important;
+            transform: scale(1.05);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0.5rem;
+            margin-left: -0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .footer-link:hover {
+            color: #007bff !important;
+            transform: translateX(10px);
+            border-left-color: #007bff;
+            background: rgba(0,123,255,0.05);
+        }
+        
+        .footer-link:hover::before {
+            left: 0;
+        }
+        
+        .footer-link i {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .footer-link:hover i {
+            transform: translateX(5px) scale(1.2);
+            opacity: 1;
+            color: #007bff;
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item:hover {
+            background: rgba(0,123,255,0.1);
+            transform: translateX(8px);
+        }
+        
+        .contact-icon {
+            transition: all 0.3s ease;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item:hover .contact-icon {
+            transform: scale(1.3) rotate(360deg);
+            color: #0056b3;
+        }
+        
+        .social-links {
+            gap: 0.5rem;
+        }
+        
+        .social-btn {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: #007bff !important;
+            border: 2px solid #007bff !important;
+            color: #ffffff !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+            color: #ffffff !important;
+        }
+        
+        .social-btn:hover::before {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+        .social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+        .social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+        .social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+        .social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+        .social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+        .social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+        .social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+        .social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+        .social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+        
+        .copyright {
+            background: #007bff !important;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            margin: 0 !important;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            transition: all 0.3s ease;
+        }
+        
+        .copyright .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        .copyright .row {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+        
+        .copyright .col-md-6 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        
+        .copyright-text {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+        }
+        
+        .copyright:hover .copyright-text {
+            transform: translateY(-2px);
+        }
+        
+        .copyright-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+        
+        .copyright-link:hover {
+            color: #f8f9fa !important;
+            border-bottom-color: #f8f9fa;
+            transform: translateY(-1px);
+        }
+        
+        .footer-menu-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.2rem;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        .footer-menu-link:hover {
+            color: #007bff !important;
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+        
+        .company-logo {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            filter: brightness(1.1);
+        }
+        
+        .logo-container:hover .company-logo {
+            transform: scale(1.1) rotate(5deg);
+            filter: brightness(1.2);
+        }
+        
+        /* Responsive footer adjustments */
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 2rem;
+                padding: 1rem;
+                min-height: auto;
+            }
+            
+            .footer-section:hover {
+                transform: translateY(-5px);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-menu {
+                text-align: center;
+            }
+            
+            .footer-menu-link {
+                display: inline-block;
+                margin: 0.2rem;
+            }
+            
+            .company-logo {
+                height: 80px;
+            }
+        }
+        
+        /* Corporate Elegant Header Animation System */
+        .professional-page-header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+            background-size: 200% 200%;
+            animation: corporateGradientFlow 15s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, #007bff, #0056b3, #007bff) 1;
+            box-shadow: 0 2px 20px rgba(0,123,255,0.1);
+        }
+        
+        .professional-page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(0,123,255,0.03) 50%, transparent 60%);
+            animation: corporateShimmer 8s linear infinite;
+            z-index: 1;
+        }
+        
+        .professional-page-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(0,123,255,0.05) 0%, transparent 70%);
+            animation: corporatePulse 12s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        @keyframes corporateGradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes corporateShimmer {
+            0% { transform: translateX(-100%) skewX(-10deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(200%) skewX(-10deg); opacity: 0; }
+        }
+        
+        @keyframes corporatePulse {
+            0%, 100% { 
+                opacity: 0.2; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 0.4; 
+                transform: scale(1.05); 
+            }
+        }
+        
+        @keyframes headerPulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        .professional-title {
+            background: linear-gradient(135deg, #2c3e50 0%, #007bff 50%, #2c3e50 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            position: relative;
+            z-index: 3;
+            animation: corporateTitleFlow 10s ease-in-out infinite;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .professional-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(circle, rgba(0,123,255,0.08) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: corporateTitleAura 8s ease-in-out infinite;
+            z-index: -1;
+            border-radius: 50%;
+        }
+        
+        .professional-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #007bff, transparent);
+            transform: translateX(-50%);
+            border-radius: 2px;
+            animation: corporateTitleUnderline 6s ease-in-out infinite;
+        }
+        
+        @keyframes corporateTitleFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes corporateTitleAura {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1); 
+                opacity: 0.3; 
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.1); 
+                opacity: 0.6; 
+            }
+        }
+        
+        @keyframes corporateTitleUnderline {
+            0%, 100% { 
+                width: 60%; 
+                opacity: 0.7; 
+            }
+            50% { 
+                width: 80%; 
+                opacity: 1; 
+            }
+        }
+        
+        .professional-breadcrumb {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 15px 25px;
+            border: 2px solid rgba(0,123,255,0.1);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 25px rgba(0,123,255,0.1);
+        }
+        
+        .professional-breadcrumb .breadcrumb-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+        
+        .professional-breadcrumb .breadcrumb-item a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,198,255,0.1));
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .professional-breadcrumb .breadcrumb-item a:hover {
+            color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .professional-breadcrumb .breadcrumb-item a:hover::before {
+            opacity: 1;
+        }
+        
+        .professional-breadcrumb-active {
+            color: #2c3e50 !important;
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(0,123,255,0.15), rgba(0,198,255,0.15));
+            padding: 5px 15px;
+            border-radius: 15px;
+            border: 2px solid rgba(0,123,255,0.2);
+        }
+        
+        /* Corporate Elegant Particle System */
+        .header-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+        
+        .header-particles .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: linear-gradient(45deg, rgba(0,123,255,0.6), rgba(0,123,255,0.3));
+            border-radius: 50%;
+            animation: corporateParticleFloat 20s infinite linear;
+            opacity: 0.6;
+            top: 110%;
+            box-shadow: 0 0 6px rgba(0,123,255,0.3);
+        }
+        
+        .header-particles .particle:nth-child(odd) {
+            animation-duration: 25s;
+            background: linear-gradient(45deg, rgba(0,123,255,0.4), rgba(0,123,255,0.2));
+        }
+        
+        .header-particles .particle:nth-child(3n) {
+            animation-duration: 30s;
+            width: 2px;
+            height: 2px;
+        }
+        
+        .header-particles .particle:nth-child(4n) {
+            width: 4px;
+            height: 4px;
+            animation-duration: 22s;
+        }
+        
+        @keyframes corporateParticleFloat {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-400px) translateX(20px);
+                opacity: 0;
+            }
+        }
+        
+        /* Corporate Elegant Floating Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .floating-circle, .floating-square {
+            position: absolute;
+            opacity: 0.4;
+            animation: corporateFloatUpDown 12s ease-in-out infinite;
+        }
+        
+        .floating-circle {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, rgba(0,123,255,0.2), rgba(0,123,255,0.1));
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0,123,255,0.2);
+            border: 1px solid rgba(0,123,255,0.1);
+        }
+        
+        .floating-square {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(45deg, rgba(0,123,255,0.15), rgba(0,123,255,0.1));
+            border-radius: 3px;
+            transform: rotate(45deg);
+            box-shadow: 0 0 12px rgba(0,123,255,0.15);
+            border: 1px solid rgba(0,123,255,0.1);
+        }
+        
+        @keyframes corporateFloatUpDown {
+            0%, 100% { 
+                transform: translateY(0) scale(1);
+                opacity: 0.4;
+            }
+            50% { 
+                transform: translateY(-25px) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+        
+        .floating-circle:nth-child(odd) {
+            animation-duration: 15s;
+            animation-delay: 2s;
+        }
+        
+        .floating-square:nth-child(even) {
+            animation-duration: 18s;
+            animation-delay: 1s;
+        }
+        
+        /* Corporate Job Section Styling */
+        .job-section-container {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .job-section-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(0,123,255,0.02) 50%, transparent 60%);
+            animation: jobSectionShimmer 15s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes jobSectionShimmer {
+            0% { transform: translateX(-100%) skewX(-10deg); }
+            100% { transform: translateX(200%) skewX(-10deg); }
+        }
+        
+        .job-section-header {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .corporate-job-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2c3e50 0%, #007bff 50%, #2c3e50 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: jobTitleGradient 8s ease-in-out infinite;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .corporate-job-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #007bff, transparent);
+            transform: translateX(-50%);
+            border-radius: 2px;
+            animation: jobTitleUnderline 6s ease-in-out infinite;
+        }
+        
+        @keyframes jobTitleGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes jobTitleUnderline {
+            0%, 100% { width: 100px; opacity: 0.7; }
+            50% { width: 150px; opacity: 1; }
+        }
+        
+        .corporate-job-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        /* Corporate Search Bar */
+        .corporate-search-container {
+            margin-bottom: 3rem;
+        }
+        
+        .search-input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,249,250,0.95));
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 0 10px 30px rgba(0,123,255,0.1);
+            border: 2px solid rgba(0,123,255,0.1);
+            overflow: hidden;
+        }
+        
+        .search-input-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.05), transparent);
+            animation: searchShimmer 6s infinite;
+            border-radius: 25px;
+        }
+        
+        @keyframes searchShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .search-icon {
+            padding: 0 20px;
+            color: #007bff;
+            font-size: 1.1rem;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .corporate-search-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 15px 10px;
+            font-size: 1rem;
+            color: #495057;
+            outline: none;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .corporate-search-input::placeholder {
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        .corporate-search-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 20px;
+            padding: 12px 20px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .corporate-search-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .corporate-search-btn:hover::before {
+            left: 100%;
+        }
+        
+        .corporate-search-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+            background: linear-gradient(135deg, #0056b3, #004085);
+        }
+
+        .corporate-clear-btn {
+            position: absolute;
+            right: 75px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 8px;
+            color: #666;
+            padding: 8px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .corporate-clear-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .corporate-clear-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #333;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .corporate-browse-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 25px;
+            padding: 15px 35px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+            backdrop-filter: blur(10px);
+            letter-spacing: 0.5px;
+        }
+
+        .corporate-browse-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .corporate-browse-btn:hover::before {
+            left: 100%;
+        }
+
+        .corporate-browse-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(135deg, #0056b3, #004085);
+            color: white;
+            text-decoration: none;
+        }
+
+        .corporate-browse-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+        
+        .corporate-tab-container {
+            background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(248,249,250,0.9));
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,123,255,0.1);
+            border: 1px solid rgba(0,123,255,0.1);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 3rem;
+        }
+        
+        .corporate-tab-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.05), transparent);
+            animation: tabContainerShimmer 8s infinite;
+            border-radius: 25px;
+        }
+        
+        @keyframes tabContainerShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .corporate-nav-pills {
+            border: none;
+            background: rgba(255,255,255,0.5);
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        .corporate-nav-link {
+            position: relative;
+            padding: 15px 25px;
+            margin: 0 8px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #495057;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .corporate-nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s ease;
+            z-index: 0;
+        }
+        
+        .corporate-nav-link:hover::before,
+        .corporate-nav-link.active::before {
+            left: 100%;
+        }
+        
+        .corporate-nav-link.active {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border-color: #007bff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+        }
+        
+        .corporate-nav-link:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0,123,255,0.3);
+            background: linear-gradient(145deg, rgba(0,123,255,0.1), rgba(255,255,255,0.9));
+            box-shadow: 0 6px 20px rgba(0,123,255,0.15);
+        }
+        
+        .nav-icon-container {
+            margin-right: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .nav-icon {
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .corporate-nav-link:hover .nav-icon,
+        .corporate-nav-link.active .nav-icon {
+            transform: scale(1.2) rotate(360deg);
+        }
+        
+        .job-count-badge {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            animation: badgePulse 2s ease-in-out infinite;
+            box-shadow: 0 2px 8px rgba(220,53,69,0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .corporate-tab-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Corporate Job Item Styling */
+        .job-item {
+            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,249,250,0.95));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,123,255,0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,123,255,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem !important;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: jobItemSlideIn 0.6s ease-out forwards;
+        }
+        
+        .job-item:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+        
+        .job-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+        
+        .job-item:nth-child(3n) {
+            animation-delay: 0.3s;
+        }
+        
+        @keyframes jobItemSlideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .job-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,123,255,0.03) 0%, rgba(0,123,255,0.01) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+        
+        .job-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #007bff, transparent);
+            background-size: 200% 100%;
+            animation: jobItemTopBorder 4s linear infinite;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            border-radius: 20px 20px 0 0;
+            z-index: 2;
+        }
+        
+        @keyframes jobItemTopBorder {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .job-item:hover::before {
+            opacity: 1;
+        }
+        
+        .job-item:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .job-item:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0,123,255,0.2);
+            box-shadow: 0 15px 40px rgba(0,123,255,0.15);
+            background: linear-gradient(145deg, rgba(255,255,255,1), rgba(248,249,250,1));
+        }
+        
+        .job-item h5 {
+            color: #2c3e50;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .job-item:hover h5 {
+            color: #007bff;
+            transform: translateX(5px);
+        }
+        
+        .job-item img {
+            transition: all 0.4s ease;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 3;
+        }
+        
+        .job-item:hover img {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.2);
+        }
+        
+        .job-item .btn-primary {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 12px;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 3;
+        }
+        
+        .job-item .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .job-item .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .job-item .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+            background: linear-gradient(135deg, #0056b3, #004085);
+        }
+        
+        .job-item .btn-light {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: 2px solid rgba(0,123,255,0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .job-item .btn-light:hover {
+            background: linear-gradient(145deg, rgba(0,123,255,0.1), rgba(255,255,255,0.9));
+            border-color: rgba(0,123,255,0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+        
+        .job-item .text-primary {
+            color: #007bff !important;
+            transition: all 0.3s ease;
+        }
+        
+        .job-item:hover .text-primary {
+            color: #0056b3 !important;
+            transform: scale(1.1);
+        }
+        
+        .job-item small {
+            color: #6c757d;
+            font-style: italic;
+            position: relative;
+            z-index: 3;
+        }
+        
+        /* Corporate Elegant Wave Animation */
+        .header-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            z-index: 3;
+            overflow: hidden;
+            opacity: 0.8;
+        }
+        
+        .header-wave svg {
+            width: 100%;
+            height: 100%;
+            transform: rotateX(180deg);
+        }
+        
+        .professional-page-header .container {
+            position: relative;
+            z-index: 4;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .professional-title {
+                font-size: 2.5rem !important;
+                letter-spacing: 1px;
+            }
+            
+            .professional-breadcrumb {
+                padding: 10px 15px;
+            }
+            
+            .professional-title::after {
+                width: 150px;
+                height: 4px;
+                bottom: -10px;
+            }
+        }
+        
+        /* Fix for dropdown arrows */
+        .dropdown-toggle::after {
+            display: inline-block !important;
+            margin-left: 0.255em !important;
+            vertical-align: 0.255em !important;
+            content: "" !important;
+            border-top: 0.3em solid !important;
+            border-right: 0.3em solid transparent !important;
+            border-bottom: 0 !important;
+            border-left: 0.3em solid transparent !important;
+        }
+        
+        .dropdown-toggle:empty::after {
+            margin-left: 0 !important;
+        }
+        
+        .navbar-nav .dropdown-toggle::after {
+            color: inherit !important;
+            opacity: 0.8 !important;
+        }
+        
+        .navbar-nav .dropdown-toggle:hover::after {
+            opacity: 1 !important;
+        }
+        
+        /* Fix for icons visibility */
+        .social-btn i {
+            font-size: 16px !important;
+            color: white !important;
+            display: inline-block !important;
+            line-height: 1 !important;
+            vertical-align: middle !important;
+        }
+        
+        .whatsapp-float i {
+            font-size: 32px !important;
+            color: white !important;
+            display: inline-block !important;
+            line-height: 1 !important;
+        }
+        
+        .back-to-top i {
+            font-size: 18px !important;
+            color: white !important;
+            display: inline-block !important;
+            line-height: 1 !important;
+            vertical-align: middle !important;
+        }
+        
+        /* Ensure Font Awesome loads properly */
+        .fa, .fab, .far, .fas, .bi {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "bootstrap-icons" !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            display: inline-block !important;
+        }
+        
+        .bi {
+            font-family: "bootstrap-icons" !important;
+            font-weight: normal !important;
+        }
+        
+        /* Specific icon fixes */
+        .fab.fa-whatsapp::before { content: "\f232"; }
+        .fab.fa-twitter::before { content: "\f099"; }
+        .fab.fa-facebook-f::before { content: "\f39e"; }
+        .fab.fa-youtube::before { content: "\f167"; }
+        .fab.fa-linkedin-in::before { content: "\f0e1"; }
+        .bi.bi-arrow-up::before { content: "\f148"; }
+        
+        /* Enhanced back-to-top button */
+        .back-to-top {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 1000 !important;
+            background: #007bff !important;
+            border: none !important;
+            border-radius: 50% !important;
+            width: 50px !important;
+            height: 50px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3) !important;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px) scale(1.1) !important;
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4) !important;
+        }
+        
+        /* Active navbar link styling */
+        .navbar-nav .nav-link.active {
+            color: #007bff !important;
+            font-weight: 600;
+        }
+        
+        .navbar-nav .nav-link.active:hover {
+            color: #0056b3 !important;
+        }
+
+        /* Modern Navbar Styles */
+        .modern-brand-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2563eb; /* Fallback color */
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        
+        .arabic-text {
+            font-family: 'Arial', sans-serif;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: -3px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+        
+        .modern-nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151 !important;
+            position: relative;
+            padding: 0.8rem 1.2rem !important;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .modern-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .modern-nav-link:hover::before,
+        .modern-nav-link.active::before {
+            width: 80%;
+        }
+        
+        .modern-nav-link:hover,
+        .modern-nav-link.active {
+            color: #2563eb !important;
+        }
+        
+        .modern-dropdown {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .modern-dropdown-item {
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .modern-dropdown-item:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-left-color: #1d4ed8;
+            transform: translateX(5px);
+        }
+        
+        .modern-cta-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .modern-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .modern-cta-btn:hover::before {
+            left: 100%;
+        }
+        
+        .modern-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Navbar Styles */
+        @media (max-width: 768px) {
+            .modern-brand-text {
+                font-size: 1.5rem;
+            }
+            
+            .arabic-text {
+                font-size: 1rem;
+            }
+            
+            .modern-cta-btn {
+                margin-top: 10px;
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+            
+            .navbar-nav {
+                text-align: center;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 10px 15px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .modern-brand-text {
+                font-size: 1.3rem;
+            }
+            
+            .arabic-text {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Advanced Scroll Animation System */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-animate.animate-in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-animate[data-animation="fade-up"] {
+            transform: translateY(60px);
+        }
+        
+        .scroll-animate[data-animation="fade-up"].animate-in-view {
+            transform: translateY(0);
+        }
+        
+        .scroll-animate[data-animation="slide-left"] {
+            transform: translateX(-60px);
+        }
+        
+        .scroll-animate[data-animation="slide-left"].animate-in-view {
+            transform: translateX(0);
+        }
+        
+        .scroll-animate[data-animation="slide-right"] {
+            transform: translateX(60px);
+        }
+        
+        .scroll-animate[data-animation="slide-right"].animate-in-view {
+            transform: translateX(0);
+        }
+        
+        .scroll-animate[data-animation="zoom-in"] {
+            transform: scale(0.8);
+        }
+        
+        .scroll-animate[data-animation="zoom-in"].animate-in-view {
+            transform: scale(1);
+        }
+        
+        /* Parallax Elements */
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+        }
+        
+        .parallax-bg {
+            transition: transform 0.1s ease-out;
+        }
+        
+        /* Text Reveal Animation */
+        .text-reveal {
+            overflow: hidden;
+        }
+        
+        .word-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .animate-in-view .word-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .animate-in-view .word-reveal:nth-child(1) { transition-delay: 0.1s; }
+        .animate-in-view .word-reveal:nth-child(2) { transition-delay: 0.2s; }
+        .animate-in-view .word-reveal:nth-child(3) { transition-delay: 0.3s; }
+        .animate-in-view .word-reveal:nth-child(4) { transition-delay: 0.4s; }
+        .animate-in-view .word-reveal:nth-child(5) { transition-delay: 0.5s; }
+        
+        /* Staggered Animation Delays */
+        .scroll-animate[data-delay="0.1"] { transition-delay: 0.1s; }
+        .scroll-animate[data-delay="0.2"] { transition-delay: 0.2s; }
+        .scroll-animate[data-delay="0.3"] { transition-delay: 0.3s; }
+        .scroll-animate[data-delay="0.4"] { transition-delay: 0.4s; }
+        .scroll-animate[data-delay="0.5"] { transition-delay: 0.5s; }
+        .scroll-animate[data-delay="0.6"] { transition-delay: 0.6s; }
+        
+        /* Navbar Scroll Effect */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-animate,
+            .parallax-element,
+            .parallax-bg,
+            .word-reveal {
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+    <style>
+    /* Force all .text-primary to use the correct blue */
+    .text-primary {
+        color: #2563eb !important;
+    }
+    </style>
+    <style>
+    .glow-title {
+        text-shadow: none !important;
+        animation: none !important;
+    }
+    </style>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div style="position:relative;display:flex;align-items:center;justify-content:center;width:5.2rem;height:5.2rem;">
+                <div class="spinner-border" style="width: 5.2rem; height: 5.2rem; color: #2563eb; border-color: #2563eb; border-width: 0.38em; position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;animation: spinner-rotate 1.1s linear infinite;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <img src="img/only logo.png" alt="Talentra Logo" style="position:absolute;top:50%;left:50%;width:3.6rem;height:3.6rem;transform:translate(-50%,-50%);object-fit:contain;border-radius:50%;z-index:2;box-shadow:0 2px 12px #2563eb33;background:#fff;" />
+            </div>
+            <style>
+            @keyframes spinner-rotate {
+                100% { transform: rotate(360deg); }
+            }
+            </style>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Top Contact Bar Start -->
+        <div class="container-fluid bg-dark text-white py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center">
+                            <div class="me-4">
+                                <i class="fa fa-phone-alt me-2"></i>
+                                <span>+(971) 56 380 7863</span>
+                            </div>
+                            <div class="me-4">
+                                <i class="fa fa-envelope me-2"></i>
+                                <span>info@talentra.com</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <span class="me-3">Follow Us:</span>
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Contact Bar End -->
+
+        <!-- Modern Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(37, 99, 235, 0.1); transition: all 0.3s ease;">
+            <div class="container">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/only logo.png" alt="Talentra Logo" style="height: 70px; width: auto; object-fit: contain; margin-right: 15px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div style="color:#2563eb;font-size:2rem;font-weight:900;font-family:Arial,sans-serif;line-height:1.1;margin-bottom:0;letter-spacing:1px;">TALENTRA</div>
+                        <span class="arabic-text">تالينترا</span>
+                    </div>
+                </a>
+                
+                <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto d-flex align-items-center">
+                        <a href="index.html" class="nav-item nav-link modern-nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link modern-nav-link">About</a>
+                        <a href="BLOG.html" class="nav-item nav-link modern-nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link " data-bs-toggle="dropdown">Jobs</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="job-list.html" class="dropdown-item modern-dropdown-item">Job List</a>
+                                <a href="job-detail.html" class="dropdown-item modern-dropdown-item">Job Detail</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle modern-nav-link active" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu modern-dropdown">
+                                <a href="pro services.html" class="dropdown-item modern-dropdown-item">PRO Services</a>
+                                <a href="countries.html" class="dropdown-item modern-dropdown-item">Countries We Serve</a>
+                                <a href="companies.html" class="dropdown-item modern-dropdown-item">Our Strategic Partners</a>
+                            </div>
+                        </div>
+                          <a href="blog.html" class="nav-item nav-link modern-nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link modern-nav-link">Contact</a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center ms-lg-3">
+                        <a href="Travisa/index.html" class="btn modern-cta-btn">
+                            <span>VISA SERVICES</span>
+                            <i class="fa fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Modern Navbar End -->
+        <!-- Navbar End -->
+
+
+        <!-- Animated Modern Header Start -->
+        <div class="container-xxl py-5 mb-5 animated-gradient-header position-relative" style="overflow:visible;">
+            <div class="header-animated-bg"></div>
+            <div class="header-gradient-border" style="position:absolute;inset:0;border-radius:2rem;pointer-events:none;z-index:2;border:4px solid;border-image:linear-gradient(120deg,#2563eb 0%,#60a5fa 100%) 1;opacity:0.8;box-shadow:0 0 32px 0 #2563eb33;"></div>
+            <div class="header-floating-shapes">
+                <span style="position:absolute;left:5%;top:18%;width:120px;height:120px;display:inline-block;opacity:0.18;z-index:4;">
+                    <svg width="120" height="120" style="position:absolute;top:0;left:0;z-index:1;" class="floating-shape"><circle cx="60" cy="60" r="55" fill="#2563eb"/></svg>
+                    <img src="img/whiteBG.png" alt="Talentra Logo" style="position:absolute;top:50%;left:50%;width:64px;height:64px;transform:translate(-50%,-50%);border-radius:50%;box-shadow:0 2px 12px #2563eb55;object-fit:contain;z-index:2;" />
+                </span>
+                <svg width="80" height="80" class="floating-shape" style="right:10%;top:10%;opacity:0.13;"><rect width="80" height="80" rx="20" fill="#1d4ed8"/></svg>
+                <svg width="60" height="60" class="floating-shape" style="left:20%;bottom:10%;opacity:0.12;"><polygon points="30,5 55,55 5,55" fill="#60a5fa"/></svg>
+                <svg width="48" height="48" class="floating-shape" style="right:18%;bottom:18%;opacity:0.10;"><ellipse cx="24" cy="24" rx="22" ry="14" fill="#60a5fa"/></svg>
+                <svg width="36" height="36" class="floating-shape" style="left:12%;top:32%;opacity:0.09;"><rect width="36" height="36" rx="8" fill="#2563eb"/></svg>
+            </div>
+            <div class="header-glass-overlay position-absolute top-0 start-0 w-100 h-100" style="backdrop-filter: blur(24px); background: rgba(255,255,255,0.22); border-radius: 2rem; z-index:1; box-shadow: 0 8px 32px rgba(37,99,235,0.10);"></div>
+            <div class="container position-relative d-flex flex-row align-items-center justify-content-between" style="z-index:2;min-height:180px;">
+                <div class="company-header-logo me-4" style="display:flex;align-items:center;justify-content:flex-start;">
+                    <img src="img/whiteBG.png" alt="Talentra Logo" class="logo-3d-animated logo-3d-hover" style="height:220px;width:auto;object-fit:contain;border-radius:2.7rem;box-shadow:0 16px 64px 0 rgba(37,99,235,0.28),0 4px 24px #2563eb88,0 0px 0px 12px #60a5fa55;filter:drop-shadow(0 6px 32px #2563eb88) drop-shadow(0 0px 32px #60a5fa55);padding:0;transition:transform 0.5s cubic-bezier(.4,2,.6,1),box-shadow 0.3s;perspective:600px;">
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1" style="min-width:0;">
+                    <h1 class="display-4 fw-bold text-white text-shadow-glow mb-3 text-center" style="letter-spacing:2.5px; text-shadow: 0 6px 32px #2563eb99, 0 2px 8px #60a5fa99;">PRO SERVICES</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb animated-breadcrumb justify-content-center mb-0" style="background:rgba(255,255,255,0.08); border-radius:1rem;">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:#e0e7ef;text-shadow:0 1px 4px #2563eb55;font-weight:500;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:#fff;font-weight:700;text-shadow:0 1px 4px #2563eb55;">PRO Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <style>
+                .header-gradient-border {
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 2rem;
+                    pointer-events: none;
+                    z-index: 3;
+                    border: 4px solid;
+                    border-image: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%) 1;
+                    opacity: 0.7;
+                    box-shadow: 0 0 32px 0 #2563eb33;
+                }
+                .logo-3d-animated {
+                    animation: logoPulseGlow 2.2s ease-in-out infinite alternate;
+                }
+                @keyframes logoPulseGlow {
+                    0% {
+                        box-shadow: 0 0 0px 0 #2563eb55, 0 8px 32px rgba(37,99,235,0.18);
+                        transform: scale(1.02) translateY(0);
+                    }
+                    50% {
+                        box-shadow: 0 0 24px 8px #2563eb88, 0 16px 48px rgba(37,99,235,0.22);
+                        transform: scale(1.07) translateY(-6px);
+                    }
+                    100% {
+                        box-shadow: 0 0 12px 4px #2563eb66, 0 12px 40px rgba(37,99,235,0.20);
+                        transform: scale(1.04) translateY(-3px);
+                    }
+                }
+                .logo-3d-hover:hover {
+                    animation-play-state: paused;
+                    transform: scale(1.18) rotateY(32deg) rotateX(18deg) skewY(-10deg) translateY(-18px) perspective(600px);
+                    box-shadow:0 48px 128px 0 rgba(37,99,235,0.38),0 12px 36px #00c6ff88,0 0px 0px 32px #60a5fa99;
+                    z-index:2;
+                }
+            </style>
+        </div>
+        <!-- Animated Modern Header End -->
+
+
+            <!-- PRO Services Section Start -->
+                <section class="container-xxl py-5 job-section-container scroll-animate animate-in-view magic-bg" data-animation="fade-up" data-delay="0.1" style="opacity:1;transform:none;position:relative;">
+                    <!-- Animated Decorative SVG Background -->
+                    <svg class="position-absolute top-0 start-0 w-100" height="180" style="z-index:0;opacity:0.13;pointer-events:none;">
+                        <defs>
+                            <linearGradient id="proWaveGradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#2563eb"/>
+                                <stop offset="100%" stop-color="#60a5fa"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,80 Q200,160 600,80 T1200,80 V180 H0Z" fill="url(#proWaveGradient)">
+                            <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                                values="M0,80 Q200,160 600,80 T1200,80 V180 H0Z;
+                                        M0,100 Q200,60 600,120 T1200,100 V180 H0Z;
+                                        M0,80 Q200,160 600,80 T1200,80 V180 H0Z"/>
+                        </path>
+                    </svg>
+                    <!-- Floating Magic CTA Button -->
+                    <style>
+                    .magic-bg {
+                        background: linear-gradient(120deg, #e0e7ff 0%, #f0f9ff 100%);
+                        box-shadow: 0 8px 32px 0 #2563eb22;
+                        position: relative;
+                    }
+                    </style>
+                <div class="container position-relative" style="z-index:2;">
+                    <div class="job-section-header mb-5">
+                        <h1 class="corporate-job-title text-center mb-3 text-reveal">
+                            <span class="word-reveal">PRO</span> <span class="word-reveal">Services</span> <span class="word-reveal">in</span> <span class="word-reveal">Dubai</span>
+                        </h1>
+                        <p class="corporate-job-subtitle text-center mb-4 scroll-animate" data-animation="fade-up" data-delay="0.2">
+                            <i class="fa fa-star text-warning me-2"></i>
+                            Expert Government Liaison &amp; Business Support for Companies and Individuals
+                            <i class="fa fa-star text-warning ms-2"></i>
+                        </p>
+                    </div>
+                    <!-- Animated Cards for Key Services -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4 scroll-animate" data-animation="slide-left" data-delay="0.1">
+                            <div class="card h-100 shadow-lg border-0 animate__animated animate__fadeInUp" style="border-radius:1.5rem;">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-building fa-3x text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold mb-2">Company Formation</h5>
+                                    <p class="card-text">Mainland, Free Zone, Offshore setup, licensing, and all government approvals handled seamlessly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 scroll-animate" data-animation="zoom-in" data-delay="0.2">
+                            <div class="card h-100 shadow-lg border-0 animate__animated animate__fadeInUp" style="border-radius:1.5rem;">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-passport fa-3x text-info"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold mb-2">Visa &amp; Immigration</h5>
+                                    <p class="card-text">Investor, Employment, Family, Golden Visa, Emirates ID, Medical, and more – fast, reliable processing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 scroll-animate" data-animation="slide-right" data-delay="0.3">
+                            <div class="card h-100 shadow-lg border-0 animate__animated animate__fadeInUp" style="border-radius:1.5rem;">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-file-signature fa-3x text-success"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold mb-2">Document Services</h5>
+                                    <p class="card-text">Attestation, translation, notarization, NOCs, permits, and all government paperwork managed for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRO Services Content Start -->
+                <!-- Additional Information Start -->
+                <div class="row mb-5">
+                    <div class="col-md-6 scroll-animate" data-animation="fade-up" data-delay="0.2">
+                        <h4 class="mb-3 text-primary"><i class="fas fa-users me-2"></i>Who Needs PRO Services?</h4>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-primary me-2"></i>Startups and entrepreneurs setting up new businesses in the UAE</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-primary me-2"></i>Established companies expanding or maintaining compliance</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-primary me-2"></i>Foreign investors and international clients</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-primary me-2"></i>Individuals needing visas, document attestation, or government approvals</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 scroll-animate" data-animation="fade-up" data-delay="0.3">
+                        <h4 class="mb-3 text-primary"><i class="fas fa-gem me-2"></i>Benefits of Using Talentra PRO Services</h4>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="fas fa-bolt text-primary me-2"></i>Save time and avoid government bureaucracy</li>
+                            <li class="list-group-item"><i class="fas fa-user-shield text-primary me-2"></i>Ensure compliance with UAE laws and regulations</li>
+                            <li class="list-group-item"><i class="fas fa-handshake text-primary me-2"></i>Access to expert advice and direct government liaisons</li>
+                            <li class="list-group-item"><i class="fas fa-globe text-primary me-2"></i>Multilingual support for global clients</li>
+                            <li class="list-group-item"><i class="fas fa-thumbs-up text-primary me-2"></i>Transparent pricing and reliable service</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Additional Information End -->
+                    <div class="row mb-5">
+                            <div class="col-md-6 scroll-animate" data-animation="slide-left" data-delay="0.2">
+                                <h4 class="mb-3 text-primary glow-title"><i class="fas fa-list-ul me-2"></i>Core PRO Services</h4>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.1s"><i class="fas fa-check-circle text-success me-2"></i>Company Formation &amp; Licensing (Mainland, Free Zone, Offshore)</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.2s"><i class="fas fa-check-circle text-success me-2"></i>Visa Processing (Investor, Employment, Family, Maid, Golden Visa)</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.3s"><i class="fas fa-check-circle text-success me-2"></i>Labor &amp; Immigration Card Services</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.4s"><i class="fas fa-check-circle text-success me-2"></i>Emirates ID Application &amp; Renewal</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.5s"><i class="fas fa-check-circle text-success me-2"></i>Medical Fitness Test Arrangements</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.6s"><i class="fas fa-check-circle text-success me-2"></i>Document Attestation, Translation &amp; Notarization</li>
+                                    <li class="list-group-item animate__animated animate__fadeInLeft" style="animation-delay:0.7s"><i class="fas fa-check-circle text-success me-2"></i>Government Approvals, NOCs &amp; Permits</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 scroll-animate" data-animation="slide-right" data-delay="0.2">
+                                <h4 class="mb-3 text-primary glow-title"><i class="fas fa-plus-circle me-2"></i>Additional Support</h4>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.1s"><strong><i class="fas fa-university text-info me-2"></i>Opening Corporate &amp; Personal Bank Accounts</strong> (Full assistance with documentation, compliance, and bank selection)</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.2s"><i class="fas fa-building text-info me-2"></i>Chamber of Commerce &amp; Municipality Services</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.3s"><i class="fas fa-sync-alt text-info me-2"></i>Annual License Renewal &amp; Compliance</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.4s"><i class="fas fa-money-check-alt text-info me-2"></i>WPS (Wage Protection System) Registration</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.5s"><i class="fas fa-user-shield text-info me-2"></i>Immigration &amp; Labor Inspections Handling</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.6s"><i class="fas fa-file-contract text-info me-2"></i>POA (Power of Attorney) Processing</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.7s"><i class="fas fa-car text-info me-2"></i>Vehicle Registration &amp; Renewal for Companies</li>
+                                    <li class="list-group-item animate__animated animate__fadeInRight" style="animation-delay:0.8s"><i class="fas fa-ellipsis-h text-info me-2"></i>All Other Government Liaison Services</li>
+                                </ul>
+                            </div>
+                        <style>
+                        .glow-title {
+                            text-shadow: 0 0 16px #2563eb, 0 2px 8px #60a5fa;
+                            animation: blueGlowPulse 2.5s infinite alternate;
+                        }
+                        @keyframes blueGlowPulse {
+                            0% { text-shadow: 0 0 16px #2563eb, 0 2px 8px #60a5fa; }
+                            100% { text-shadow: 0 0 36px #60a5fa, 0 4px 16px #2563eb; }
+                        }
+                        </style>
+                    </div>
+                    <div class="row mb-5">
+                            <div class="col-md-6 scroll-animate" data-animation="fade-up" data-delay="0.3">
+                                <h4 class="mb-3 text-primary"><i class="fas fa-star me-2"></i>Why Choose Talentra?</h4>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.1s"><i class="fas fa-user-tie text-primary me-2"></i>Dedicated PRO experts with years of UAE experience</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.2s"><i class="fas fa-handshake text-primary me-2"></i>Direct relationships with government departments</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.3s"><i class="fas fa-bolt text-primary me-2"></i>Fast, reliable, and confidential service</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.4s"><i class="fas fa-balance-scale text-primary me-2"></i>Transparent pricing and no hidden fees</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.5s"><i class="fas fa-user-friends text-primary me-2"></i>Personalized support for businesses and individuals</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.6s"><i class="fas fa-tasks text-primary me-2"></i>End-to-end management of all government processes</li>
+                                    <li class="list-group-item animate__animated animate__fadeInUp" style="animation-delay:0.7s"><i class="fas fa-language text-primary me-2"></i>Multilingual team for global clients</li>
+                                </ul>
+                            </div>
+                        <div class="col-md-6 scroll-animate" data-animation="fade-up" data-delay="0.4">
+                                <h4 class="mb-3 text-primary"><i class="fas fa-cogs me-2"></i>How Our PRO Process Works</h4>
+                                <ol class="list-group list-group-numbered mb-4">
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.1s"><strong>Initial Consultation</strong> &amp; Needs Assessment</li>
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.2s"><strong>Document Collection</strong> &amp; Review</li>
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.3s"><strong>Submission</strong> to Relevant Authorities</li>
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.4s"><strong>Follow-up</strong> &amp; Status Updates</li>
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.5s"><strong>Completion</strong> &amp; Delivery of Documents</li>
+                                    <li class="list-group-item animate__animated animate__fadeInDown" style="animation-delay:0.6s"><strong>Ongoing Support</strong> &amp; Renewals</li>
+                                </ol>
+                        </div>
+                    </div>
+                    <!-- Animated FAQ Accordion -->
+                    <h4 class="mb-3 text-primary"><i class="fas fa-question-circle me-2"></i>Frequently Asked Questions (FAQ)</h4>
+                    <div class="accordion mb-4 scroll-animate" id="proFAQ" data-animation="fade-up" data-delay="0.5">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <i class="fas fa-info-circle me-2 text-primary"></i>What is a PRO service in Dubai?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#proFAQ">
+                                <div class="accordion-body">A PRO (Public Relations Officer) service is a professional solution for handling all government paperwork, approvals, and legal formalities for businesses and individuals in the UAE.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <i class="fas fa-users me-2 text-primary"></i>Who needs PRO services?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#proFAQ">
+                                <div class="accordion-body">Any business or individual who needs to interact with UAE government departments for visas, licensing, company setup, or compliance will benefit from PRO services.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <i class="fas fa-university me-2 text-primary"></i>Can you help with opening a bank account?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#proFAQ">
+                                <div class="accordion-body">Yes, we provide full assistance for opening both corporate and personal bank accounts, including documentation, compliance, and bank selection.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <i class="fas fa-clock me-2 text-primary"></i>How fast can you process my documents?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#proFAQ">
+                                <div class="accordion-body">Processing times depend on the service and government department, but we always aim for the fastest turnaround and keep you updated at every step.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <i class="fas fa-globe me-2 text-primary"></i>Do you support international clients?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#proFAQ">
+                                <div class="accordion-body">Absolutely! Our multilingual team and global experience ensure smooth service for clients from any country.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary text-center mt-4 animate__animated animate__pulse" role="alert" style="font-size:1.2rem;">
+                        <strong><i class="fas fa-phone-alt me-2"></i>Ready to get started?</strong>
+                        <br>
+                        <span>Contact us today for a <span class="fw-bold text-success">free consultation</span> and discover how Talentra can simplify your government processes in Dubai!</span>
+                        <br>
+                        <a href="contact.html" class="btn btn-lg corporate-browse-btn mt-3 animate__animated animate__bounceIn"><i class="fas fa-envelope-open-text me-2"></i>Contact Us Now</a>
+                    </div>
+                </div>
+                <!-- Floating Animated Icon -->
+                <div style="position:absolute;right:2%;bottom:2%;z-index:10;pointer-events:none;">
+                    <i class="fas fa-user-shield fa-4x text-primary" style="opacity:0.18;animation:floatShape 6s ease-in-out infinite alternate;"></i>
+                </div>
+            </section>
+            <!-- PRO Services Section End -->
+            <!-- Animate.css CDN for extra animation effects -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+        <!-- Footer Start -->
+    <div class="container-fluid bg-light text-dark footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Company</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Quick Links</h5>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>About Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Contact Us</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Our Services</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Privacy Policy</a>
+                            <a class="btn btn-link text-secondary footer-link" href=""><i class="fas fa-chevron-right me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="footer-section">
+                            <h5 class="text-dark mb-4 footer-title">Contact</h5>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="mb-2"><i class="fa fa-envelope me-3 contact-icon"></i><span style="color:#dc3545;font-weight:600;">Coming Soon</span></p>
+                                    </div>
+                                    <div class="d-flex pt-2 social-links">
+                                        <a class="btn btn-outline-primary btn-social social-btn" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-outline-primary btn-social social-btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="logo-container">
+                                        <img src="img/only logo.png" alt="Talentra Logo" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="copyright">
+                    <div class="container-fluid px-0">
+                        <div class="row mx-0">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                            &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy <span style="font-family: 'Arial', sans-serif; color: #f8f9fa; font-weight: 500; font-size: 1.1em;">تالينترا</span></a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="httpmm">SHAHABAZ PASHA SN</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end px-3">
+                            <div class="footer-menu">
+                                <a href="" class="footer-menu-link text-secondary">Home</a>
+                                <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                                <a href="" class="footer-menu-link text-secondary">Help</a>
+                                <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/971563807863" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                width: 65px;
+                height: 65px;
+                bottom: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 38px;
+                box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 1.5px 6px #128c7e;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+                animation: whatsapp-pulse 1.5s infinite;
+                border: 3px solid #fff;
+                cursor: pointer;
+                perspective: 400px;
+            }
+            .whatsapp-float:hover {
+                background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+                color: #fff;
+                transform: scale(1.08) rotateY(15deg);
+                box-shadow: 0 12px 32px rgba(37,211,102,0.6), 0 2px 8px #128c7e;
+            }
+            @keyframes whatsapp-pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37,211,102,0.7), 0 8px 24px rgba(37,211,102,0.4);
+                }
+            }
+        </style>
+    </div>
+
+    <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="js/main.js"></script>
+                <!-- Spinner Removal Script -->
+                <script>
+                    window.addEventListener('load', function() {
+                        var spinner = document.getElementById('spinner');
+                        if (spinner) {
+                            spinner.classList.remove('show');
+                        }
+                    });
+                </script>
+        <!-- Fallback: Ensure all animated content is visible if animation JS is missing -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Reveal all scroll-animate elements
+            document.querySelectorAll('.scroll-animate').forEach(function(el) {
+                el.classList.add('animate-in-view');
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+            // Open all FAQ accordions by default (optional, or just ensure buttons are clickable)
+            // document.querySelectorAll('.accordion-collapse').forEach(function(el) {
+            //     el.classList.add('show');
+            // });
+        });
+        </script>
+</body>
+</html>

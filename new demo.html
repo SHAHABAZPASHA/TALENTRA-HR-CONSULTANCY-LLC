@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talentra HR Consultancy LLC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* --- GENERAL --- */
+    html, body {margin:0; padding:0; width:100%; font-family: 'Inter', sans-serif;}
+    :root { --primary:#00B074; --dark:#2B3940; --light:#f8f9fa;}
+
+    /* --- NAVBAR --- */
+    .logo-3d {
+      height:55px;
+      transition:transform .6s ease, box-shadow .6s ease;
+      transform-style: preserve-3d;
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+    .logo-3d:hover {
+      transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+      box-shadow:0 20px 40px rgba(0,0,0,.3);
+    }
+    @keyframes floatLogo {
+      0%{transform:translateY(0) rotateY(0);}
+      50%{transform:translateY(-5px) rotateY(5deg);}
+      100%{transform:translateY(0) rotateY(0);}
+    }
+
+    /* --- HERO --- */
+    .hero {
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+                 url('https://images.unsplash.com/photo-1606152732929-8bbdb29f9149?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')
+                 center/cover no-repeat;
+      height:85vh;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; text-align:center;
+    }
+    .hero h1 {font-size:3rem; font-weight:700;}
+    .hero p {font-size:1.25rem; max-width:600px; margin:auto;}
+    .hero .btn {padding:12px 30px; font-size:1.1rem;}
+
+    /* --- SERVICES --- */
+    .service-card{
+      background:#fff; border:none; box-shadow:0 0 25px rgba(0,0,0,.08);
+      transition:.4s; text-align:center; padding:30px 20px; border-radius:10px;
+    }
+    .service-card:hover{transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,.15);}
+    .service-card i{font-size:40px; color:var(--primary); margin-bottom:15px;}
+
+    /* --- JOBS --- */
+    .job-card{border:1px solid #eee; border-radius:8px; padding:20px; transition:.3s;}
+    .job-card:hover{box-shadow:0 0 25px rgba(0,0,0,.1); transform:translateY(-3px);}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+  <a href="#" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+    <img src="talentra.png" alt="Talentra HR Consultancy LLC" class="logo-3d">
+  </a>
+  <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <a href="#" class="nav-item nav-link active">Home</a>
+      <a href="#about" class="nav-item nav-link">About</a>
+      <a href="#services" class="nav-item nav-link">Services</a>
+      <a href="#jobs" class="nav-item nav-link">Jobs</a>
+      <a href="#contact" class="nav-item nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div>
+    <h1>Your Gateway to Top Jobs in Dubai</h1>
+    <p>Connecting talented professionals and reliable employers in Oil & Gas, IT, Real Estate & more.</p>
+    <a href="#jobs" class="btn btn-primary mt-3">Find a Job</a>
+    <a href="#contact" class="btn btn-outline-light mt-3">Hire Talent</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">For Job Seekers & Employers</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card">
+          <i class="fas fa-user-tie"></i>
+          <h5>White-Collar Recruitment</h5>
+          <p>Connecting professionals with top companies in software, real estate, and oil industries.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <i class="fas fa-hard-hat"></i>
+          <h5>Blue-Collar Placement</h5>
+          <p>Reliable workforce solutions for oil fields, construction, and industrial projects.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <i class="fas fa-briefcase"></i>
+          <h5>HR & Visa Support</h5>
+          <p>Helping with visa processing, onboarding, and HR compliance for UAE companies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOB LISTINGS -->
+<section id="jobs" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Featured Jobs</h2>
+      <p class="text-muted">Some of our current openings</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="job-card">
+          <h5>Software Engineer</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Dubai</p>
+          <p>Join a leading IT firm with great growth opportunities.</p>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="job-card">
+          <h5>Oil Field Technician</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Abu Dhabi</p>
+          <p>Hands-on technical role in a major oil & gas project.</p>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="job-card">
+          <h5>Real Estate Sales Executive</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Dubai Marina</p>
+          <p>Drive property sales for a luxury real estate company.</p>
+          <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Let’s Work Together</h2>
+    <p>Looking for a job or hiring talent in Dubai? We’re here to help.</p>
+    <a href="mailto:info@talentra.com" class="btn btn-primary mt-3">Contact Us</a>
+  </div>
+</section>
+
+<footer class="py-4 text-center bg-dark text-light">
+  <p class="mb-0">&copy; 2025 Talentra HR Consultancy LLC | Dubai</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+📊 GOOGLE SHEETS SETUP INSTRUCTIONS FOR JOB APPLICATIONS
+
+==============================================
+STEP 1: CREATE GOOGLE SHEET
+==============================================
+1. Go to sheets.google.com
+2. Create a new spreadsheet
+3. Name it "Talentra Job Applications"
+4. In the first row, add these column headers:
+   A1: Timestamp
+   B1: Name
+   C1: Email
+   D1: Portfolio
+   E1: Cover Letter
+   F1: File Name
+   G1: File Size
+   H1: Job Position
+   I1: Job Type
+   J1: Privacy Agreement
+
+==============================================
+STEP 2: CREATE GOOGLE APPS SCRIPT
+==============================================
+1. In your Google Sheet, go to Extensions → Apps Script
+2. Delete any existing code
+3. Paste this code:
+
+```javascript
+function doPost(e) {
+  try {
+    const sheet = SpreadsheetApp.getActiveSheet();
+    const data = JSON.parse(e.postData.contents);
+    
+    // Add new row with form data
+    sheet.appendRow([
+      data.timestamp,
+      data.name,
+      data.email,
+      data.portfolio,
+      data.coverLetter,
+      data.fileName,
+      data.fileSize,
+      data.jobPosition,
+      data.jobLocation,
+      data.privacyAgreed
+    ]);
+    
+    return ContentService
+      .createTextOutput('Success')
+      .setMimeType(ContentService.MimeType.TEXT);
+      
+  } catch (error) {
+    return ContentService
+      .createTextOutput('Error: ' + error.toString())
+      .setMimeType(ContentService.MimeType.TEXT);
+  }
+}
+```
+
+4. Save the script (Ctrl+S)
+5. Click "Deploy" → "New deployment"
+6. Choose type: "Web app"
+7. Execute as: "Me"
+8. Who has access: "Anyone"
+9. Click "Deploy"
+10. Copy the Web app URL (it looks like: https://script.google.com/macros/s/ABC123.../exec)
+
+==============================================
+STEP 3: UPDATE YOUR WEBSITE
+==============================================
+1. Open job-detail.html
+2. Find this line: const googleSheetURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+3. Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL' with your actual Web app URL from Step 2
+
+Example:
+const googleSheetURL = 'https://script.google.com/macros/s/AKfycbyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/exec';
+
+==============================================
+STEP 4: TEST THE FORM
+==============================================
+1. Open your website
+2. Fill out the job application form
+3. Submit it
+4. Check your Google Sheet - you should see the data appear!
+
+==============================================
+WHAT DATA GETS SAVED:
+==============================================
+✅ Timestamp of submission
+✅ Applicant name
+✅ Applicant email
+✅ Portfolio website (if provided)
+✅ Cover letter text
+✅ Resume file name
+✅ File size
+✅ Job position applied for
+✅ Job type/location
+✅ Privacy agreement confirmation
+
+==============================================
+BENEFITS:
+==============================================
+✅ FREE (Google Sheets is free)
+✅ Easy to manage applications
+✅ Can share with team members
+✅ Export to Excel if needed
+✅ Real-time updates
+✅ No server setup required
+
+==============================================
+TROUBLESHOOTING:
+==============================================
+- If form doesn't work, check browser console (F12) for errors
+- Make sure Apps Script deployment is set to "Anyone" access
+- Verify the Web app URL is correct in your HTML file
+- Test the Apps Script directly in Google Apps Script editor
+
+==============================================
+NEXT STEPS (OPTIONAL):
+==============================================
+- Add email notifications when new applications arrive
+- Create charts/dashboards to track application metrics
+- Set up automatic responses to applicants
+- Add filters to sort applications by job type

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Talentra - Visa & Immigration</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="img/favicon2.png">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid px-5 d-none d-lg-block" style="background-color: #235EE6;">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-4"><i class="fas fa-envelope text-white me-2"></i>info@talentra.com</a>
+                        <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-white me-2"></i>+971563807863</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 text-end mb-2 mb-lg-0">
+                    <div class="d-flex align-items-center justify-content-end w-100" style="height: 45px;">
+                        <a class="btn btn-sm btn-white btn-square rounded-circle me-2 social-anim social-shadow" href=""><i class="fab fa-twitter fa-lg twitter-color"></i></a>
+                        <a class="btn btn-sm btn-white btn-square rounded-circle me-2 social-anim social-shadow" href=""><i class="fab fa-facebook fa-lg facebook-color"></i></a>
+                        <a class="btn btn-sm btn-white btn-square rounded-circle me-2 social-anim social-shadow" href=""><i class="fab fa-linkedin fa-lg linkedin-color"></i></a>
+                        <a class="btn btn-sm btn-white btn-square rounded-circle me-2 social-anim social-shadow" href=""><i class="fab fa-instagram fa-lg instagram-color"></i></a>
+                        <a class="btn btn-sm btn-white btn-square rounded-circle social-anim social-shadow" href=""><i class="fab fa-youtube fa-lg youtube-color"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <style>
+        .btn-white {
+            background: #fff !important;
+            border: none !important;
+        }
+        .social-shadow {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+        .twitter-color { color: #1da1f2; transition: transform 0.3s, color 0.3s; }
+        .facebook-color { color: #1877f3; transition: transform 0.3s, color 0.3s; }
+        .linkedin-color { color: #0a66c2; transition: transform 0.3s, color 0.3s; }
+        .instagram-color { color: #e4405f; transition: transform 0.3s, color 0.3s; }
+        .youtube-color { color: #ff0000; transition: transform 0.3s, color 0.3s; }
+        .social-anim:hover i {
+            transform: scale(1.25) rotate(-10deg);
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.18));
+        }
+        </style>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="display-5 m-0"><img src="img/only logo.png" class="img-fluid" alt="" style="height:160px;width:auto;max-width:none;"><span style="color:#235EE6;"> Talentra</span> <span style="font-family: 'Arial', sans-serif; color: #235EE6; font-weight: 500; font-size: 1.1em; direction:rtl;">تالينترا</span></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="contact.html" class="nav-item nav-link active">BLOG</a>
+                        <a href="BLOG.html" class="nav-item nav-link ">Contact</a>
+                    </div>
+                    <a href="talent/index.html" class="btn rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="background-color:#235EE6;border-color:#235EE6;color:#fff;">Apply for Job / Pro Services</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-1" style="max-width: 900px; min-height: 120px; padding-top: 0.5rem; padding-bottom: 0.5rem; display: flex; flex-direction: column; justify-content: center;">
+                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">BLOG
+                </h1>
+                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    
+                    <li class="breadcrumb-item active text-secondary">BLOG</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+       
+            <!-- Blog Section Start -->
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-3" style="color:#235EE6;font-weight:700;">Latest Visa Updates & News</h2>
+                        <p class="lead">Stay informed with the latest news, tips, and updates about visas and immigration.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- Blog Post 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Visa News">
+                            <div class="card-body">
+                                <h5 class="card-title">UAE Announces New 5-Year Tourist Visa</h5>
+                                <p class="card-text">The UAE has launched a new 5-year multi-entry tourist visa, making travel easier for frequent visitors. Find out eligibility, application process, and benefits.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Visa Application Tips">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 5 Tips for a Successful Visa Application</h5>
+                                <p class="card-text">Avoid common mistakes and improve your chances of approval with these expert tips for preparing your visa documents and interview.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Immigration Update">
+                            <div class="card-body">
+                                <h5 class="card-title">Latest Immigration Policy Changes in GCC</h5>
+                                <p class="card-text">GCC countries have updated their immigration policies for 2024. Learn about new rules, work permits, and family visa options.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Post 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Student Visa">
+                            <div class="card-body">
+                                <h5 class="card-title">Student Visa Guide: Study Abroad in 2025</h5>
+                                <p class="card-text">Explore the latest requirements and opportunities for students planning to study in the UK, USA, Canada, and Australia. Scholarships and visa tips included.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Post 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Business Visa">
+                            <div class="card-body">
+                                <h5 class="card-title">Business Visa: How to Expand Your Company Overseas</h5>
+                                <p class="card-text">Learn about business visa options for entrepreneurs and companies looking to expand into new markets. Key steps and legal advice for 2025.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Post 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/visa22.png" class="card-img-top" alt="Family Visa">
+                            <div class="card-body">
+                                <h5 class="card-title">Family Visa: Bringing Loved Ones Together</h5>
+                                <p class="card-text">Discover the latest updates on family reunification visas, including new rules for dependents and faster processing times in the Middle East.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Section End -->
+
+            <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5 justify-content-between align-items-stretch">
+                    <!-- Contact Card 1 (Left) -->
+                    <div class="col-lg-4 col-md-6 col-12 wow fadeInUp d-flex justify-content-start" data-wow-delay="0.2s">
+                        <div class="footer-section flex-fill d-flex flex-column justify-content-center align-items-start text-start">
+                            <h5 class="text-dark mb-4 footer-title w-100 text-center" style="text-align:center !important;">Head Office</h5>
+                            <div class="w-100 d-flex flex-column align-items-center justify-content-center">
+                                <div class="contact-item"><p class="mb-2"><i class="fa fa-map-marker-alt me-3 contact-icon"></i>Dubai, UAE</p></div>
+                                <div class="contact-item"><p class="mb-2"><i class="fa fa-phone-alt me-3 contact-icon"></i>+971 56 380 7863</p></div>
+                                <div class="contact-item"><p class="mb-2"><i class="fa fa-envelope-open me-3 contact-icon"></i>info@talentra.com</p></div>
+                                <div class="contact-item"><p class="mb-2"><i class="fab fa-whatsapp me-3 contact-icon"></i>+971 56 380 7863</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Talentra 3D Logo (Middle) -->
+                    <div class="col-lg-3 col-md-12 col-12 d-flex align-items-center justify-content-center">
+                        <div class="footer-section border-0 shadow-none bg-transparent d-flex flex-column align-items-center justify-content-center p-0 m-0" style="min-height:0;box-shadow:none !important;">
+                            <img src="img/talentra (2).png" alt="Talentra 3D Logo" style="width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 4px 40px rgba(35,94,230,0.28));">
+                        </div>
+                    </div>
+                    <!-- Social Only (Right) -->
+                    <div class="col-lg-4 col-md-12 col-12 wow fadeInUp d-flex justify-content-end" data-wow-delay="0.5s">
+                        <div class="footer-section flex-fill d-flex flex-column justify-content-center align-items-end text-end">
+                            <h5 class="text-dark mb-4 footer-title w-100 text-center" style="text-align:center !important;">Stay Connected</h5>
+                            <div class="d-flex pt-2 social-links mb-3 justify-content-end w-100">
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="https://wa.me/971563807863" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="#"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary btn-social social-btn mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="logo-container mt-4 w-100 d-flex justify-content-center align-items-center">
+                                <img src="img/only logo.png" alt="Talentra Logo" class="company-logo mx-auto d-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright section removed here to avoid duplicate. -->
+        </div>
+        <style>
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%) !important;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid #007bff;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.15), transparent);
+            animation: footer-shimmer 8s infinite;
+        }
+        @keyframes footer-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .footer-section {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9) !important;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,123,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,123,255,0.15);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .footer-section:hover::before {
+            left: 100%;
+        }
+        .footer-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,1) !important;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.25);
+            border-color: rgba(0,123,255,0.3);
+        }
+        .footer-title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            transition: width 0.5s ease;
+        }
+        .footer-section:hover .footer-title::after {
+            width: 100%;
+        }
+        .footer-title:hover {
+            color: #007bff !important;
+            transform: scale(1.05);
+        }
+        .footer-link {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0.5rem;
+            margin-left: -0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .footer-link:hover {
+            color: #007bff !important;
+            transform: translateX(10px);
+            border-left-color: #007bff;
+            background: rgba(0,123,255,0.05);
+        }
+        .footer-link:hover::before {
+            left: 0;
+        }
+        .footer-link i {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        .footer-link:hover i {
+            transform: translateX(5px) scale(1.2);
+            opacity: 1;
+            color: #007bff;
+        }
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        .contact-item:hover {
+            background: rgba(0,123,255,0.1);
+            transform: translateX(8px);
+        }
+        .contact-icon {
+            transition: all 0.3s ease;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        .contact-item:hover .contact-icon {
+            transform: scale(1.3) rotate(360deg);
+            color: #0056b3;
+        }
+        .social-links {
+            gap: 0.5rem;
+        }
+        .social-btn {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: #007bff !important;
+            border: 2px solid #007bff !important;
+            color: #ffffff !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+            color: #ffffff !important;
+        }
+        .social-btn:hover::before {
+            width: 80px;
+            height: 80px;
+        }
+        .social-btn:nth-child(1) { background: #25d366 !important; border-color: #25d366 !important; }
+        .social-btn:nth-child(1):hover { background: #1fb354 !important; border-color: #1fb354 !important; }
+        .social-btn:nth-child(2) { background: #1da1f2 !important; border-color: #1da1f2 !important; }
+        .social-btn:nth-child(2):hover { background: #0d8bd9 !important; border-color: #0d8bd9 !important; }
+        .social-btn:nth-child(3) { background: #1877f2 !important; border-color: #1877f2 !important; }
+        .social-btn:nth-child(3):hover { background: #0866dc !important; border-color: #0866dc !important; }
+        .social-btn:nth-child(4) { background: #ff0000 !important; border-color: #ff0000 !important; }
+        .social-btn:nth-child(4):hover { background: #e60000 !important; border-color: #e60000 !important; }
+        .social-btn:nth-child(5) { background: #0077b5 !important; border-color: #0077b5 !important; }
+        .social-btn:nth-child(5):hover { background: #005f8a !important; border-color: #005f8a !important; }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .company-logo {
+            width: 180px;
+            height: 200px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+        .company-logo:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .copyright {
+            background: #007bff !important;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            margin: 0 !important;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            transition: all 0.3s ease;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+        .copyright .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        .copyright .row {
+            margin: 0 !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 0 !important;
+        }
+        .copyright .col-md-6 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .footer .container-fluid {
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+        }
+        .footer .container-fluid:last-child {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        /* Removed overflow-x: hidden from body and .container-xxl to allow proper horizontal scrolling and layout on desktop */
+        .copyright-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+        .copyright-link:hover {
+            color: #f8f9fa !important;
+            border-bottom-color: #f8f9fa;
+            transform: translateY(-1px);
+        }
+        .footer-menu-link {
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.2rem;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            font-weight: 500;
+        }
+        .footer-menu-link:hover {
+            color: #007bff !important;
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+            .footer-section:hover {
+                transform: translateY(-5px);
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .footer-menu {
+                text-align: center;
+            }
+            .footer-menu-link {
+                display: inline-block;
+                margin: 0.2rem;
+            }
+            .company-logo {
+                width: 90px;
+                height: 90px;
+            }
+            .logo-container {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+            }
+        }
+        </style>
+
+        <!-- Copyright Section (moved to the very end) -->
+        <div class="container-fluid px-0">
+            <div class="copyright wow fadeInUp" data-wow-delay="1.0s">
+                <div class="container-fluid px-0">
+                    <div class="row mx-0">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 px-3">
+                        &copy; <a class="border-bottom copyright-link" href="#">Talentra HR Consultancy <span style="font-family: 'Arial', sans-serif; color: #f8f9fa; font-weight: 500; font-size: 1.1em;">تالينترا</span></a>, <span style="color:#212529;font-weight:bold;">All Right Reserved.</span> <span style="color:#212529;font-weight:bold;">Designed By <a class="border-bottom copyright-link" href="" style="color:#212529;font-weight:bold;">SHAHABAZ PASHA SN</a></span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end px-3">
+                        <div class="footer-menu">
+                            <a href="" class="footer-menu-link text-secondary">Home</a>
+                            <a href="" class="footer-menu-link text-secondary">Cookies</a>
+                            <a href="" class="footer-menu-link text-secondary">Help</a>
+                            <a href="" class="footer-menu-link text-secondary">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Section -->
+
+        <!-- Back to Top -->
+    <a href="#" class="btn btn-lg-square back-to-top" style="background-color:#235EE6;border-color:#235EE6;color:#fff;"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
